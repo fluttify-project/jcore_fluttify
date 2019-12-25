@@ -10,7 +10,7 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-class cn_jiguang_net_HttpUtils_HttpListener extends java_lang_Object  {
+class cn_jiguang_android_IDataShare_Stub extends android_os_Binder with cn_jiguang_android_IDataShare {
   //region constants
   
   //endregion

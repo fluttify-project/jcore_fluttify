@@ -123,50 +123,6 @@ class cn_jiguang_net_HttpUtils extends java_lang_Object  {
     }
   }
   
-  static Future<void> httpGet__android_content_Context__String__cn_jiguang_net_HttpUtils_HttpListener(android_content_Context var0, String var1, cn_jiguang_net_HttpUtils_HttpListener var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: cn.jiguang.net.HttpUtils::httpGet([\'var1\':$var1])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpGet__android_content_Context__String__cn_jiguang_net_HttpUtils_HttpListener', {"var0": var0.refId, "var1": var1, "var2": var2.refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  static Future<void> httpGet__android_content_Context__cn_jiguang_net_HttpRequest__cn_jiguang_net_HttpUtils_HttpListener(android_content_Context var0, cn_jiguang_net_HttpRequest var1, cn_jiguang_net_HttpUtils_HttpListener var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: cn.jiguang.net.HttpUtils::httpGet([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpGet__android_content_Context__cn_jiguang_net_HttpRequest__cn_jiguang_net_HttpUtils_HttpListener', {"var0": var0.refId, "var1": var1.refId, "var2": var2.refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
   static Future<cn_jiguang_net_HttpResponse> httpPost__android_content_Context__cn_jiguang_net_HttpRequest(android_content_Context var0, cn_jiguang_net_HttpRequest var1) async {
     // print log
     if (fluttifyLogEnabled) {
