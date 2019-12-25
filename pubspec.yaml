@@ -1,0 +1,28 @@
+name: jcore_fluttify
+description: A `JCore` Component, Powered By `Fluttify` Engine.
+version: 0.0.1
+author: yohom <382146139@qq.com>
+homepage: https://github.com/fluttify-project/amap_search_fluttify
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+  flutter: ">=1.12.13 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  foundation_fluttify: 0.4.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: me.yohom.jcore_fluttify
+        pluginClass: JcoreFluttifyPlugin
+      ios:
+        pluginClass: JcoreFluttifyPlugin
