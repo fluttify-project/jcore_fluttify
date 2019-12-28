@@ -16,7 +16,7 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
   //endregion
 
   //region creators
-  static Future<cn_jpush_android_service_DataProvider> create() async {
+  static Future<cn_jpush_android_service_DataProvider> create__() async {
     final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jpush_android_service_DataProvider__');
     final object = cn_jpush_android_service_DataProvider()..refId = refId..tag = 'jcore_fluttify';
   

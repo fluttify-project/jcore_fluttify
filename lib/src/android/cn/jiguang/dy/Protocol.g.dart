@@ -16,7 +16,7 @@ class cn_jiguang_dy_Protocol extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<cn_jiguang_dy_Protocol> create() async {
+  static Future<cn_jiguang_dy_Protocol> create__() async {
     final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_dy_Protocol__');
     final object = cn_jiguang_dy_Protocol()..refId = refId..tag = 'jcore_fluttify';
   

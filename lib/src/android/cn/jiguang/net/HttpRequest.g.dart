@@ -343,28 +343,6 @@ class cn_jiguang_net_HttpRequest extends java_lang_Object  {
     }
   }
   
-  Future<void> setSslTrustManager(cn_jiguang_net_SSLTrustManager var1) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: cn.jiguang.net.HttpRequest@$refId::setSslTrustManager([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpRequest::setSslTrustManager', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
   Future<bool> isNeedRetryIfHttpsFailed() async {
     // print log
     if (fluttifyLogEnabled) {

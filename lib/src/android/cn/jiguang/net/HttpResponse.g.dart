@@ -24,7 +24,7 @@ class cn_jiguang_net_HttpResponse extends java_lang_Object  {
     return object;
   }
   
-  static Future<cn_jiguang_net_HttpResponse> create() async {
+  static Future<cn_jiguang_net_HttpResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_net_HttpResponse__');
     final object = cn_jiguang_net_HttpResponse()..refId = refId..tag = 'jcore_fluttify';
   

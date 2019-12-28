@@ -16,7 +16,7 @@ class cn_jpush_android_service_DActivity extends android_app_Activity  {
   //endregion
 
   //region creators
-  static Future<cn_jpush_android_service_DActivity> create() async {
+  static Future<cn_jpush_android_service_DActivity> create__() async {
     final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jpush_android_service_DActivity__');
     final object = cn_jpush_android_service_DActivity()..refId = refId..tag = 'jcore_fluttify';
   

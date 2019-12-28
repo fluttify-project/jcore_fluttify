@@ -16,7 +16,7 @@ class cn_jiguang_api_utils_ByteBufferUtils extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<cn_jiguang_api_utils_ByteBufferUtils> create() async {
+  static Future<cn_jiguang_api_utils_ByteBufferUtils> create__() async {
     final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_api_utils_ByteBufferUtils__');
     final object = cn_jiguang_api_utils_ByteBufferUtils()..refId = refId..tag = 'jcore_fluttify';
   

@@ -11,333 +11,286 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:jcore_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-Future<bool> isKindOfcn_jiguang_net_DefaultHostVerifier(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_DefaultHostVerifier', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_net_SSLTrustManager(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_SSLTrustManager', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_net_HttpRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_HttpRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_net_HttpUtils(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_HttpUtils', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_net_HttpResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_HttpResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_internal_JConstants(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_internal_JConstants', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_internal_JCoreHelperAction(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_internal_JCoreHelperAction', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_internal_JCoreInternalHelper(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_internal_JCoreInternalHelper', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_internal_ActionManager(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_internal_ActionManager', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_android_IDataShare_Stub(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_android_IDataShare_Stub', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_android_BuildConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_android_BuildConfig', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_dy_Protocol(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_dy_Protocol', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_JDispatchAction(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JDispatchAction', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_JActionExtra(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JActionExtra', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_utils_ByteBufferUtils(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_utils_ByteBufferUtils', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_utils_OutputDataUtil(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_utils_OutputDataUtil', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_utils_ProtocolUtil(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_utils_ProtocolUtil', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_JRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_JResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_JCoreInterface(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JCoreInterface', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_JCoreManager(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JCoreManager', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_BaseLogger(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_BaseLogger', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_JProtocol(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JProtocol', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_api_MultiSpHelper(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_MultiSpHelper', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_analytics_page_ActivityLifecycle(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_page_ActivityLifecycle', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jiguang_analytics_page_PushSA(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_page_PushSA', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jcore_client_android_BuildConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jcore_client_android_BuildConfig', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jpush_android_service_DActivity(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DActivity', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jpush_android_service_DataProvider(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DataProvider', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jpush_android_service_DownloadActivity(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DownloadActivity', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jpush_android_service_DaemonService_MyBinder(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DaemonService_MyBinder', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jpush_android_service_DataShare(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DataShare', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcn_jpush_android_service_DownloadProvider(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DownloadProvider', {'refId': ref.refId});
-  return result;
-}
-
-
-Future<cn_jiguang_net_DefaultHostVerifier> ascn_jiguang_net_DefaultHostVerifier(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_net_DefaultHostVerifier', {'refId': ref.refId});
-  return cn_jiguang_net_DefaultHostVerifier()..refId = result;
-}
-
-Future<cn_jiguang_net_SSLTrustManager> ascn_jiguang_net_SSLTrustManager(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_net_SSLTrustManager', {'refId': ref.refId});
-  return cn_jiguang_net_SSLTrustManager()..refId = result;
-}
-
-Future<cn_jiguang_net_HttpRequest> ascn_jiguang_net_HttpRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_net_HttpRequest', {'refId': ref.refId});
-  return cn_jiguang_net_HttpRequest()..refId = result;
-}
-
-Future<cn_jiguang_net_HttpUtils> ascn_jiguang_net_HttpUtils(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_net_HttpUtils', {'refId': ref.refId});
-  return cn_jiguang_net_HttpUtils()..refId = result;
-}
-
-Future<cn_jiguang_net_HttpResponse> ascn_jiguang_net_HttpResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_net_HttpResponse', {'refId': ref.refId});
-  return cn_jiguang_net_HttpResponse()..refId = result;
-}
-
-Future<cn_jiguang_internal_JConstants> ascn_jiguang_internal_JConstants(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_internal_JConstants', {'refId': ref.refId});
-  return cn_jiguang_internal_JConstants()..refId = result;
-}
-
-Future<cn_jiguang_internal_JCoreHelperAction> ascn_jiguang_internal_JCoreHelperAction(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_internal_JCoreHelperAction', {'refId': ref.refId});
-  return cn_jiguang_internal_JCoreHelperAction()..refId = result;
-}
-
-Future<cn_jiguang_internal_JCoreInternalHelper> ascn_jiguang_internal_JCoreInternalHelper(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_internal_JCoreInternalHelper', {'refId': ref.refId});
-  return cn_jiguang_internal_JCoreInternalHelper()..refId = result;
-}
-
-Future<cn_jiguang_internal_ActionManager> ascn_jiguang_internal_ActionManager(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_internal_ActionManager', {'refId': ref.refId});
-  return cn_jiguang_internal_ActionManager()..refId = result;
-}
-
-Future<cn_jiguang_android_IDataShare_Stub> ascn_jiguang_android_IDataShare_Stub(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_android_IDataShare_Stub', {'refId': ref.refId});
-  return cn_jiguang_android_IDataShare_Stub()..refId = result;
-}
-
-Future<cn_jiguang_android_BuildConfig> ascn_jiguang_android_BuildConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_android_BuildConfig', {'refId': ref.refId});
-  return cn_jiguang_android_BuildConfig()..refId = result;
-}
-
-Future<cn_jiguang_dy_Protocol> ascn_jiguang_dy_Protocol(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_dy_Protocol', {'refId': ref.refId});
-  return cn_jiguang_dy_Protocol()..refId = result;
-}
-
-Future<cn_jiguang_api_JDispatchAction> ascn_jiguang_api_JDispatchAction(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JDispatchAction', {'refId': ref.refId});
-  return cn_jiguang_api_JDispatchAction()..refId = result;
-}
-
-Future<cn_jiguang_api_JActionExtra> ascn_jiguang_api_JActionExtra(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JActionExtra', {'refId': ref.refId});
-  return cn_jiguang_api_JActionExtra()..refId = result;
-}
-
-Future<cn_jiguang_api_utils_ByteBufferUtils> ascn_jiguang_api_utils_ByteBufferUtils(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_utils_ByteBufferUtils', {'refId': ref.refId});
-  return cn_jiguang_api_utils_ByteBufferUtils()..refId = result;
-}
-
-Future<cn_jiguang_api_utils_OutputDataUtil> ascn_jiguang_api_utils_OutputDataUtil(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_utils_OutputDataUtil', {'refId': ref.refId});
-  return cn_jiguang_api_utils_OutputDataUtil()..refId = result;
-}
-
-Future<cn_jiguang_api_utils_ProtocolUtil> ascn_jiguang_api_utils_ProtocolUtil(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_utils_ProtocolUtil', {'refId': ref.refId});
-  return cn_jiguang_api_utils_ProtocolUtil()..refId = result;
-}
-
-Future<cn_jiguang_api_JRequest> ascn_jiguang_api_JRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JRequest', {'refId': ref.refId});
-  return cn_jiguang_api_JRequest()..refId = result;
-}
-
-Future<cn_jiguang_api_JResponse> ascn_jiguang_api_JResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JResponse', {'refId': ref.refId});
-  return cn_jiguang_api_JResponse()..refId = result;
-}
-
-Future<cn_jiguang_api_JCoreInterface> ascn_jiguang_api_JCoreInterface(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JCoreInterface', {'refId': ref.refId});
-  return cn_jiguang_api_JCoreInterface()..refId = result;
-}
-
-Future<cn_jiguang_api_JCoreManager> ascn_jiguang_api_JCoreManager(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JCoreManager', {'refId': ref.refId});
-  return cn_jiguang_api_JCoreManager()..refId = result;
-}
-
-Future<cn_jiguang_api_BaseLogger> ascn_jiguang_api_BaseLogger(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_BaseLogger', {'refId': ref.refId});
-  return cn_jiguang_api_BaseLogger()..refId = result;
-}
-
-Future<cn_jiguang_api_JProtocol> ascn_jiguang_api_JProtocol(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JProtocol', {'refId': ref.refId});
-  return cn_jiguang_api_JProtocol()..refId = result;
-}
-
-Future<cn_jiguang_api_MultiSpHelper> ascn_jiguang_api_MultiSpHelper(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_MultiSpHelper', {'refId': ref.refId});
-  return cn_jiguang_api_MultiSpHelper()..refId = result;
-}
-
-Future<cn_jiguang_analytics_page_ActivityLifecycle> ascn_jiguang_analytics_page_ActivityLifecycle(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_page_ActivityLifecycle', {'refId': ref.refId});
-  return cn_jiguang_analytics_page_ActivityLifecycle()..refId = result;
-}
-
-Future<cn_jiguang_analytics_page_PushSA> ascn_jiguang_analytics_page_PushSA(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_page_PushSA', {'refId': ref.refId});
-  return cn_jiguang_analytics_page_PushSA()..refId = result;
-}
-
-Future<cn_jcore_client_android_BuildConfig> ascn_jcore_client_android_BuildConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jcore_client_android_BuildConfig', {'refId': ref.refId});
-  return cn_jcore_client_android_BuildConfig()..refId = result;
-}
-
-Future<cn_jpush_android_service_DActivity> ascn_jpush_android_service_DActivity(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DActivity', {'refId': ref.refId});
-  return cn_jpush_android_service_DActivity()..refId = result;
-}
-
-Future<cn_jpush_android_service_DataProvider> ascn_jpush_android_service_DataProvider(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DataProvider', {'refId': ref.refId});
-  return cn_jpush_android_service_DataProvider()..refId = result;
-}
-
-Future<cn_jpush_android_service_DownloadActivity> ascn_jpush_android_service_DownloadActivity(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DownloadActivity', {'refId': ref.refId});
-  return cn_jpush_android_service_DownloadActivity()..refId = result;
-}
-
-Future<cn_jpush_android_service_DaemonService_MyBinder> ascn_jpush_android_service_DaemonService_MyBinder(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DaemonService_MyBinder', {'refId': ref.refId});
-  return cn_jpush_android_service_DaemonService_MyBinder()..refId = result;
-}
-
-Future<cn_jpush_android_service_DataShare> ascn_jpush_android_service_DataShare(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DataShare', {'refId': ref.refId});
-  return cn_jpush_android_service_DataShare()..refId = result;
-}
-
-Future<cn_jpush_android_service_DownloadProvider> ascn_jpush_android_service_DownloadProvider(Ref ref) async {
-  final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DownloadProvider', {'refId': ref.refId});
-  return cn_jpush_android_service_DownloadProvider()..refId = result;
+extension on Ref {
+  Future<bool> iscn_jiguang_net_HttpRequest() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_HttpRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_net_HttpUtils() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_HttpUtils', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_net_HttpResponse() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_HttpResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_internal_JConstants() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_internal_JConstants', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_internal_JCoreHelperAction() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_internal_JCoreHelperAction', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_internal_JCoreInternalHelper() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_internal_JCoreInternalHelper', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_internal_ActionManager() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_internal_ActionManager', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_android_BuildConfig() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_android_BuildConfig', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_dy_Protocol() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_dy_Protocol', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_JDispatchAction() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JDispatchAction', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_JActionExtra() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JActionExtra', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_utils_ByteBufferUtils() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_utils_ByteBufferUtils', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_utils_OutputDataUtil() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_utils_OutputDataUtil', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_utils_ProtocolUtil() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_utils_ProtocolUtil', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_JRequest() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_JResponse() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_JCoreInterface() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JCoreInterface', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_JCoreManager() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JCoreManager', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_BaseLogger() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_BaseLogger', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_JProtocol() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_JProtocol', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_api_MultiSpHelper() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_api_MultiSpHelper', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_analytics_page_PushSA() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_page_PushSA', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jcore_client_android_BuildConfig() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jcore_client_android_BuildConfig', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jpush_android_service_DActivity() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DActivity', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jpush_android_service_DataProvider() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DataProvider', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jpush_android_service_DownloadActivity() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DownloadActivity', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jpush_android_service_DaemonService_MyBinder() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DaemonService_MyBinder', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jpush_android_service_DownloadProvider() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DownloadProvider', {'refId': refId});
+    return result;
+  }
+  
+
+  Future<cn_jiguang_net_HttpRequest> ascn_jiguang_net_HttpRequest() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_net_HttpRequest', {'refId': refId});
+    return cn_jiguang_net_HttpRequest()..refId = result;
+  }
+  
+  Future<cn_jiguang_net_HttpUtils> ascn_jiguang_net_HttpUtils() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_net_HttpUtils', {'refId': refId});
+    return cn_jiguang_net_HttpUtils()..refId = result;
+  }
+  
+  Future<cn_jiguang_net_HttpResponse> ascn_jiguang_net_HttpResponse() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_net_HttpResponse', {'refId': refId});
+    return cn_jiguang_net_HttpResponse()..refId = result;
+  }
+  
+  Future<cn_jiguang_internal_JConstants> ascn_jiguang_internal_JConstants() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_internal_JConstants', {'refId': refId});
+    return cn_jiguang_internal_JConstants()..refId = result;
+  }
+  
+  Future<cn_jiguang_internal_JCoreHelperAction> ascn_jiguang_internal_JCoreHelperAction() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_internal_JCoreHelperAction', {'refId': refId});
+    return cn_jiguang_internal_JCoreHelperAction()..refId = result;
+  }
+  
+  Future<cn_jiguang_internal_JCoreInternalHelper> ascn_jiguang_internal_JCoreInternalHelper() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_internal_JCoreInternalHelper', {'refId': refId});
+    return cn_jiguang_internal_JCoreInternalHelper()..refId = result;
+  }
+  
+  Future<cn_jiguang_internal_ActionManager> ascn_jiguang_internal_ActionManager() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_internal_ActionManager', {'refId': refId});
+    return cn_jiguang_internal_ActionManager()..refId = result;
+  }
+  
+  Future<cn_jiguang_android_BuildConfig> ascn_jiguang_android_BuildConfig() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_android_BuildConfig', {'refId': refId});
+    return cn_jiguang_android_BuildConfig()..refId = result;
+  }
+  
+  Future<cn_jiguang_dy_Protocol> ascn_jiguang_dy_Protocol() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_dy_Protocol', {'refId': refId});
+    return cn_jiguang_dy_Protocol()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_JDispatchAction> ascn_jiguang_api_JDispatchAction() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JDispatchAction', {'refId': refId});
+    return cn_jiguang_api_JDispatchAction()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_JActionExtra> ascn_jiguang_api_JActionExtra() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JActionExtra', {'refId': refId});
+    return cn_jiguang_api_JActionExtra()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_utils_ByteBufferUtils> ascn_jiguang_api_utils_ByteBufferUtils() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_utils_ByteBufferUtils', {'refId': refId});
+    return cn_jiguang_api_utils_ByteBufferUtils()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_utils_OutputDataUtil> ascn_jiguang_api_utils_OutputDataUtil() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_utils_OutputDataUtil', {'refId': refId});
+    return cn_jiguang_api_utils_OutputDataUtil()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_utils_ProtocolUtil> ascn_jiguang_api_utils_ProtocolUtil() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_utils_ProtocolUtil', {'refId': refId});
+    return cn_jiguang_api_utils_ProtocolUtil()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_JRequest> ascn_jiguang_api_JRequest() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JRequest', {'refId': refId});
+    return cn_jiguang_api_JRequest()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_JResponse> ascn_jiguang_api_JResponse() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JResponse', {'refId': refId});
+    return cn_jiguang_api_JResponse()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_JCoreInterface> ascn_jiguang_api_JCoreInterface() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JCoreInterface', {'refId': refId});
+    return cn_jiguang_api_JCoreInterface()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_JCoreManager> ascn_jiguang_api_JCoreManager() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JCoreManager', {'refId': refId});
+    return cn_jiguang_api_JCoreManager()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_BaseLogger> ascn_jiguang_api_BaseLogger() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_BaseLogger', {'refId': refId});
+    return cn_jiguang_api_BaseLogger()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_JProtocol> ascn_jiguang_api_JProtocol() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_JProtocol', {'refId': refId});
+    return cn_jiguang_api_JProtocol()..refId = result;
+  }
+  
+  Future<cn_jiguang_api_MultiSpHelper> ascn_jiguang_api_MultiSpHelper() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_api_MultiSpHelper', {'refId': refId});
+    return cn_jiguang_api_MultiSpHelper()..refId = result;
+  }
+  
+  Future<cn_jiguang_analytics_page_PushSA> ascn_jiguang_analytics_page_PushSA() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_page_PushSA', {'refId': refId});
+    return cn_jiguang_analytics_page_PushSA()..refId = result;
+  }
+  
+  Future<cn_jcore_client_android_BuildConfig> ascn_jcore_client_android_BuildConfig() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jcore_client_android_BuildConfig', {'refId': refId});
+    return cn_jcore_client_android_BuildConfig()..refId = result;
+  }
+  
+  Future<cn_jpush_android_service_DActivity> ascn_jpush_android_service_DActivity() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DActivity', {'refId': refId});
+    return cn_jpush_android_service_DActivity()..refId = result;
+  }
+  
+  Future<cn_jpush_android_service_DataProvider> ascn_jpush_android_service_DataProvider() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DataProvider', {'refId': refId});
+    return cn_jpush_android_service_DataProvider()..refId = result;
+  }
+  
+  Future<cn_jpush_android_service_DownloadActivity> ascn_jpush_android_service_DownloadActivity() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DownloadActivity', {'refId': refId});
+    return cn_jpush_android_service_DownloadActivity()..refId = result;
+  }
+  
+  Future<cn_jpush_android_service_DaemonService_MyBinder> ascn_jpush_android_service_DaemonService_MyBinder() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DaemonService_MyBinder', {'refId': refId});
+    return cn_jpush_android_service_DaemonService_MyBinder()..refId = result;
+  }
+  
+  Future<cn_jpush_android_service_DownloadProvider> ascn_jpush_android_service_DownloadProvider() async {
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::ascn_jpush_android_service_DownloadProvider', {'refId': refId});
+    return cn_jpush_android_service_DownloadProvider()..refId = result;
+  }
+  
 }
