@@ -11,7 +11,7 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:jcore_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension on Ref {
+extension TypeOpJcoreFluttifyAndroid on Ref {
   Future<bool> iscn_jiguang_net_HttpRequest() async {
     final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_net_HttpRequest', {'refId': refId});
     return result;

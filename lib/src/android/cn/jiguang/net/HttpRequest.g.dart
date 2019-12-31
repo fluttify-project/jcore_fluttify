@@ -387,6 +387,28 @@ class cn_jiguang_net_HttpRequest extends java_lang_Object  {
     }
   }
   
+  Future<Map<String,String>> getParasMap() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.net.HttpRequest@$refId::getParasMap([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpRequest::getParasMap', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
   Future<Uint8List> getParas() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -461,6 +483,28 @@ class cn_jiguang_net_HttpRequest extends java_lang_Object  {
   
     // invoke native method
     final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpRequest::setUserAgent', {"var1": var1, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  Future<Map<String,String>> getRequestProperties() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.net.HttpRequest@$refId::getRequestProperties([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpRequest::getRequestProperties', {"refId": refId});
   
   
     // handle native call

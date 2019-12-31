@@ -27,10 +27,6 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 @SuppressWarnings("ALL")
 public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler {
 
-    private JcoreFluttifyPlugin(BinaryMessenger messenger) {
-        this.messenger = messenger;
-    }
-
     private BinaryMessenger messenger;
 
     private final Map<String, Handler> handlerMap = new HashMap<String, Handler>() {{
@@ -538,6 +534,36 @@ public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
             methodResult.success("success");
         });
         // method
+        put("cn.jiguang.net.HttpRequest::getParasMap", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.net.HttpRequest@" + refId + "::getParasMap(" + "" + ")");
+            }
+        
+            // invoke native method
+            Map<String,String> result;
+            try {
+                result = ref.getParasMap();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
         put("cn.jiguang.net.HttpRequest::getParas", (args, methodResult) -> {
             // args
         
@@ -659,6 +685,36 @@ public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("cn.jiguang.net.HttpRequest::getRequestProperties", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.net.HttpRequest@" + refId + "::getRequestProperties(" + "" + ")");
+            }
+        
+            // invoke native method
+            Map<String,String> result;
+            try {
+                result = ref.getRequestProperties();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
         });
         // method
         put("cn.jiguang.net.HttpRequest::isHaveRspData", (args, methodResult) -> {
@@ -6801,13 +6857,32 @@ public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
 
     // v1 android embedding for compatible
     public static void registerWith(Registrar registrar) {
-        initPlugin(registrar.messenger(), registrar.platformViewRegistry());
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), "me.yohom/jcore_fluttify");
+
+        JcoreFluttifyPlugin plugin = new JcoreFluttifyPlugin();
+        BinaryMessenger messenger = registrar.messenger();
+        plugin.messenger = messenger;
+
+        channel.setMethodCallHandler(plugin);
+
+        // register platform view
+        PlatformViewRegistry platformViewRegistry = registrar.platformViewRegistry();
+        
     }
 
     // v2 android embedding
     @Override
     public void onAttachedToEngine(FlutterPluginBinding binding) {
-        initPlugin(binding.getBinaryMessenger(), binding.getPlatformViewRegistry());
+        final MethodChannel channel = new MethodChannel(binding.getBinaryMessenger(), "me.yohom/jcore_fluttify");
+
+        messenger = binding.getBinaryMessenger();
+
+        channel.setMethodCallHandler(this);
+
+
+        // register platform view
+        PlatformViewRegistry platformViewRegistry = binding.getPlatformViewRegistry();
+        
     }
 
     @Override
@@ -6829,14 +6904,6 @@ public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
         } else {
             methodResult.notImplemented();
         }
-    }
-
-    private static void initPlugin(BinaryMessenger messenger, PlatformViewRegistry platformViewRegistry) {
-        MethodChannel channel = new MethodChannel(messenger, "me.yohom/jcore_fluttify");
-        channel.setMethodCallHandler(new JcoreFluttifyPlugin(messenger));
-
-        // register platform view
-        
     }
 
     @FunctionalInterface
