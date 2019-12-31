@@ -16,7 +16,7 @@ class cn_jiguang_api_JCoreInterface extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<cn_jiguang_api_JCoreInterface> create() async {
+  static Future<cn_jiguang_api_JCoreInterface> create__() async {
     final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_api_JCoreInterface__');
     final object = cn_jiguang_api_JCoreInterface()..refId = refId..tag = 'jcore_fluttify';
   

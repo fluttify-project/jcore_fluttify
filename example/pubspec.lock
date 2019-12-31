@@ -94,7 +94,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.2+94bcede"
+    version: "0.0.3+5a1bab8"
   matcher:
     dependency: transitive
     description:

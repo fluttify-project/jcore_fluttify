@@ -16,7 +16,7 @@ class cn_jiguang_internal_ActionManager extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<cn_jiguang_internal_ActionManager> create() async {
+  static Future<cn_jiguang_internal_ActionManager> create__() async {
     final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_internal_ActionManager__');
     final object = cn_jiguang_internal_ActionManager()..refId = refId..tag = 'jcore_fluttify';
   

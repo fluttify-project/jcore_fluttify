@@ -13,22 +13,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
-import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
+import io.flutter.plugin.platform.PlatformViewRegistry;
+
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
-import androidx.annotation.NonNull;
+import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 
-// todo 启用新的embedding
 @SuppressWarnings("ALL")
-public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
+public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler {
 
-    private JcoreFluttifyPlugin(Registrar registrar) {
-        this.registrar = registrar;
-    }
-
-    private Registrar registrar;
+    private BinaryMessenger messenger;
 
     private final Map<String, Handler> handlerMap = new HashMap<String, Handler>() {{
         // getter
@@ -475,36 +474,6 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
             methodResult.success("success");
         });
         // method
-        put("cn.jiguang.net.HttpRequest::setSslTrustManager", (args, methodResult) -> {
-            // args
-            // ref arg
-            cn.jiguang.net.SSLTrustManager var1 = (cn.jiguang.net.SSLTrustManager) getHEAP().get((int) args.get("var1"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.net.HttpRequest@" + refId + "::setSslTrustManager(" + var1 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.setSslTrustManager(var1);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
         put("cn.jiguang.net.HttpRequest::isNeedRetryIfHttpsFailed", (args, methodResult) -> {
             // args
         
@@ -563,6 +532,36 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("cn.jiguang.net.HttpRequest::getParasMap", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.net.HttpRequest@" + refId + "::getParasMap(" + "" + ")");
+            }
+        
+            // invoke native method
+            Map<String,String> result;
+            try {
+                result = ref.getParasMap();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
         });
         // method
         put("cn.jiguang.net.HttpRequest::getParas", (args, methodResult) -> {
@@ -686,6 +685,36 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("cn.jiguang.net.HttpRequest::getRequestProperties", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.net.HttpRequest@" + refId + "::getRequestProperties(" + "" + ")");
+            }
+        
+            // invoke native method
+            Map<String,String> result;
+            try {
+                result = ref.getRequestProperties();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
         });
         // method
         put("cn.jiguang.net.HttpRequest::isHaveRspData", (args, methodResult) -> {
@@ -1961,115 +1990,6 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
         
             // result
             methodResult.success("success");
-        });
-        // method
-        put("cn.jiguang.android.IDataShare::onAction", (args, methodResult) -> {
-            // args
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-            // jsonable arg
-            String var2 = (String) args.get("var2");
-            // ref arg
-            android.os.Bundle var3 = (android.os.Bundle) getHEAP().get((int) args.get("var3"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.android.IDataShare ref = (cn.jiguang.android.IDataShare) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.android.IDataShare@" + refId + "::onAction(" + var1 + var2 + var3 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onAction(var1, var2, var3);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jiguang.android.IDataShare::execute", (args, methodResult) -> {
-            // args
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-            // jsonable arg
-            String var2 = (String) args.get("var2");
-            // ref arg
-            android.os.Bundle var3 = (android.os.Bundle) getHEAP().get((int) args.get("var3"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.android.IDataShare ref = (cn.jiguang.android.IDataShare) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.android.IDataShare@" + refId + "::execute(" + var1 + var2 + var3 + ")");
-            }
-        
-            // invoke native method
-            android.os.Bundle result;
-            try {
-                result = ref.execute(var1, var2, var3);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            if (result != null) {
-                int returnRefId = result.hashCode();
-                getHEAP().put(returnRefId, result);
-        
-                methodResult.success(returnRefId);
-            } else {
-                methodResult.success(null);
-            }
-        });
-        // method
-        put("cn.jiguang.android.IDataShare::bind", (args, methodResult) -> {
-            // args
-            // ref arg
-            cn.jiguang.android.IDataShare var1 = (cn.jiguang.android.IDataShare) getHEAP().get((int) args.get("var1"));
-            // jsonable arg
-            String var2 = (String) args.get("var2");
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.android.IDataShare ref = (cn.jiguang.android.IDataShare) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.android.IDataShare@" + refId + "::bind(" + var1 + var2 + ")");
-            }
-        
-            // invoke native method
-            String result;
-            try {
-                result = ref.bind(var1, var2);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success(result);
         });
         // method
         put("cn.jiguang.api.JDispatchAction::isSupportedCMD", (args, methodResult) -> {
@@ -3944,7 +3864,7 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
             try {
                 cn.jiguang.api.JCoreInterface.setAnalysisAction(new cn.jiguang.api.JAnalyticsAction() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "cn.jiguang.api.JCoreInterface::setAnalysisAction::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "cn.jiguang.api.JCoreInterface::setAnalysisAction::Callback");
         
                 // call dart method
                 @Override
@@ -5293,7 +5213,7 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
             try {
                 cn.jiguang.api.JCoreManager.setAnalysisAction(new cn.jiguang.api.JAnalyticsAction() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "cn.jiguang.api.JCoreManager::setAnalysisAction::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "cn.jiguang.api.JCoreManager::setAnalysisAction::Callback");
         
                 // call dart method
                 @Override
@@ -6135,220 +6055,6 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
             methodResult.success(result);
         });
         // method
-        put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityCreated", (args, methodResult) -> {
-            // args
-            // ref arg
-            android.app.Activity var1 = (android.app.Activity) getHEAP().get((int) args.get("var1"));
-            // ref arg
-            android.os.Bundle var2 = (android.os.Bundle) getHEAP().get((int) args.get("var2"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityCreated(" + var1 + var2 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onActivityCreated(var1, var2);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityStarted", (args, methodResult) -> {
-            // args
-            // ref arg
-            android.app.Activity var1 = (android.app.Activity) getHEAP().get((int) args.get("var1"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityStarted(" + var1 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onActivityStarted(var1);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityResumed", (args, methodResult) -> {
-            // args
-            // ref arg
-            android.app.Activity var1 = (android.app.Activity) getHEAP().get((int) args.get("var1"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityResumed(" + var1 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onActivityResumed(var1);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityPaused", (args, methodResult) -> {
-            // args
-            // ref arg
-            android.app.Activity var1 = (android.app.Activity) getHEAP().get((int) args.get("var1"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityPaused(" + var1 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onActivityPaused(var1);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityStopped", (args, methodResult) -> {
-            // args
-            // ref arg
-            android.app.Activity var1 = (android.app.Activity) getHEAP().get((int) args.get("var1"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityStopped(" + var1 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onActivityStopped(var1);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jiguang.analytics.page.ActivityLifecycle::onActivitySaveInstanceState", (args, methodResult) -> {
-            // args
-            // ref arg
-            android.app.Activity var1 = (android.app.Activity) getHEAP().get((int) args.get("var1"));
-            // ref arg
-            android.os.Bundle var2 = (android.os.Bundle) getHEAP().get((int) args.get("var2"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivitySaveInstanceState(" + var1 + var2 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onActivitySaveInstanceState(var1, var2);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityDestroyed", (args, methodResult) -> {
-            // args
-            // ref arg
-            android.app.Activity var1 = (android.app.Activity) getHEAP().get((int) args.get("var1"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityDestroyed(" + var1 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onActivityDestroyed(var1);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
         put("cn.jiguang.analytics.page.PushSA::onFragmentResume", (args, methodResult) -> {
             // args
             // ref arg
@@ -6731,203 +6437,6 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
             }
         });
         // method
-        put("cn.jpush.android.service.DataShare::init", (args, methodResult) -> {
-            // args
-            // ref arg
-            cn.jiguang.android.IDataShare var0 = (cn.jiguang.android.IDataShare) getHEAP().get((int) args.get("var0"));
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-        
-            // ref
-        
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataShare::init(" + var0 + var1 + ")");
-            }
-        
-            // invoke native method
-            try {
-                cn.jpush.android.service.DataShare.init(var0, var1);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jpush.android.service.DataShare::bind", (args, methodResult) -> {
-            // args
-            // ref arg
-            cn.jiguang.android.IDataShare var1 = (cn.jiguang.android.IDataShare) getHEAP().get((int) args.get("var1"));
-            // jsonable arg
-            String var2 = (String) args.get("var2");
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jpush.android.service.DataShare ref = (cn.jpush.android.service.DataShare) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataShare@" + refId + "::bind(" + var1 + var2 + ")");
-            }
-        
-            // invoke native method
-            String result;
-            try {
-                result = ref.bind(var1, var2);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success(result);
-        });
-        // method
-        put("cn.jpush.android.service.DataShare::isBinding", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-        
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataShare::isBinding(" + "" + ")");
-            }
-        
-            // invoke native method
-            boolean result;
-            try {
-                result = cn.jpush.android.service.DataShare.isBinding();
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success(result);
-        });
-        // method
-        put("cn.jpush.android.service.DataShare::setBinding", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-        
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataShare::setBinding(" + "" + ")");
-            }
-        
-            // invoke native method
-            try {
-                cn.jpush.android.service.DataShare.setBinding();
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jpush.android.service.DataShare::onAction", (args, methodResult) -> {
-            // args
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-            // jsonable arg
-            String var2 = (String) args.get("var2");
-            // ref arg
-            android.os.Bundle var3 = (android.os.Bundle) getHEAP().get((int) args.get("var3"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jpush.android.service.DataShare ref = (cn.jpush.android.service.DataShare) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataShare@" + refId + "::onAction(" + var1 + var2 + var3 + ")");
-            }
-        
-            // invoke native method
-            try {
-                ref.onAction(var1, var2, var3);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success("success");
-        });
-        // method
-        put("cn.jpush.android.service.DataShare::execute", (args, methodResult) -> {
-            // args
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-            // jsonable arg
-            String var2 = (String) args.get("var2");
-            // ref arg
-            android.os.Bundle var3 = (android.os.Bundle) getHEAP().get((int) args.get("var3"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            cn.jpush.android.service.DataShare ref = (cn.jpush.android.service.DataShare) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataShare@" + refId + "::execute(" + var1 + var2 + var3 + ")");
-            }
-        
-            // invoke native method
-            android.os.Bundle result;
-            try {
-                result = ref.execute(var1, var2, var3);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                if (getEnableLog()) {
-                    Log.d("Current HEAP: ", getHEAP().toString());
-                }
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            if (result != null) {
-                int returnRefId = result.hashCode();
-                getHEAP().put(returnRefId, result);
-        
-                methodResult.success(returnRefId);
-            } else {
-                methodResult.success(null);
-            }
-        });
-        // method
         put("cn.jpush.android.service.DownloadProvider::onCreate", (args, methodResult) -> {
             // args
         
@@ -6998,44 +6507,6 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
             } else {
                 methodResult.success(null);
             }
-        });
-        // factory
-        put("ObjectFactory::createcn_jiguang_net_DefaultHostVerifier__String", (args, methodResult) -> {
-            Log.d("ObjectFactory", "创建对象: cn_jiguang_net_DefaultHostVerifier__String");
-        
-            // args
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-        
-            // create target object
-            cn.jiguang.net.DefaultHostVerifier obj = new cn.jiguang.net.DefaultHostVerifier(var1);
-            getHEAP().put(obj.hashCode(), obj);
-        
-            // print current HEAP
-            if (getEnableLog()) {
-                Log.d("ObjectFactory", "HEAP: " + getHEAP());
-            }
-        
-            methodResult.success(obj.hashCode());
-        });
-        // factory
-        put("ObjectFactory::createcn_jiguang_net_SSLTrustManager__String", (args, methodResult) -> {
-            Log.d("ObjectFactory", "创建对象: cn_jiguang_net_SSLTrustManager__String");
-        
-            // args
-            // jsonable arg
-            String param1 = (String) args.get("param1");
-        
-            // create target object
-            cn.jiguang.net.SSLTrustManager obj = new cn.jiguang.net.SSLTrustManager(param1);
-            getHEAP().put(obj.hashCode(), obj);
-        
-            // print current HEAP
-            if (getEnableLog()) {
-                Log.d("ObjectFactory", "HEAP: " + getHEAP());
-            }
-        
-            methodResult.success(obj.hashCode());
         });
         // factory
         put("ObjectFactory::createcn_jiguang_net_HttpRequest__String", (args, methodResult) -> {
@@ -7293,24 +6764,6 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
             methodResult.success(obj.hashCode());
         });
         // factory
-        put("ObjectFactory::createcn_jiguang_analytics_page_ActivityLifecycle__", (args, methodResult) -> {
-            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_page_ActivityLifecycle__");
-        
-            // args
-        
-        
-            // create target object
-            cn.jiguang.analytics.page.ActivityLifecycle obj = new cn.jiguang.analytics.page.ActivityLifecycle();
-            getHEAP().put(obj.hashCode(), obj);
-        
-            // print current HEAP
-            if (getEnableLog()) {
-                Log.d("ObjectFactory", "HEAP: " + getHEAP());
-            }
-        
-            methodResult.success(obj.hashCode());
-        });
-        // factory
         put("ObjectFactory::createcn_jcore_client_android_BuildConfig__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: cn_jcore_client_android_BuildConfig__");
         
@@ -7383,24 +6836,6 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
             methodResult.success(obj.hashCode());
         });
         // factory
-        put("ObjectFactory::createcn_jpush_android_service_DataShare__", (args, methodResult) -> {
-            Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_DataShare__");
-        
-            // args
-        
-        
-            // create target object
-            cn.jpush.android.service.DataShare obj = new cn.jpush.android.service.DataShare();
-            getHEAP().put(obj.hashCode(), obj);
-        
-            // print current HEAP
-            if (getEnableLog()) {
-                Log.d("ObjectFactory", "HEAP: " + getHEAP());
-            }
-        
-            methodResult.success(obj.hashCode());
-        });
-        // factory
         put("ObjectFactory::createcn_jpush_android_service_DownloadProvider__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_DownloadProvider__");
         
@@ -7420,12 +6855,39 @@ public class JcoreFluttifyPlugin implements MethodChannel.MethodCallHandler {
         });
     }};
 
+    // v1 android embedding for compatible
     public static void registerWith(Registrar registrar) {
-        MethodChannel channel = new MethodChannel(registrar.messenger(), "me.yohom/jcore_fluttify");
-        channel.setMethodCallHandler(new JcoreFluttifyPlugin(registrar));
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), "me.yohom/jcore_fluttify");
+
+        JcoreFluttifyPlugin plugin = new JcoreFluttifyPlugin();
+        BinaryMessenger messenger = registrar.messenger();
+        plugin.messenger = messenger;
+
+        channel.setMethodCallHandler(plugin);
 
         // register platform view
+        PlatformViewRegistry platformViewRegistry = registrar.platformViewRegistry();
         
+    }
+
+    // v2 android embedding
+    @Override
+    public void onAttachedToEngine(FlutterPluginBinding binding) {
+        final MethodChannel channel = new MethodChannel(binding.getBinaryMessenger(), "me.yohom/jcore_fluttify");
+
+        messenger = binding.getBinaryMessenger();
+
+        channel.setMethodCallHandler(this);
+
+
+        // register platform view
+        PlatformViewRegistry platformViewRegistry = binding.getPlatformViewRegistry();
+        
+    }
+
+    @Override
+    public void onDetachedFromEngine(FlutterPluginBinding binding) {
+
     }
 
     @Override
