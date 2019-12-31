@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   
   # sdk dependency
-  s.dependency 'JCore', '2.1'
+  s.dependency 'JCore', '~> 2.1'
 
   s.ios.deployment_target = '8.0'
   # include project framework
