@@ -10,6 +10,8 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class cn_jpush_android_service_DataProvider extends android_content_ContentProvider  {
   //region constants
   
@@ -22,6 +24,17 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<cn_jpush_android_service_DataProvider>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jpush_android_service_DataProvider__', {'length': length});
+  
+    final List<cn_jpush_android_service_DataProvider> typedResult = resultBatch.map((result) => cn_jpush_android_service_DataProvider()..refId = result..tag = 'jcore_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -76,6 +89,55 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
     } else {
       kNativeObjectPool.add(android_os_Bundle()..refId = result..tag = 'jcore_fluttify');
       return android_os_Bundle()..refId = result..tag = 'jcore_fluttify';
+    }
+  }
+  
+  //endregion
+}
+
+extension cn_jpush_android_service_DataProvider_Batch on List<cn_jpush_android_service_DataProvider> {
+  //region getters
+  
+  //endregion
+
+  //region methods
+  Future<List<bool>> onCreate_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jpush.android.service.DataProvider::onCreate_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<android_os_Bundle>> call_batch(List<String> var1, List<String> var2, List<android_os_Bundle> var3) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jpush.android.service.DataProvider::call_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "var2": var2[i], "var3": var3[i].refId, "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => android_os_Bundle()..refId = result..tag = 'jcore_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
     }
   }
   

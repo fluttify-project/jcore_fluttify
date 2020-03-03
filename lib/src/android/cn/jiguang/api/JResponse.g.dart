@@ -10,6 +10,8 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class cn_jiguang_api_JResponse extends cn_jiguang_api_JProtocol  {
   //region constants
   
@@ -33,6 +35,22 @@ class cn_jiguang_api_JResponse extends cn_jiguang_api_JProtocol  {
     await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JResponse::set_code', {'refId': refId, "code": code});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension cn_jiguang_api_JResponse_Batch on List<cn_jiguang_api_JResponse> {
+  //region getters
+  Future<List<int>> get_code_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.api.JResponse::get_code_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

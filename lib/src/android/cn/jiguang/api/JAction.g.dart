@@ -10,6 +10,8 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 mixin cn_jiguang_api_JAction on java_lang_Object {
   
 
@@ -27,11 +29,30 @@ mixin cn_jiguang_api_JAction on java_lang_Object {
   }
   
   @mustCallSuper
+  Future<void> onActionRun(android_content_Context var1, int var2, android_os_Bundle var4, Object var5) {
+    kNativeObjectPool.add(var1);
+    kNativeObjectPool.add(var4);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('onActionRun::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
   Future<void> onEvent(android_content_Context var1, int var2, int var4) {
     kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onEvent::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
+  Future<void> handleMessage(android_content_Context var1, int var2, Object var4) {
+    kNativeObjectPool.add(var1);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('handleMessage::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

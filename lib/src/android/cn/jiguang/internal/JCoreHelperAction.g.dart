@@ -10,6 +10,8 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class cn_jiguang_internal_JCoreHelperAction extends java_lang_Object  {
   //region constants
   
@@ -28,6 +30,28 @@ class cn_jiguang_internal_JCoreHelperAction extends java_lang_Object  {
   //endregion
 
   //region methods
+  Future<Object> onEvent(android_content_Context var1, String var2, int var3, String var4, android_os_Bundle var5, Object var6) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.internal.JCoreHelperAction@$refId::onEvent([\'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var6\':$var6])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onEvent', {"var1": var1.refId, "var2": var2, "var3": var3, "var4": var4, "var5": var5.refId, "var6": var6, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
   Future<android_os_Bundle> directHandle(android_content_Context var1, String var2, String var3, android_os_Bundle var4) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -47,6 +71,97 @@ class cn_jiguang_internal_JCoreHelperAction extends java_lang_Object  {
     } else {
       kNativeObjectPool.add(android_os_Bundle()..refId = result..tag = 'jcore_fluttify');
       return android_os_Bundle()..refId = result..tag = 'jcore_fluttify';
+    }
+  }
+  
+  Future<Object> onCommonMethod(android_content_Context var1, String var2, Object var3) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.internal.JCoreHelperAction@$refId::onCommonMethod([\'var2\':$var2, \'var3\':$var3])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onCommonMethod', {"var1": var1.refId, "var2": var2, "var3": var3, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  //endregion
+}
+
+extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_internal_JCoreHelperAction> {
+  //region getters
+  
+  //endregion
+
+  //region methods
+  Future<List<Object>> onEvent_batch(List<android_content_Context> var1, List<String> var2, List<int> var3, List<String> var4, List<android_os_Bundle> var5, List<Object> var6) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onEvent_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "var4": var4[i], "var5": var5[i].refId, "var6": var6[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<android_os_Bundle>> directHandle_batch(List<android_content_Context> var1, List<String> var2, List<String> var3, List<android_os_Bundle> var4) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::directHandle_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "var4": var4[i].refId, "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => android_os_Bundle()..refId = result..tag = 'jcore_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  Future<List<Object>> onCommonMethod_batch(List<android_content_Context> var1, List<String> var2, List<Object> var3) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onCommonMethod_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
     }
   }
   

@@ -10,6 +10,8 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class cn_jpush_android_service_DaemonService_MyBinder extends android_os_Binder  {
   //region constants
   
@@ -24,6 +26,16 @@ class cn_jpush_android_service_DaemonService_MyBinder extends android_os_Binder 
   //endregion
 
   //region setters
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension cn_jpush_android_service_DaemonService_MyBinder_Batch on List<cn_jpush_android_service_DaemonService_MyBinder> {
+  //region getters
   
   //endregion
 

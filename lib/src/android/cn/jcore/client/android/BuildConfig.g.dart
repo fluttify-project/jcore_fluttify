@@ -10,6 +10,8 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class cn_jcore_client_android_BuildConfig extends java_lang_Object  {
   //region constants
   static final String APPLICATION_ID = "cn.jcore.client.android";
@@ -28,6 +30,17 @@ class cn_jcore_client_android_BuildConfig extends java_lang_Object  {
     return object;
   }
   
+  static Future<List<cn_jcore_client_android_BuildConfig>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jcore_client_android_BuildConfig__', {'length': length});
+  
+    final List<cn_jcore_client_android_BuildConfig> typedResult = resultBatch.map((result) => cn_jcore_client_android_BuildConfig()..refId = result..tag = 'jcore_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -35,6 +48,16 @@ class cn_jcore_client_android_BuildConfig extends java_lang_Object  {
   //endregion
 
   //region setters
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension cn_jcore_client_android_BuildConfig_Batch on List<cn_jcore_client_android_BuildConfig> {
+  //region getters
   
   //endregion
 

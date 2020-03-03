@@ -31,4 +31,3 @@ export 'cn/jpush/android/service/DataProvider.g.dart';
 export 'cn/jpush/android/service/DownloadProvider.g.dart';
 export 'cn/jpush/android/service/DActivity.g.dart';
 export 'type_op.g.dart';
-export 'package:foundation_fluttify/foundation_fluttify.dart';

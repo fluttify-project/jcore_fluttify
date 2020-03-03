@@ -8,12 +8,12 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC
-  s.homepage         = 'https://github.com/fluttify-project/amap_search_fluttify'
+  s.homepage         = 'https://github.com/fluttify-project/jcore_fluttify'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'yohom' => '382146139@qq.com' }
+  s.author           = { 'yohom' => 'yohombao@qq.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
-  s.public_header_files = 'Classes/**/*.h'
+  s.public_header_files = ['Classes/**/*.h', 'Vendor/**/*.h']
   s.dependency 'Flutter'
   s.dependency 'foundation_fluttify'
   # flutter plugin dependency
@@ -21,11 +21,12 @@ A new flutter plugin project.
   # sdk dependency
   s.dependency 'JCore', '~> 2.1'
 
+  s.static_framework = true
   s.ios.deployment_target = '8.0'
   # include project framework
-  s.vendored_frameworks = '**/*.framework'
+  s.vendored_frameworks = 'Vendor/*.framework'
   # include project .a
-  s.vendored_libraries = '**/*.a'
+  s.vendored_libraries = 'Vendor/*.a'
   # ios system framework
   s.frameworks = [
         
@@ -35,9 +36,9 @@ A new flutter plugin project.
         
   ]
   # resources
-  s.resources = '*.framework/*.bundle'
+  s.resources = 'Vendor/*.framework/*.bundle'
   # s.resource_bundles = {
-  #   'jcore_fluttify' => ['*.framework/*.bundle']
+  #   'jcore_fluttify' => ['Vendor/*.framework/*.bundle']
   # }
 end
 

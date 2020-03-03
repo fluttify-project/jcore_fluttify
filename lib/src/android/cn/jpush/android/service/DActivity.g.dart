@@ -10,6 +10,8 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class cn_jpush_android_service_DActivity extends android_app_Activity  {
   //region constants
   
@@ -24,6 +26,17 @@ class cn_jpush_android_service_DActivity extends android_app_Activity  {
     return object;
   }
   
+  static Future<List<cn_jpush_android_service_DActivity>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jpush_android_service_DActivity__', {'length': length});
+  
+    final List<cn_jpush_android_service_DActivity> typedResult = resultBatch.map((result) => cn_jpush_android_service_DActivity()..refId = result..tag = 'jcore_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -31,6 +44,16 @@ class cn_jpush_android_service_DActivity extends android_app_Activity  {
   //endregion
 
   //region setters
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension cn_jpush_android_service_DActivity_Batch on List<cn_jpush_android_service_DActivity> {
+  //region getters
   
   //endregion
 

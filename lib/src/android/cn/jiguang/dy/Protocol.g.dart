@@ -10,6 +10,8 @@ import 'package:jcore_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class cn_jiguang_dy_Protocol extends java_lang_Object  {
   //region constants
   static final String soName = "jcore224";
@@ -24,6 +26,17 @@ class cn_jiguang_dy_Protocol extends java_lang_Object  {
     return object;
   }
   
+  static Future<List<cn_jiguang_dy_Protocol>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_dy_Protocol__', {'length': length});
+  
+    final List<cn_jiguang_dy_Protocol> typedResult = resultBatch.map((result) => cn_jiguang_dy_Protocol()..refId = result..tag = 'jcore_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -31,6 +44,16 @@ class cn_jiguang_dy_Protocol extends java_lang_Object  {
   //endregion
 
   //region setters
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension cn_jiguang_dy_Protocol_Batch on List<cn_jiguang_dy_Protocol> {
+  //region getters
   
   //endregion
 
