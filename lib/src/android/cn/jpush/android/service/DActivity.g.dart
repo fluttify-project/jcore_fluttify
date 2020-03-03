@@ -27,9 +27,9 @@ class cn_jpush_android_service_DActivity extends android_app_Activity  {
   }
   
   static Future<List<cn_jpush_android_service_DActivity>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jpush_android_service_DActivity__', {'length': length});
   
     final List<cn_jpush_android_service_DActivity> typedResult = resultBatch.map((result) => cn_jpush_android_service_DActivity()..refId = result..tag = 'jcore_fluttify').toList();

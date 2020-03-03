@@ -106,10 +106,9 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
 
   //region methods
   Future<List<String>> getCommonTag_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::getCommonTag_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -126,10 +125,9 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
   }
   
   Future<void> _d_batch(List<String> var1, List<String> var2, List<Object> var3) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length || var2.length != var3.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::_d_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);
@@ -146,10 +144,9 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
   }
   
   Future<void> flushCached2File_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::flushCached2File_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

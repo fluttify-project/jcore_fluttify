@@ -106,10 +106,9 @@ extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_interna
 
   //region methods
   Future<List<Object>> onEvent_batch(List<android_content_Context> var1, List<String> var2, List<int> var3, List<String> var4, List<android_os_Bundle> var5, List<Object> var6) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length || var4.length != var5.length || var5.length != var6.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onEvent_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "var4": var4[i], "var5": var5[i].refId, "var6": var6[i], "refId": this[i].refId}]);
@@ -126,10 +125,9 @@ extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_interna
   }
   
   Future<List<android_os_Bundle>> directHandle_batch(List<android_content_Context> var1, List<String> var2, List<String> var3, List<android_os_Bundle> var4) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::directHandle_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "var4": var4[i].refId, "refId": this[i].refId}]);
@@ -146,10 +144,9 @@ extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_interna
   }
   
   Future<List<Object>> onCommonMethod_batch(List<android_content_Context> var1, List<String> var2, List<Object> var3) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length || var2.length != var3.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onCommonMethod_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);

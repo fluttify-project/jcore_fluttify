@@ -27,9 +27,9 @@ class cn_jiguang_dy_Protocol extends java_lang_Object  {
   }
   
   static Future<List<cn_jiguang_dy_Protocol>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_dy_Protocol__', {'length': length});
   
     final List<cn_jiguang_dy_Protocol> typedResult = resultBatch.map((result) => cn_jiguang_dy_Protocol()..refId = result..tag = 'jcore_fluttify').toList();

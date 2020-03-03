@@ -216,10 +216,9 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
 
   //region methods
   Future<void> commitString_batch(List<android_content_Context> var0, List<String> var1, List<String> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitString_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -236,10 +235,9 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
   }
   
   Future<List<String>> getString_batch(List<android_content_Context> var0, List<String> var1, List<String> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getString_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -256,10 +254,9 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
   }
   
   Future<void> commitLong_batch(List<android_content_Context> var0, List<String> var1, List<int> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitLong_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -276,10 +273,9 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
   }
   
   Future<List<int>> getLong_batch(List<android_content_Context> var0, List<String> var1, List<int> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getLong_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -296,10 +292,9 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
   }
   
   Future<void> commitInt_batch(List<android_content_Context> var0, List<String> var1, List<int> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitInt_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -316,10 +311,9 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
   }
   
   Future<List<int>> getInt_batch(List<android_content_Context> var0, List<String> var1, List<int> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getInt_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -336,10 +330,9 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
   }
   
   Future<void> commitBoolean_batch(List<android_content_Context> var0, List<String> var1, List<bool> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitBoolean_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -356,10 +349,9 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
   }
   
   Future<List<bool>> getBoolean_batch(List<android_content_Context> var0, List<String> var1, List<bool> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getBoolean_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);

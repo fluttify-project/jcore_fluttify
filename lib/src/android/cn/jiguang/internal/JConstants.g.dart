@@ -33,9 +33,9 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
   }
   
   static Future<List<cn_jiguang_internal_JConstants>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_internal_JConstants__', {'length': length});
   
     final List<cn_jiguang_internal_JConstants> typedResult = resultBatch.map((result) => cn_jiguang_internal_JConstants()..refId = result..tag = 'jcore_fluttify').toList();
@@ -174,10 +174,9 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
 
   //region methods
   Future<List<bool>> isTestEnv_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::isTestEnv_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -194,10 +193,9 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
   }
   
   Future<void> setTestEnv_batch(List<bool> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::setTestEnv_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -214,10 +212,9 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
   }
   
   Future<void> testAndroidQ_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::testAndroidQ_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -234,10 +231,9 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
   }
   
   Future<List<bool>> isAndroidQ_batch(List<android_content_Context> var0, List<bool> var1, List<String> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::isAndroidQ_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -254,10 +250,9 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
   }
   
   Future<List<android_content_Context>> getAppContext_batch(List<android_content_Context> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::getAppContext_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);

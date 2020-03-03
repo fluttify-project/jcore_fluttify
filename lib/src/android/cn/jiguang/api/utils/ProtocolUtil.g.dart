@@ -27,9 +27,9 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
   }
   
   static Future<List<cn_jiguang_api_utils_ProtocolUtil>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_api_utils_ProtocolUtil__', {'length': length});
   
     final List<cn_jiguang_api_utils_ProtocolUtil> typedResult = resultBatch.map((result) => cn_jiguang_api_utils_ProtocolUtil()..refId = result..tag = 'jcore_fluttify').toList();
@@ -212,10 +212,9 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
 
   //region methods
   Future<List<Uint8List>> tlv2ToByteArray_batch(List<String> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::tlv2ToByteArray_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -232,10 +231,9 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
   }
   
   Future<List<Uint8List>> fixedStringToBytes_batch(List<String> var0, List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fixedStringToBytes_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
@@ -252,10 +250,9 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
   }
   
   Future<void> fillIntData_batch(List<Uint8List> var0, List<int> var1, List<int> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillIntData_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -272,10 +269,9 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
   }
   
   Future<void> fillStringData_batch(List<Uint8List> var0, List<String> var1, List<int> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillStringData_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -292,10 +288,9 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
   }
   
   Future<List<Uint8List>> getDefaultByte_batch(List<int> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::getDefaultByte_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -312,10 +307,9 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
   }
   
   Future<List<Uint8List>> int2ByteArray_batch(List<int> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::int2ByteArray_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -332,10 +326,9 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
   }
   
   Future<List<Uint8List>> long2ByteArray_batch(List<int> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::long2ByteArray_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);

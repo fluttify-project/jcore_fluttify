@@ -27,9 +27,9 @@ class cn_jiguang_internal_ActionManager extends java_lang_Object  {
   }
   
   static Future<List<cn_jiguang_internal_ActionManager>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_internal_ActionManager__', {'length': length});
   
     final List<cn_jiguang_internal_ActionManager> typedResult = resultBatch.map((result) => cn_jiguang_internal_ActionManager()..refId = result..tag = 'jcore_fluttify').toList();
@@ -124,10 +124,9 @@ extension cn_jiguang_internal_ActionManager_Batch on List<cn_jiguang_internal_Ac
 
   //region methods
   Future<List<cn_jiguang_internal_ActionManager>> getInstance_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.ActionManager::getInstance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -144,10 +143,9 @@ extension cn_jiguang_internal_ActionManager_Batch on List<cn_jiguang_internal_Ac
   }
   
   Future<void> addAction_batch(List<String> var1, List<String> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.ActionManager::addAction_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -164,10 +162,9 @@ extension cn_jiguang_internal_ActionManager_Batch on List<cn_jiguang_internal_Ac
   }
   
   Future<void> handleMessage_batch(List<android_content_Context> var1, List<String> var2, List<Object> var3) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length || var2.length != var3.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.ActionManager::handleMessage_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);

@@ -27,9 +27,9 @@ class cn_jiguang_api_utils_ByteBufferUtils extends java_lang_Object  {
   }
   
   static Future<List<cn_jiguang_api_utils_ByteBufferUtils>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_api_utils_ByteBufferUtils__', {'length': length});
   
     final List<cn_jiguang_api_utils_ByteBufferUtils> typedResult = resultBatch.map((result) => cn_jiguang_api_utils_ByteBufferUtils()..refId = result..tag = 'jcore_fluttify').toList();

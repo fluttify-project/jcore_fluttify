@@ -221,10 +221,9 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
 
   //region methods
   Future<List<Uint8List>> parseHead_batch(List<Object> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JProtocol::parseHead_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -241,10 +240,9 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
   }
   
   Future<List<int>> getCommand_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JProtocol::getCommand_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -261,10 +259,9 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
   }
   
   Future<List<int>> getRid_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JProtocol::getRid_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -281,10 +278,9 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
   }
   
   Future<List<int>> getJuid_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JProtocol::getJuid_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -301,10 +297,9 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
   }
   
   Future<List<int>> getSid_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JProtocol::getSid_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -321,10 +316,9 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
   }
   
   Future<List<int>> getVersion_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JProtocol::getVersion_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -341,10 +335,9 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
   }
   
   Future<List<String>> getName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JProtocol::getName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -361,10 +354,9 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
   }
   
   Future<List<Uint8List>> writeBodyAndToBytes_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JProtocol::writeBodyAndToBytes_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

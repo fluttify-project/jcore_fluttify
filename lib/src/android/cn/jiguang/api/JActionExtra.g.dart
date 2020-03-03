@@ -128,10 +128,9 @@ extension cn_jiguang_api_JActionExtra_Batch on List<cn_jiguang_api_JActionExtra>
 
   //region methods
   Future<List<bool>> checkAction_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JActionExtra::checkAction_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -148,10 +147,9 @@ extension cn_jiguang_api_JActionExtra_Batch on List<cn_jiguang_api_JActionExtra>
   }
   
   Future<List<Object>> beforRegister_batch(List<android_content_Context> var1, List<int> var2, List<String> var3) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length || var2.length != var3.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JActionExtra::beforRegister_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);
@@ -168,10 +166,9 @@ extension cn_jiguang_api_JActionExtra_Batch on List<cn_jiguang_api_JActionExtra>
   }
   
   Future<List<Object>> beforLogin_batch(List<android_content_Context> var1, List<int> var2, List<String> var3) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length || var2.length != var3.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JActionExtra::beforLogin_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);
@@ -188,10 +185,9 @@ extension cn_jiguang_api_JActionExtra_Batch on List<cn_jiguang_api_JActionExtra>
   }
   
   Future<List<Object>> onSendData_batch(List<android_content_Context> var1, List<int> var2, List<int> var4, List<int> var6, List<int> var7) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length || var2.length != var4.length || var4.length != var6.length || var6.length != var7.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JActionExtra::onSendData_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "var2": var2[i], "var4": var4[i], "var6": var6[i], "var7": var7[i], "refId": this[i].refId}]);

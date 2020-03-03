@@ -27,9 +27,9 @@ class cn_jiguang_net_HttpUtils extends java_lang_Object  {
   }
   
   static Future<List<cn_jiguang_net_HttpUtils>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_net_HttpUtils__', {'length': length});
   
     final List<cn_jiguang_net_HttpUtils> typedResult = resultBatch.map((result) => cn_jiguang_net_HttpUtils()..refId = result..tag = 'jcore_fluttify').toList();
@@ -202,6 +202,116 @@ class cn_jiguang_net_HttpUtils extends java_lang_Object  {
     }
   }
   
+  static Future<String> httpPostString__android_content_Context__String__Map_String_String_(android_content_Context var0, String var1, Map<String, String> var2) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.net.HttpUtils::httpPostString([\'var1\':$var1, \'var2\':$var2])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpPostString__android_content_Context__String__Map_String_String_', {"var0": var0.refId, "var1": var1, "var2": var2});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  static Future<String> getUrlWithParas(String var0, Map<String, String> var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.net.HttpUtils::getUrlWithParas([\'var0\':$var0, \'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::getUrlWithParas', {"var0": var0, "var1": var1});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  static Future<String> getUrlWithValueEncodeParas(String var0, Map<String, String> var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.net.HttpUtils::getUrlWithValueEncodeParas([\'var0\':$var0, \'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::getUrlWithValueEncodeParas', {"var0": var0, "var1": var1});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  static Future<String> joinParas(Map<String, String> var0) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.net.HttpUtils::joinParas([\'var0\':$var0])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::joinParas', {"var0": var0});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  static Future<String> joinParasWithEncodedValue(Map<String, String> var0) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.net.HttpUtils::joinParasWithEncodedValue([\'var0\':$var0])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::joinParasWithEncodedValue', {"var0": var0});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
   static Future<String> appendParaToUrl(String var0, String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -256,10 +366,9 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
 
   //region methods
   Future<List<cn_jiguang_net_HttpResponse>> httpGet__android_content_Context__cn_jiguang_net_HttpRequest_batch(List<android_content_Context> var0, List<cn_jiguang_net_HttpRequest> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpGet__android_content_Context__cn_jiguang_net_HttpRequest_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i].refId, "refId": this[i].refId}]);
@@ -276,10 +385,9 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
   }
   
   Future<List<cn_jiguang_net_HttpResponse>> httpGet__android_content_Context__String_batch(List<android_content_Context> var0, List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpGet__android_content_Context__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
@@ -296,10 +404,9 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
   }
   
   Future<List<String>> httpGetString__android_content_Context__cn_jiguang_net_HttpRequest_batch(List<android_content_Context> var0, List<cn_jiguang_net_HttpRequest> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpGetString__android_content_Context__cn_jiguang_net_HttpRequest_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i].refId, "refId": this[i].refId}]);
@@ -316,10 +423,9 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
   }
   
   Future<List<String>> httpGetString__android_content_Context__String_batch(List<android_content_Context> var0, List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpGetString__android_content_Context__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
@@ -336,10 +442,9 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
   }
   
   Future<List<cn_jiguang_net_HttpResponse>> httpPost__android_content_Context__cn_jiguang_net_HttpRequest_batch(List<android_content_Context> var0, List<cn_jiguang_net_HttpRequest> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpPost__android_content_Context__cn_jiguang_net_HttpRequest_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i].refId, "refId": this[i].refId}]);
@@ -356,10 +461,9 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
   }
   
   Future<List<cn_jiguang_net_HttpResponse>> httpPost__android_content_Context__String_batch(List<android_content_Context> var0, List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpPost__android_content_Context__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
@@ -376,10 +480,9 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
   }
   
   Future<List<String>> httpPostString__android_content_Context__String_batch(List<android_content_Context> var0, List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpPostString__android_content_Context__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
@@ -395,11 +498,105 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
     }
   }
   
+  Future<List<String>> httpPostString__android_content_Context__String__Map_String_String__batch(List<android_content_Context> var0, List<String> var1, List<Map<String, String>> var2) async {
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::httpPostString__android_content_Context__String__Map_String_String__batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<String>> getUrlWithParas_batch(List<String> var0, List<Map<String, String>> var1) async {
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::getUrlWithParas_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<String>> getUrlWithValueEncodeParas_batch(List<String> var0, List<Map<String, String>> var1) async {
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::getUrlWithValueEncodeParas_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<String>> joinParas_batch(List<Map<String, String>> var0) async {
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::joinParas_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<String>> joinParasWithEncodedValue_batch(List<Map<String, String>> var0) async {
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::joinParasWithEncodedValue_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
   Future<List<String>> appendParaToUrl_batch(List<String> var0, List<String> var1, List<String> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::appendParaToUrl_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -416,10 +613,9 @@ extension cn_jiguang_net_HttpUtils_Batch on List<cn_jiguang_net_HttpUtils> {
   }
   
   Future<List<int>> parseGmtTime_batch(List<String> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.HttpUtils::parseGmtTime_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
