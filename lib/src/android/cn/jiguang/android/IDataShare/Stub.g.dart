@@ -11,9 +11,9 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class cn_jpush_android_service_DaemonService_MyBinder extends android_os_Binder  {
+/* abstract */ class cn_jiguang_android_IDataShare_Stub extends android_os_Binder with cn_jiguang_android_IDataShare {
   //region constants
-  static const String name__ = 'cn.jpush.android.service.DaemonService.MyBinder';
+  static const String name__ = 'cn.jiguang.android.IDataShare.Stub';
 
   
   //endregion
@@ -35,7 +35,7 @@ class cn_jpush_android_service_DaemonService_MyBinder extends android_os_Binder 
   //endregion
 }
 
-extension cn_jpush_android_service_DaemonService_MyBinder_Batch on List<cn_jpush_android_service_DaemonService_MyBinder> {
+extension cn_jiguang_android_IDataShare_Stub_Batch on List<cn_jiguang_android_IDataShare_Stub> {
   //region getters
   
   //endregion

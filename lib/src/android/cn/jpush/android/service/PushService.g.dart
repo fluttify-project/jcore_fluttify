@@ -11,9 +11,9 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class cn_jpush_android_service_DaemonService_MyBinder extends android_os_Binder  {
+class cn_jpush_android_service_PushService extends java_lang_Object  {
   //region constants
-  static const String name__ = 'cn.jpush.android.service.DaemonService.MyBinder';
+  static const String name__ = 'cn.jpush.android.service.PushService';
 
   
   //endregion
@@ -35,7 +35,7 @@ class cn_jpush_android_service_DaemonService_MyBinder extends android_os_Binder 
   //endregion
 }
 
-extension cn_jpush_android_service_DaemonService_MyBinder_Batch on List<cn_jpush_android_service_DaemonService_MyBinder> {
+extension cn_jpush_android_service_PushService_Batch on List<cn_jpush_android_service_PushService> {
   //region getters
   
   //endregion

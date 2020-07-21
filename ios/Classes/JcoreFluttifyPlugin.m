@@ -5,7 +5,7 @@
 #import "JcoreFluttifyPlugin.h"
 #import <objc/runtime.h>
 
-typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
+#import "SubHandler/Custom/SubHandlerCustom.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -15,8 +15,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
 extern BOOL enableLog;
 
 @implementation JcoreFluttifyPlugin {
-  NSObject <FlutterPluginRegistrar> * _registrar;
-  NSDictionary<NSString *, Handler> *_handlerMap;
+  NSMutableDictionary<NSString*, Handler>* _handlerMap;
 }
 
 - (instancetype) initWithFlutterPluginRegistrar: (NSObject <FlutterPluginRegistrar> *) registrar {
@@ -24,9 +23,10 @@ extern BOOL enableLog;
   if (self) {
     _registrar = registrar;
     // 处理方法们
-    _handlerMap = @{
-      
-    };
+    _handlerMap = @{}.mutableCopy;
+
+    
+    [_handlerMap addEntriesFromDictionary: [self getSubHandlerCustom]];
   }
 
   return self;
