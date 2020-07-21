@@ -59,10 +59,6 @@ extension TypeOpJcoreFluttifyAndroid on Object {
       final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_android_IDataShare', {'refId': (this as Ref).refId});
       return result;
     }
-    else if (T == cn_jiguang_android_IDataShare_Stub) {
-      final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_android_IDataShare_Stub', {'refId': (this as Ref).refId});
-      return result;
-    }
     else if (T == cn_jiguang_android_BuildConfig) {
       final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_android_BuildConfig', {'refId': (this as Ref).refId});
       return result;
@@ -165,14 +161,6 @@ extension TypeOpJcoreFluttifyAndroid on Object {
     }
     else if (T == cn_jpush_android_service_DaemonService) {
       final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DaemonService', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == cn_jpush_android_service_DaemonService_MyBinder) {
-      final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DaemonService_MyBinder', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == cn_jpush_android_service_DataShare) {
-      final result = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('RefClass::isKindOfcn_jpush_android_service_DataShare', {'refId': (this as Ref).refId});
       return result;
     }
     else if (T == cn_jpush_android_service_DownloadProvider) {
@@ -319,9 +307,6 @@ extension TypeOpJcoreFluttifyAndroid on Object {
     else if (T == cn_jiguang_android_IDataShare) {
       return (cn_jiguang_android_IDataShare.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'jcore_fluttify') as T;
     }
-    else if (T == cn_jiguang_android_IDataShare_Stub) {
-      return (cn_jiguang_android_IDataShare_Stub()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'jcore_fluttify') as T;
-    }
     else if (T == cn_jiguang_android_BuildConfig) {
       return (cn_jiguang_android_BuildConfig()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'jcore_fluttify') as T;
     }
@@ -399,12 +384,6 @@ extension TypeOpJcoreFluttifyAndroid on Object {
     }
     else if (T == cn_jpush_android_service_DaemonService) {
       return (cn_jpush_android_service_DaemonService()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'jcore_fluttify') as T;
-    }
-    else if (T == cn_jpush_android_service_DaemonService_MyBinder) {
-      return (cn_jpush_android_service_DaemonService_MyBinder()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'jcore_fluttify') as T;
-    }
-    else if (T == cn_jpush_android_service_DataShare) {
-      return (cn_jpush_android_service_DataShare()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'jcore_fluttify') as T;
     }
     else if (T == cn_jpush_android_service_DownloadProvider) {
       return (cn_jpush_android_service_DownloadProvider()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'jcore_fluttify') as T;
