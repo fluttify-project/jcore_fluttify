@@ -24,10 +24,8 @@ class cn_jcore_client_android_BuildConfig extends java_lang_Object  {
 
   //region creators
   static Future<cn_jcore_client_android_BuildConfig> create__() async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jcore_client_android_BuildConfig__');
+    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jcore_client_android_BuildConfig__', );
     final object = cn_jcore_client_android_BuildConfig()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -35,10 +33,9 @@ class cn_jcore_client_android_BuildConfig extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jcore_client_android_BuildConfig__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jcore_client_android_BuildConfig__', {'length': length});
   
     final List<cn_jcore_client_android_BuildConfig> typedResult = resultBatch.map((result) => cn_jcore_client_android_BuildConfig()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -46,9 +43,8 @@ class cn_jcore_client_android_BuildConfig extends java_lang_Object  {
 
   //region getters
   static Future<bool> get_static_DEBUG() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jcore.client.android.BuildConfig::get_DEBUG", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jcore.client.android.BuildConfig::get_DEBUG", );
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
@@ -65,9 +61,9 @@ class cn_jcore_client_android_BuildConfig extends java_lang_Object  {
 extension cn_jcore_client_android_BuildConfig_Batch on List<cn_jcore_client_android_BuildConfig> {
   //region getters
   Future<List<bool>> get_static_DEBUG_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jcore.client.android.BuildConfig::get_DEBUG_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jcore.client.android.BuildConfig::get_DEBUG_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   

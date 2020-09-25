@@ -20,10 +20,8 @@ class cn_jpush_android_service_DActivity extends android_app_Activity  {
 
   //region creators
   static Future<cn_jpush_android_service_DActivity> create__() async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jpush_android_service_DActivity__');
+    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jpush_android_service_DActivity__', );
     final object = cn_jpush_android_service_DActivity()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -31,10 +29,9 @@ class cn_jpush_android_service_DActivity extends android_app_Activity  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jpush_android_service_DActivity__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jpush_android_service_DActivity__', {'length': length});
   
     final List<cn_jpush_android_service_DActivity> typedResult = resultBatch.map((result) => cn_jpush_android_service_DActivity()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   

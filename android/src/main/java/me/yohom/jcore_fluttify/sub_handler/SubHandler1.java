@@ -19,9 +19,11 @@ import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.jcore_fluttify.JcoreFluttifyPlugin.Handler;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -31,55 +33,23 @@ public class SubHandler1 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("cn.jiguang.api.utils.OutputDataUtil::writeByteArray__Uint8List", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.utils.OutputDataUtil ref = (cn.jiguang.api.utils.OutputDataUtil) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.utils.OutputDataUtil@" + refId + "::writeByteArray(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.writeByteArray(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
             put("cn.jiguang.api.utils.OutputDataUtil::writeCountedString", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.utils.OutputDataUtil ref = (cn.jiguang.api.utils.OutputDataUtil) getHEAP().get(refId);
+                cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.utils.OutputDataUtil@" + refId + "::writeCountedString(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.utils.OutputDataUtil@" + __this__ + "::writeCountedString(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.writeCountedString(var1);
+                    __this__.writeCountedString(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -89,10 +59,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.utils.OutputDataUtil::toByteArray", (__args__, __methodResult__) -> {
@@ -100,18 +67,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.utils.OutputDataUtil ref = (cn.jiguang.api.utils.OutputDataUtil) getHEAP().get(refId);
+                cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.utils.OutputDataUtil@" + refId + "::toByteArray(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.utils.OutputDataUtil@" + __this__ + "::toByteArray(" + "" + ")");
                 }
             
                 // invoke native method
-                byte[] __result__;
+                byte[] __result__ = null;
                 try {
-                    __result__ = ref.toByteArray();
+                    __result__ = __this__.toByteArray();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -121,15 +87,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                byte[] jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.utils.ProtocolUtil::tlv2ToByteArray", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -141,7 +104,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                byte[] __result__;
+                byte[] __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.utils.ProtocolUtil.tlv2ToByteArray(var0);
                 } catch (Throwable throwable) {
@@ -153,18 +116,15 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                byte[] jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.utils.ProtocolUtil::fixedStringToBytes", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
             
@@ -175,9 +135,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                byte[] __result__;
+                byte[] __result__ = null;
                 try {
-                    __result__ = cn.jiguang.api.utils.ProtocolUtil.fixedStringToBytes(var0, var1);
+                    __result__ = cn.jiguang.api.utils.ProtocolUtil.fixedStringToBytes(var0, var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -187,20 +147,17 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                byte[] jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.utils.ProtocolUtil::fillIntData", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
             
@@ -211,8 +168,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.utils.ProtocolUtil.fillIntData(var0, var1, var2);
+                    cn.jiguang.api.utils.ProtocolUtil.fillIntData(var0, var1.intValue(), var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -222,20 +180,17 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.utils.ProtocolUtil::fillStringData", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
             
@@ -246,8 +201,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.utils.ProtocolUtil.fillStringData(var0, var1, var2);
+                    cn.jiguang.api.utils.ProtocolUtil.fillStringData(var0, var1, var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -257,16 +213,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.utils.ProtocolUtil::getDefaultByte", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                int var0 = (int) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -277,9 +230,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                byte[] __result__;
+                byte[] __result__ = null;
                 try {
-                    __result__ = cn.jiguang.api.utils.ProtocolUtil.getDefaultByte(var0);
+                    __result__ = cn.jiguang.api.utils.ProtocolUtil.getDefaultByte(var0.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -289,16 +242,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                byte[] jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.utils.ProtocolUtil::int2ByteArray", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                int var0 = (int) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -309,9 +259,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                byte[] __result__;
+                byte[] __result__ = null;
                 try {
-                    __result__ = cn.jiguang.api.utils.ProtocolUtil.int2ByteArray(var0);
+                    __result__ = cn.jiguang.api.utils.ProtocolUtil.int2ByteArray(var0.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -321,16 +271,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                byte[] jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.utils.ProtocolUtil::long2ByteArray", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                long var0 = (long) (int) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -341,9 +288,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                byte[] __result__;
+                byte[] __result__ = null;
                 try {
-                    __result__ = cn.jiguang.api.utils.ProtocolUtil.long2ByteArray(var0);
+                    __result__ = cn.jiguang.api.utils.ProtocolUtil.long2ByteArray(var0.longValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -353,29 +300,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                byte[] jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JRequest::setSid", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JRequest ref = (cn.jiguang.api.JRequest) getHEAP().get(refId);
+                cn.jiguang.api.JRequest __this__ = (cn.jiguang.api.JRequest) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JRequest@" + refId + "::setSid(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JRequest@" + __this__ + "::setSid(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSid(var1);
+                    __this__.setSid(var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -385,29 +329,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JRequest::setJuid", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                long var1 = (long) (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JRequest ref = (cn.jiguang.api.JRequest) getHEAP().get(refId);
+                cn.jiguang.api.JRequest __this__ = (cn.jiguang.api.JRequest) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JRequest@" + refId + "::setJuid(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JRequest@" + __this__ + "::setJuid(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setJuid(var1);
+                    __this__.setJuid(var1.longValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -417,18 +358,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::init", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -440,7 +377,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.init(var0, var1);
                 } catch (Throwable throwable) {
@@ -452,17 +389,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::register", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -473,6 +406,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.register(var0);
                 } catch (Throwable throwable) {
@@ -484,22 +418,18 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::sendData", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
                 byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
@@ -511,8 +441,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.JCoreInterface.sendData(var0, var1, var2, var3);
+                    cn.jiguang.api.JCoreInterface.sendData(var0, var1, var2.intValue(), var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -522,22 +453,18 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::sendRequestData", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
                 byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
@@ -549,8 +476,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.JCoreInterface.sendRequestData(var0, var1, var2, var3);
+                    cn.jiguang.api.JCoreInterface.sendRequestData(var0, var1, var2.intValue(), var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -560,22 +488,17 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::sendAction", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.os.Bundle var2 = __var2RefId__ != null ? (android.os.Bundle) getHEAP().get(__var2RefId__) : null;
+                android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
             
@@ -586,6 +509,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.sendAction(var0, var1, var2);
                 } catch (Throwable throwable) {
@@ -597,22 +521,17 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::stop", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.os.Bundle var2 = __var2RefId__ != null ? (android.os.Bundle) getHEAP().get(__var2RefId__) : null;
+                android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
             
@@ -623,6 +542,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.stop(var0, var1, var2);
                 } catch (Throwable throwable) {
@@ -634,23 +554,18 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::restart", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.os.Bundle var2 = __var2RefId__ != null ? (android.os.Bundle) getHEAP().get(__var2RefId__) : null;
-                // jsonable arg
+                android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
                 boolean var3 = (boolean) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
@@ -662,6 +577,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.restart(var0, var1, var2, var3);
                 } catch (Throwable throwable) {
@@ -673,17 +589,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getDeviceId", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -694,7 +606,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getDeviceId(var0);
                 } catch (Throwable throwable) {
@@ -706,10 +618,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::canCallDirect", (__args__, __methodResult__) -> {
@@ -725,7 +634,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.canCallDirect();
                 } catch (Throwable throwable) {
@@ -737,15 +646,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setDebugMode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -757,6 +663,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setDebugMode(var0);
                 } catch (Throwable throwable) {
@@ -768,10 +675,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getDebugMode", (__args__, __methodResult__) -> {
@@ -787,7 +691,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getDebugMode();
                 } catch (Throwable throwable) {
@@ -799,57 +703,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::si", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.os.Bundle var2 = __var2RefId__ != null ? (android.os.Bundle) getHEAP().get(__var2RefId__) : null;
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JCoreInterface::si(" + var0 + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                android.os.Bundle __result__;
-                try {
-                    __result__ = cn.jiguang.api.JCoreInterface.si(var0, var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::putSingleExecutor", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -861,6 +720,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.putSingleExecutor(var0);
                 } catch (Throwable throwable) {
@@ -872,10 +732,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setAnalysisAction", (__args__, __methodResult__) -> {
@@ -891,10 +748,11 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setAnalysisAction(new cn.jiguang.api.JAnalyticsAction() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "cn.jiguang.api.JCoreInterface::setAnalysisAction::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "cn.jiguang.api.JCoreInterface::setAnalysisAction::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -905,16 +763,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: dispatchResume(" + var1 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -922,7 +770,7 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::cn.jiguang.api.JAnalyticsAction::dispatchResume",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
+                                            put("var1", var1);
                                         }}
                                     );
                                 }
@@ -939,16 +787,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: dispatchPause(" + var1 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -956,7 +794,7 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::cn.jiguang.api.JAnalyticsAction::dispatchPause",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
+                                            put("var1", var1);
                                         }}
                                     );
                                 }
@@ -973,18 +811,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: dispatchStatus(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            String argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -992,8 +818,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::cn.jiguang.api.JAnalyticsAction::dispatchStatus",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -1013,17 +839,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getRegistrationID", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1034,7 +856,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getRegistrationID(var0);
                 } catch (Throwable throwable) {
@@ -1046,10 +868,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::isValidRegistered", (__args__, __methodResult__) -> {
@@ -1065,7 +884,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.isValidRegistered();
                 } catch (Throwable throwable) {
@@ -1077,10 +896,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getAppKey", (__args__, __methodResult__) -> {
@@ -1096,7 +912,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getAppKey();
                 } catch (Throwable throwable) {
@@ -1108,10 +924,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getReportTime", (__args__, __methodResult__) -> {
@@ -1127,7 +940,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                long __result__;
+                Long __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getReportTime();
                 } catch (Throwable throwable) {
@@ -1139,10 +952,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                long jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getUid", (__args__, __methodResult__) -> {
@@ -1158,7 +968,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                long __result__;
+                Long __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getUid();
                 } catch (Throwable throwable) {
@@ -1170,10 +980,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                long jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getSid", (__args__, __methodResult__) -> {
@@ -1189,7 +996,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getSid();
                 } catch (Throwable throwable) {
@@ -1201,10 +1008,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getNextRid", (__args__, __methodResult__) -> {
@@ -1220,7 +1024,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                long __result__;
+                Long __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getNextRid();
                 } catch (Throwable throwable) {
@@ -1232,10 +1036,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                long jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::isTcpConnected", (__args__, __methodResult__) -> {
@@ -1251,7 +1052,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.isTcpConnected();
                 } catch (Throwable throwable) {
@@ -1263,17 +1064,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getConnectionState", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1284,7 +1081,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getConnectionState(var0);
                 } catch (Throwable throwable) {
@@ -1296,10 +1093,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getChannel", (__args__, __methodResult__) -> {
@@ -1315,7 +1109,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getChannel();
                 } catch (Throwable throwable) {
@@ -1327,20 +1121,16 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::reportHttpData", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 java.lang.Object var1 = (java.lang.Object) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
@@ -1352,7 +1142,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.reportHttpData(var0, var1, var2);
                 } catch (Throwable throwable) {
@@ -1364,18 +1154,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getHttpConfig", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -1387,7 +1173,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getHttpConfig(var0, var1);
                 } catch (Throwable throwable) {
@@ -1399,10 +1185,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getRuningFlag", (__args__, __methodResult__) -> {
@@ -1418,7 +1201,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getRuningFlag();
                 } catch (Throwable throwable) {
@@ -1430,18 +1213,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setImLBSEnable", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -1453,6 +1232,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setImLBSEnable(var0, var1);
                 } catch (Throwable throwable) {
@@ -1464,18 +1244,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setWakeEnable", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -1487,6 +1263,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setWakeEnable(var0, var1);
                 } catch (Throwable throwable) {
@@ -1498,17 +1275,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::onResume", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1519,6 +1292,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.onResume(var0);
                 } catch (Throwable throwable) {
@@ -1530,17 +1304,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::onPause", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1551,6 +1321,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.onPause(var0);
                 } catch (Throwable throwable) {
@@ -1562,18 +1333,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::onFragmentResume", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -1585,6 +1352,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.onFragmentResume(var0, var1);
                 } catch (Throwable throwable) {
@@ -1596,18 +1364,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::onFragmentPause", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -1619,6 +1383,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.onFragmentPause(var0, var1);
                 } catch (Throwable throwable) {
@@ -1630,17 +1395,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::onKillProcess", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1651,6 +1412,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.onKillProcess(var0);
                 } catch (Throwable throwable) {
@@ -1662,17 +1424,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::initCrashHandler", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1683,6 +1441,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.initCrashHandler(var0);
                 } catch (Throwable throwable) {
@@ -1694,17 +1453,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::stopCrashHandler", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1715,6 +1470,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.stopCrashHandler(var0);
                 } catch (Throwable throwable) {
@@ -1726,17 +1482,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::requestPermission", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1747,6 +1499,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.requestPermission(var0);
                 } catch (Throwable throwable) {
@@ -1758,15 +1511,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setCanLaunchedStoppedService", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -1778,6 +1528,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setCanLaunchedStoppedService(var0);
                 } catch (Throwable throwable) {
@@ -1789,15 +1540,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setTestConn", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -1809,6 +1557,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setTestConn(var0);
                 } catch (Throwable throwable) {
@@ -1820,18 +1569,15 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setTestConnIPPort", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
             
@@ -1842,8 +1588,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.JCoreInterface.setTestConnIPPort(var0, var1);
+                    cn.jiguang.api.JCoreInterface.setTestConnIPPort(var0, var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1853,10 +1600,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getJCoreSDKVersionInt", (__args__, __methodResult__) -> {
@@ -1872,7 +1616,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getJCoreSDKVersionInt();
                 } catch (Throwable throwable) {
@@ -1884,16 +1628,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::processCtrlReport", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                int var0 = (int) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -1904,8 +1645,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.JCoreInterface.processCtrlReport(var0);
+                    cn.jiguang.api.JCoreInterface.processCtrlReport(var0.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1915,15 +1657,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setDaemonAction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -1935,6 +1674,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setDaemonAction(var0);
                 } catch (Throwable throwable) {
@@ -1946,10 +1686,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getDaemonAction", (__args__, __methodResult__) -> {
@@ -1965,7 +1702,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getDaemonAction();
                 } catch (Throwable throwable) {
@@ -1977,19 +1714,15 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setLocationReportDelay", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
-                long var1 = (long) (int) ((Map<String, Object>) __args__).get("var1");
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
             
@@ -2000,8 +1733,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.JCoreInterface.setLocationReportDelay(var0, var1);
+                    cn.jiguang.api.JCoreInterface.setLocationReportDelay(var0, var1.longValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2011,18 +1745,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setPowerSaveMode", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -2034,6 +1764,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setPowerSaveMode(var0, var1);
                 } catch (Throwable throwable) {
@@ -2045,15 +1776,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::testCountryCode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -2065,6 +1793,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.testCountryCode(var0);
                 } catch (Throwable throwable) {
@@ -2076,15 +1805,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::setAccountId", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -2096,6 +1822,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreInterface.setAccountId(var0);
                 } catch (Throwable throwable) {
@@ -2107,10 +1834,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getAccountId", (__args__, __methodResult__) -> {
@@ -2126,7 +1850,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getAccountId();
                 } catch (Throwable throwable) {
@@ -2138,10 +1862,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::getCommonConfigAppkey", (__args__, __methodResult__) -> {
@@ -2157,7 +1878,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreInterface.getCommonConfigAppkey();
                 } catch (Throwable throwable) {
@@ -2169,19 +1890,15 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreInterface::triggerSceneCheck", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
             
@@ -2192,8 +1909,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.JCoreInterface.triggerSceneCheck(var0, var1);
+                    cn.jiguang.api.JCoreInterface.triggerSceneCheck(var0, var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2203,17 +1921,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::init", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -2224,6 +1938,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.init(var0);
                 } catch (Throwable throwable) {
@@ -2235,18 +1950,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::register", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -2258,6 +1969,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.register(var0, var1);
                 } catch (Throwable throwable) {
@@ -2269,17 +1981,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::unRegister", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -2290,6 +1998,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.unRegister(var0);
                 } catch (Throwable throwable) {
@@ -2301,15 +2010,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::changeLiveStatus", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -2321,6 +2027,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.changeLiveStatus(var0);
                 } catch (Throwable throwable) {
@@ -2332,18 +2039,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::setLBSEnable", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -2355,6 +2058,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.setLBSEnable(var0, var1);
                 } catch (Throwable throwable) {
@@ -2366,15 +2070,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::setDebugMode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -2386,6 +2087,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.setDebugMode(var0);
                 } catch (Throwable throwable) {
@@ -2397,10 +2099,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::getDebugMode", (__args__, __methodResult__) -> {
@@ -2416,7 +2115,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreManager.getDebugMode();
                 } catch (Throwable throwable) {
@@ -2428,10 +2127,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::isInternal", (__args__, __methodResult__) -> {
@@ -2447,7 +2143,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreManager.isInternal();
                 } catch (Throwable throwable) {
@@ -2459,17 +2155,14 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::addDispatchAction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
@@ -2481,6 +2174,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.addDispatchAction(var0, var1);
                 } catch (Throwable throwable) {
@@ -2492,27 +2186,22 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::onEvent__android_content_Context__String__int__String__android_os_Bundle__Object", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
                 // ref arg
-                Integer __var4RefId__ = (Integer) ((Map<String, Object>) __args__).get("var4");
-                android.os.Bundle var4 = __var4RefId__ != null ? (android.os.Bundle) getHEAP().get(__var4RefId__) : null;
-                // jsonable arg
+                android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
+                // ref arg
                 java.lang.Object var5 = (java.lang.Object) ((Map<String, Object>) __args__).get("var5");
             
                 // ref
@@ -2524,9 +2213,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                java.lang.Object __result__;
+                java.lang.Object __result__ = null;
                 try {
-                    __result__ = cn.jiguang.api.JCoreManager.onEvent(var0, var1, var2, var3, var4, var5);
+                    __result__ = cn.jiguang.api.JCoreManager.onEvent(var0, var1, var2.intValue(), var3, var4, var5);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2536,29 +2225,24 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                java.lang.Object jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::onEvent__android_content_Context__String__int__bool__String__android_os_Bundle__Object", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
                 boolean var3 = (boolean) ((Map<String, Object>) __args__).get("var3");
-                // jsonable arg
+                // ref arg
                 String var4 = (String) ((Map<String, Object>) __args__).get("var4");
                 // ref arg
-                Integer __var5RefId__ = (Integer) ((Map<String, Object>) __args__).get("var5");
-                android.os.Bundle var5 = __var5RefId__ != null ? (android.os.Bundle) getHEAP().get(__var5RefId__) : null;
-                // jsonable arg
+                android.os.Bundle var5 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var5");
+                // ref arg
                 java.lang.Object var6 = (java.lang.Object) ((Map<String, Object>) __args__).get("var6");
             
                 // ref
@@ -2570,9 +2254,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                java.lang.Object __result__;
+                java.lang.Object __result__ = null;
                 try {
-                    __result__ = cn.jiguang.api.JCoreManager.onEvent(var0, var1, var2, var3, var4, var5, var6);
+                    __result__ = cn.jiguang.api.JCoreManager.onEvent(var0, var1, var2.intValue(), var3, var4, var5, var6);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2582,10 +2266,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                java.lang.Object jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::setAnalysisAction", (__args__, __methodResult__) -> {
@@ -2601,10 +2282,11 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.setAnalysisAction(new cn.jiguang.api.JAnalyticsAction() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "cn.jiguang.api.JCoreManager::setAnalysisAction::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "cn.jiguang.api.JCoreManager::setAnalysisAction::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -2615,16 +2297,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: dispatchResume(" + var1 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -2632,7 +2304,7 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::cn.jiguang.api.JAnalyticsAction::dispatchResume",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
+                                            put("var1", var1);
                                         }}
                                     );
                                 }
@@ -2649,16 +2321,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: dispatchPause(" + var1 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -2666,7 +2328,7 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::cn.jiguang.api.JAnalyticsAction::dispatchPause",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
+                                            put("var1", var1);
                                         }}
                                     );
                                 }
@@ -2683,18 +2345,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: dispatchStatus(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            String argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -2702,8 +2352,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::cn.jiguang.api.JAnalyticsAction::dispatchStatus",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -2723,17 +2373,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::requestPermission", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -2744,6 +2390,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.requestPermission(var0);
                 } catch (Throwable throwable) {
@@ -2755,17 +2402,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::initCrashHandler", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -2776,6 +2419,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.initCrashHandler(var0);
                 } catch (Throwable throwable) {
@@ -2787,17 +2431,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::stopCrashHandler", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -2808,6 +2448,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.stopCrashHandler(var0);
                 } catch (Throwable throwable) {
@@ -2819,10 +2460,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::isTestEnv", (__args__, __methodResult__) -> {
@@ -2838,7 +2476,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreManager.isTestEnv();
                 } catch (Throwable throwable) {
@@ -2850,20 +2488,15 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::setSDKConfigs", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.os.Bundle var1 = __var1RefId__ != null ? (android.os.Bundle) getHEAP().get(__var1RefId__) : null;
+                android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
             
@@ -2874,6 +2507,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.JCoreManager.setSDKConfigs(var0, var1);
                 } catch (Throwable throwable) {
@@ -2885,17 +2519,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::getAppContext", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -2906,7 +2536,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                android.content.Context __result__;
+                android.content.Context __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreManager.getAppContext(var0);
                 } catch (Throwable throwable) {
@@ -2918,21 +2548,13 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JCoreManager::getConnectionState", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
             
@@ -2943,7 +2565,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JCoreManager.getConnectionState(var0);
                 } catch (Throwable throwable) {
@@ -2955,10 +2577,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.BaseLogger::getCommonTag", (__args__, __methodResult__) -> {
@@ -2966,18 +2585,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
+                cn.jiguang.api.BaseLogger __this__ = (cn.jiguang.api.BaseLogger) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::getCommonTag(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + __this__ + "::getCommonTag(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCommonTag();
+                    __result__ = __this__.getCommonTag();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2987,373 +2605,30 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::v__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::v(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.v(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::vv__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::vv(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.vv(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::d__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::d(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.d(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::dd__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::dd(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.dd(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::i__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::i(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.i(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::ii__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::ii(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.ii(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::w__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::w(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.w(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::ww__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::ww(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.ww(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::e__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::e(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.e(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::ee__String__String", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::ee(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.ee(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.BaseLogger::_d", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
                 java.lang.Object var3 = (java.lang.Object) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.BaseLogger ref = (cn.jiguang.api.BaseLogger) getHEAP().get(refId);
+                cn.jiguang.api.BaseLogger __this__ = (cn.jiguang.api.BaseLogger) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + refId + "::_d(" + var1 + var2 + var3 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.BaseLogger@" + __this__ + "::_d(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref._d(var1, var2, var3);
+                    __this__._d(var1, var2, var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3363,10 +2638,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.BaseLogger::flushCached2File", (__args__, __methodResult__) -> {
@@ -3382,6 +2654,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.BaseLogger.flushCached2File();
                 } catch (Throwable throwable) {
@@ -3393,15 +2666,12 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JProtocol::parseHead", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
             
                 // ref
@@ -3413,7 +2683,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                byte[] __result__;
+                byte[] __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.JProtocol.parseHead(var0);
                 } catch (Throwable throwable) {
@@ -3425,10 +2695,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                byte[] jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JProtocol::getCommand", (__args__, __methodResult__) -> {
@@ -3436,18 +2703,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JProtocol ref = (cn.jiguang.api.JProtocol) getHEAP().get(refId);
+                cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + refId + "::getCommand(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + __this__ + "::getCommand(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getCommand();
+                    __result__ = __this__.getCommand();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3457,10 +2723,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JProtocol::getRid", (__args__, __methodResult__) -> {
@@ -3468,18 +2731,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JProtocol ref = (cn.jiguang.api.JProtocol) getHEAP().get(refId);
+                cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + refId + "::getRid(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + __this__ + "::getRid(" + "" + ")");
                 }
             
                 // invoke native method
-                Long __result__;
+                Long __result__ = null;
                 try {
-                    __result__ = ref.getRid();
+                    __result__ = __this__.getRid();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3489,10 +2751,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Long jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JProtocol::getJuid", (__args__, __methodResult__) -> {
@@ -3500,18 +2759,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JProtocol ref = (cn.jiguang.api.JProtocol) getHEAP().get(refId);
+                cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + refId + "::getJuid(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + __this__ + "::getJuid(" + "" + ")");
                 }
             
                 // invoke native method
-                long __result__;
+                Long __result__ = null;
                 try {
-                    __result__ = ref.getJuid();
+                    __result__ = __this__.getJuid();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3521,10 +2779,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                long jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JProtocol::getSid", (__args__, __methodResult__) -> {
@@ -3532,18 +2787,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JProtocol ref = (cn.jiguang.api.JProtocol) getHEAP().get(refId);
+                cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + refId + "::getSid(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + __this__ + "::getSid(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getSid();
+                    __result__ = __this__.getSid();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3553,10 +2807,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JProtocol::getVersion", (__args__, __methodResult__) -> {
@@ -3564,18 +2815,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JProtocol ref = (cn.jiguang.api.JProtocol) getHEAP().get(refId);
+                cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + refId + "::getVersion(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + __this__ + "::getVersion(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getVersion();
+                    __result__ = __this__.getVersion();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3585,10 +2835,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JProtocol::getName", (__args__, __methodResult__) -> {
@@ -3596,18 +2843,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JProtocol ref = (cn.jiguang.api.JProtocol) getHEAP().get(refId);
+                cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + refId + "::getName(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + __this__ + "::getName(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getName();
+                    __result__ = __this__.getName();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3617,10 +2863,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.JProtocol::writeBodyAndToBytes", (__args__, __methodResult__) -> {
@@ -3628,18 +2871,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.api.JProtocol ref = (cn.jiguang.api.JProtocol) getHEAP().get(refId);
+                cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + refId + "::writeBodyAndToBytes(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.api.JProtocol@" + __this__ + "::writeBodyAndToBytes(" + "" + ")");
                 }
             
                 // invoke native method
-                byte[] __result__;
+                byte[] __result__ = null;
                 try {
-                    __result__ = ref.writeBodyAndToBytes();
+                    __result__ = __this__.writeBodyAndToBytes();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3649,20 +2891,16 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                byte[] jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.MultiSpHelper::commitString", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
@@ -3674,6 +2912,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.MultiSpHelper.commitString(var0, var1, var2);
                 } catch (Throwable throwable) {
@@ -3685,20 +2924,16 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.MultiSpHelper::getString", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
@@ -3710,7 +2945,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.MultiSpHelper.getString(var0, var1, var2);
                 } catch (Throwable throwable) {
@@ -3722,21 +2957,17 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.MultiSpHelper::commitLong", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                long var2 = (long) (int) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
             
@@ -3747,8 +2978,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.MultiSpHelper.commitLong(var0, var1, var2);
+                    cn.jiguang.api.MultiSpHelper.commitLong(var0, var1, var2.longValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3758,21 +2990,17 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.MultiSpHelper::getLong", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                long var2 = (long) (int) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
             
@@ -3783,9 +3011,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                long __result__;
+                Long __result__ = null;
                 try {
-                    __result__ = cn.jiguang.api.MultiSpHelper.getLong(var0, var1, var2);
+                    __result__ = cn.jiguang.api.MultiSpHelper.getLong(var0, var1, var2.longValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3795,21 +3023,17 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                long jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.MultiSpHelper::commitInt", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
             
@@ -3820,8 +3044,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    cn.jiguang.api.MultiSpHelper.commitInt(var0, var1, var2);
+                    cn.jiguang.api.MultiSpHelper.commitInt(var0, var1, var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3831,21 +3056,17 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.MultiSpHelper::getInt", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
             
@@ -3856,9 +3077,9 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = cn.jiguang.api.MultiSpHelper.getInt(var0, var1, var2);
+                    __result__ = cn.jiguang.api.MultiSpHelper.getInt(var0, var1, var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3868,20 +3089,16 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.MultiSpHelper::commitBoolean", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
@@ -3893,6 +3110,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
                     cn.jiguang.api.MultiSpHelper.commitBoolean(var0, var1, var2);
                 } catch (Throwable throwable) {
@@ -3904,20 +3122,16 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.api.MultiSpHelper::getBoolean", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                // jsonable arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
@@ -3929,7 +3143,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
                     __result__ = cn.jiguang.api.MultiSpHelper.getBoolean(var0, var1, var2);
                 } catch (Throwable throwable) {
@@ -3941,33 +3155,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityCreated", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.app.Activity var1 = __var1RefId__ != null ? (android.app.Activity) getHEAP().get(__var1RefId__) : null;
+                android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.os.Bundle var2 = __var2RefId__ != null ? (android.os.Bundle) getHEAP().get(__var2RefId__) : null;
+                android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
+                cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityCreated(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + __this__ + "::onActivityCreated(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onActivityCreated(var1, var2);
+                    __this__.onActivityCreated(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3977,30 +3186,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityStarted", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.app.Activity var1 = __var1RefId__ != null ? (android.app.Activity) getHEAP().get(__var1RefId__) : null;
+                android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
+                cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityStarted(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + __this__ + "::onActivityStarted(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onActivityStarted(var1);
+                    __this__.onActivityStarted(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4010,30 +3215,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityResumed", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.app.Activity var1 = __var1RefId__ != null ? (android.app.Activity) getHEAP().get(__var1RefId__) : null;
+                android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
+                cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityResumed(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + __this__ + "::onActivityResumed(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onActivityResumed(var1);
+                    __this__.onActivityResumed(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4043,30 +3244,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityPaused", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.app.Activity var1 = __var1RefId__ != null ? (android.app.Activity) getHEAP().get(__var1RefId__) : null;
+                android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
+                cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityPaused(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + __this__ + "::onActivityPaused(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onActivityPaused(var1);
+                    __this__.onActivityPaused(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4076,30 +3273,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityStopped", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.app.Activity var1 = __var1RefId__ != null ? (android.app.Activity) getHEAP().get(__var1RefId__) : null;
+                android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
+                cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityStopped(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + __this__ + "::onActivityStopped(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onActivityStopped(var1);
+                    __this__.onActivityStopped(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4109,33 +3302,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.ActivityLifecycle::onActivitySaveInstanceState", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.app.Activity var1 = __var1RefId__ != null ? (android.app.Activity) getHEAP().get(__var1RefId__) : null;
+                android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.os.Bundle var2 = __var2RefId__ != null ? (android.os.Bundle) getHEAP().get(__var2RefId__) : null;
+                android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
+                cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivitySaveInstanceState(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + __this__ + "::onActivitySaveInstanceState(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onActivitySaveInstanceState(var1, var2);
+                    __this__.onActivitySaveInstanceState(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4145,30 +3333,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityDestroyed", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.app.Activity var1 = __var1RefId__ != null ? (android.app.Activity) getHEAP().get(__var1RefId__) : null;
+                android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.ActivityLifecycle ref = (cn.jiguang.analytics.page.ActivityLifecycle) getHEAP().get(refId);
+                cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + refId + "::onActivityDestroyed(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.ActivityLifecycle@" + __this__ + "::onActivityDestroyed(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onActivityDestroyed(var1);
+                    __this__.onActivityDestroyed(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4178,32 +3362,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::onFragmentResume", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::onFragmentResume(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::onFragmentResume(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onFragmentResume(var1, var2);
+                    __this__.onFragmentResume(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4213,32 +3393,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::onFragmentPause", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::onFragmentPause(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::onFragmentPause(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onFragmentPause(var1, var2);
+                    __this__.onFragmentPause(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4248,10 +3424,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::getInterval", (__args__, __methodResult__) -> {
@@ -4259,18 +3432,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::getInterval(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::getInterval(" + "" + ")");
                 }
             
                 // invoke native method
-                long __result__;
+                Long __result__ = null;
                 try {
-                    __result__ = ref.getInterval();
+                    __result__ = __this__.getInterval();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4280,29 +3452,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                long jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::setInterval", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                long var1 = (long) (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::setInterval(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::setInterval(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setInterval(var1);
+                    __this__.setInterval(var1.longValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4312,10 +3481,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::isStatEnable", (__args__, __methodResult__) -> {
@@ -4323,18 +3489,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::isStatEnable(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::isStatEnable(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.isStatEnable();
+                    __result__ = __this__.isStatEnable();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4344,29 +3509,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::setStatEnable", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::setStatEnable(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::setStatEnable(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setStatEnable(var1);
+                    __this__.setStatEnable(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4376,30 +3538,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::onKillProcess", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::onKillProcess(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::onKillProcess(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onKillProcess(var1);
+                    __this__.onKillProcess(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4409,10 +3567,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::getInstance", (__args__, __methodResult__) -> {
@@ -4428,7 +3583,7 @@ public class SubHandler1 {
                 }
             
                 // invoke native method
-                cn.jiguang.analytics.page.PushSA __result__;
+                cn.jiguang.analytics.page.PushSA __result__ = null;
                 try {
                     __result__ = cn.jiguang.analytics.page.PushSA.getInstance();
                 } catch (Throwable throwable) {
@@ -4440,34 +3595,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::onResume", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::onResume(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::onResume(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onResume(var1);
+                    __this__.onResume(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4477,30 +3624,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.page.PushSA::onPause", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jiguang.analytics.page.PushSA ref = (cn.jiguang.analytics.page.PushSA) getHEAP().get(refId);
+                cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + refId + "::onPause(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.page.PushSA@" + __this__ + "::onPause(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onPause(var1);
+                    __this__.onPause(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4510,10 +3653,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onCreate", (__args__, __methodResult__) -> {
@@ -4521,17 +3661,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onCreate(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onCreate(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onCreate();
+                    __this__.onCreate();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4541,31 +3681,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onUnbind", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onUnbind(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onUnbind(" + var1 + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.onUnbind(var1);
+                    __result__ = __this__.onUnbind(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4575,10 +3710,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onDestroy", (__args__, __methodResult__) -> {
@@ -4586,17 +3718,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onDestroy(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onDestroy(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onDestroy();
+                    __this__.onDestroy();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4606,10 +3738,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onLowMemory", (__args__, __methodResult__) -> {
@@ -4617,17 +3746,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onLowMemory(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onLowMemory(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onLowMemory();
+                    __this__.onLowMemory();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4637,30 +3766,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onRebind", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onRebind(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onRebind(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onRebind(var1);
+                    __this__.onRebind(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4670,30 +3795,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onTaskRemoved", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onTaskRemoved(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onTaskRemoved(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onTaskRemoved(var1);
+                    __this__.onTaskRemoved(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4703,29 +3824,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onTrimMemory", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onTrimMemory(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onTrimMemory(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onTrimMemory(var1);
+                    __this__.onTrimMemory(var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4735,32 +3853,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onStart", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onStart(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onStart(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onStart(var1, var2);
+                    __this__.onStart(var1, var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4770,35 +3884,30 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.JCommonService::onStartCommand", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
-                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
+                cn.jpush.android.service.JCommonService __this__ = (cn.jpush.android.service.JCommonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + refId + "::onStartCommand(" + var1 + var2 + var3 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.JCommonService@" + __this__ + "::onStartCommand(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.onStartCommand(var1, var2, var3);
+                    __result__ = __this__.onStartCommand(var1, var2.intValue(), var3.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4808,10 +3917,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.DataProvider::onCreate", (__args__, __methodResult__) -> {
@@ -4819,18 +3925,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.DataProvider ref = (cn.jpush.android.service.DataProvider) getHEAP().get(refId);
+                cn.jpush.android.service.DataProvider __this__ = (cn.jpush.android.service.DataProvider) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataProvider@" + refId + "::onCreate(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataProvider@" + __this__ + "::onCreate(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.onCreate();
+                    __result__ = __this__.onCreate();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4840,35 +3945,30 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.DataProvider::call", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
-                Integer __var3RefId__ = (Integer) ((Map<String, Object>) __args__).get("var3");
-                android.os.Bundle var3 = __var3RefId__ != null ? (android.os.Bundle) getHEAP().get(__var3RefId__) : null;
+                android.os.Bundle var3 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.DataProvider ref = (cn.jpush.android.service.DataProvider) getHEAP().get(refId);
+                cn.jpush.android.service.DataProvider __this__ = (cn.jpush.android.service.DataProvider) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataProvider@" + refId + "::call(" + var1 + var2 + var3 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DataProvider@" + __this__ + "::call(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
-                android.os.Bundle __result__;
+                android.os.Bundle __result__ = null;
                 try {
-                    __result__ = ref.call(var1, var2, var3);
+                    __result__ = __this__.call(var1, var2, var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4878,37 +3978,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.AlarmReceiver::onReceive", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.content.Intent var2 = __var2RefId__ != null ? (android.content.Intent) getHEAP().get(__var2RefId__) : null;
+                android.content.Intent var2 = (android.content.Intent) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.AlarmReceiver ref = (cn.jpush.android.service.AlarmReceiver) getHEAP().get(refId);
+                cn.jpush.android.service.AlarmReceiver __this__ = (cn.jpush.android.service.AlarmReceiver) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.AlarmReceiver@" + refId + "::onReceive(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.AlarmReceiver@" + __this__ + "::onReceive(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onReceive(var1, var2);
+                    __this__.onReceive(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4918,33 +4009,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.PushReceiver::onReceive", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.content.Intent var2 = __var2RefId__ != null ? (android.content.Intent) getHEAP().get(__var2RefId__) : null;
+                android.content.Intent var2 = (android.content.Intent) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.PushReceiver ref = (cn.jpush.android.service.PushReceiver) getHEAP().get(refId);
+                cn.jpush.android.service.PushReceiver __this__ = (cn.jpush.android.service.PushReceiver) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.PushReceiver@" + refId + "::onReceive(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.PushReceiver@" + __this__ + "::onReceive(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onReceive(var1, var2);
+                    __this__.onReceive(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4954,33 +4040,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.WakedResultReceiver::onReceive", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                android.content.Intent var2 = __var2RefId__ != null ? (android.content.Intent) getHEAP().get(__var2RefId__) : null;
+                android.content.Intent var2 = (android.content.Intent) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.WakedResultReceiver ref = (cn.jpush.android.service.WakedResultReceiver) getHEAP().get(refId);
+                cn.jpush.android.service.WakedResultReceiver __this__ = (cn.jpush.android.service.WakedResultReceiver) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.WakedResultReceiver@" + refId + "::onReceive(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.WakedResultReceiver@" + __this__ + "::onReceive(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onReceive(var1, var2);
+                    __this__.onReceive(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4990,29 +4071,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.WakedResultReceiver::onWakeMap", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 java.util.Map var1 = (java.util.Map) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.WakedResultReceiver ref = (cn.jpush.android.service.WakedResultReceiver) getHEAP().get(refId);
+                cn.jpush.android.service.WakedResultReceiver __this__ = (cn.jpush.android.service.WakedResultReceiver) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.WakedResultReceiver@" + refId + "::onWakeMap(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.WakedResultReceiver@" + __this__ + "::onWakeMap(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onWakeMap(var1);
+                    __this__.onWakeMap(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5022,29 +4100,26 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.WakedResultReceiver::onWake__int", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.WakedResultReceiver ref = (cn.jpush.android.service.WakedResultReceiver) getHEAP().get(refId);
+                cn.jpush.android.service.WakedResultReceiver __this__ = (cn.jpush.android.service.WakedResultReceiver) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.WakedResultReceiver@" + refId + "::onWake(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.WakedResultReceiver@" + __this__ + "::onWake(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onWake(var1);
+                    __this__.onWake(var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5054,32 +4129,28 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.WakedResultReceiver::onWake__android_content_Context__int", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.WakedResultReceiver ref = (cn.jpush.android.service.WakedResultReceiver) getHEAP().get(refId);
+                cn.jpush.android.service.WakedResultReceiver __this__ = (cn.jpush.android.service.WakedResultReceiver) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.WakedResultReceiver@" + refId + "::onWake(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.WakedResultReceiver@" + __this__ + "::onWake(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onWake(var1, var2);
+                    __this__.onWake(var1, var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5089,10 +4160,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.DaemonService::onCreate", (__args__, __methodResult__) -> {
@@ -5100,17 +4168,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.DaemonService ref = (cn.jpush.android.service.DaemonService) getHEAP().get(refId);
+                cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DaemonService@" + refId + "::onCreate(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DaemonService@" + __this__ + "::onCreate(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onCreate();
+                    __this__.onCreate();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5120,10 +4188,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.DaemonService::onDestroy", (__args__, __methodResult__) -> {
@@ -5131,17 +4196,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.DaemonService ref = (cn.jpush.android.service.DaemonService) getHEAP().get(refId);
+                cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DaemonService@" + refId + "::onDestroy(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DaemonService@" + __this__ + "::onDestroy(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.onDestroy();
+                    __this__.onDestroy();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5151,35 +4216,30 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.DaemonService::onStartCommand", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
-                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.DaemonService ref = (cn.jpush.android.service.DaemonService) getHEAP().get(refId);
+                cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DaemonService@" + refId + "::onStartCommand(" + var1 + var2 + var3 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DaemonService@" + __this__ + "::onStartCommand(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.onStartCommand(var1, var2, var3);
+                    __result__ = __this__.onStartCommand(var1, var2.intValue(), var3.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5189,10 +4249,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.DownloadProvider::onCreate", (__args__, __methodResult__) -> {
@@ -5200,18 +4257,17 @@ public class SubHandler1 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.DownloadProvider ref = (cn.jpush.android.service.DownloadProvider) getHEAP().get(refId);
+                cn.jpush.android.service.DownloadProvider __this__ = (cn.jpush.android.service.DownloadProvider) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DownloadProvider@" + refId + "::onCreate(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DownloadProvider@" + __this__ + "::onCreate(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.onCreate();
+                    __result__ = __this__.onCreate();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5221,35 +4277,30 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jpush.android.service.DownloadProvider::call", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
-                Integer __var3RefId__ = (Integer) ((Map<String, Object>) __args__).get("var3");
-                android.os.Bundle var3 = __var3RefId__ != null ? (android.os.Bundle) getHEAP().get(__var3RefId__) : null;
+                android.os.Bundle var3 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                cn.jpush.android.service.DownloadProvider ref = (cn.jpush.android.service.DownloadProvider) getHEAP().get(refId);
+                cn.jpush.android.service.DownloadProvider __this__ = (cn.jpush.android.service.DownloadProvider) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DownloadProvider@" + refId + "::call(" + var1 + var2 + var3 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jpush.android.service.DownloadProvider@" + __this__ + "::call(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
-                android.os.Bundle __result__;
+                android.os.Bundle __result__ = null;
                 try {
-                    __result__ = ref.call(var1, var2, var3);
+                    __result__ = __this__.call(var1, var2, var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5259,14 +4310,7 @@ public class SubHandler1 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::getUrl_batch", (__argsBatch__, __methodResult__) -> {
@@ -5279,13 +4323,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getUrl();
+                        __result__ = __this__.getUrl();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5295,10 +4338,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5314,13 +4354,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getConnectTimeout();
+                        __result__ = __this__.getConnectTimeout();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5330,32 +4369,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setConnectTimeout_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setConnectTimeout(var1);
+                        __this__.setConnectTimeout(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5365,10 +4401,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5384,13 +4417,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getReadTimeout();
+                        __result__ = __this__.getReadTimeout();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5400,32 +4432,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setReadTimeout_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setReadTimeout(var1);
+                        __this__.setReadTimeout(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5435,32 +4464,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setUrl_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setUrl(var1);
+                        __this__.setUrl(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5470,10 +4496,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5489,13 +4512,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.lang.Object __result__;
+                    java.lang.Object __result__ = null;
                     try {
-                        __result__ = ref.getBody();
+                        __result__ = __this__.getBody();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5505,32 +4527,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    java.lang.Object jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setBody_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     java.lang.Object var1 = (java.lang.Object) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setBody(var1);
+                        __this__.setBody(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5540,10 +4559,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5559,13 +4575,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    boolean __result__;
+                    Boolean __result__ = null;
                     try {
-                        __result__ = ref.isDoOutPut();
+                        __result__ = __this__.isDoOutPut();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5575,32 +4590,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setDoOutPut_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setDoOutPut(var1);
+                        __this__.setDoOutPut(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5610,10 +4622,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5629,13 +4638,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    boolean __result__;
+                    Boolean __result__ = null;
                     try {
-                        __result__ = ref.isDoInPut();
+                        __result__ = __this__.isDoInPut();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5645,32 +4653,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setDoInPut_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setDoInPut(var1);
+                        __this__.setDoInPut(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5680,10 +4685,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5699,13 +4701,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    boolean __result__;
+                    Boolean __result__ = null;
                     try {
-                        __result__ = ref.isUseCaches();
+                        __result__ = __this__.isUseCaches();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5715,32 +4716,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setUseCaches_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setUseCaches(var1);
+                        __this__.setUseCaches(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5750,10 +4748,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5769,13 +4764,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    boolean __result__;
+                    Boolean __result__ = null;
                     try {
-                        __result__ = ref.isNeedErrorInput();
+                        __result__ = __this__.isNeedErrorInput();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5785,32 +4779,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setNeedErrorInput_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setNeedErrorInput(var1);
+                        __this__.setNeedErrorInput(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5820,10 +4811,70 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
+                    __resultList__.add(__result__);
+                }
             
-                    __resultList__.add(jsonableResult);
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::getSslTrustManager_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.SSLTrustManager> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.net.SSLTrustManager __result__ = null;
+                    try {
+                        __result__ = __this__.getSslTrustManager();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setSslTrustManager_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    cn.jiguang.net.SSLTrustManager var1 = (cn.jiguang.net.SSLTrustManager) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setSslTrustManager(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5839,13 +4890,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    boolean __result__;
+                    Boolean __result__ = null;
                     try {
-                        __result__ = ref.isNeedRetryIfHttpsFailed();
+                        __result__ = __this__.isNeedRetryIfHttpsFailed();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5855,32 +4905,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setNeedRetryIfHttpsFailed_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setNeedRetryIfHttpsFailed(var1);
+                        __this__.setNeedRetryIfHttpsFailed(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5890,10 +4937,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5909,13 +4953,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.util.Map<String,String> __result__;
+                    java.util.Map<String,String> __result__ = null;
                     try {
-                        __result__ = ref.getParasMap();
+                        __result__ = __this__.getParasMap();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5925,32 +4968,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    java.util.Map<String,String> jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setParasMap_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setParasMap(var1);
+                        __this__.setParasMap(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5960,10 +5000,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5979,13 +5016,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    byte[] __result__;
+                    byte[] __result__ = null;
                     try {
-                        __result__ = ref.getParas();
+                        __result__ = __this__.getParas();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5995,34 +5031,31 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    byte[] jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setRequestProperty_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setRequestProperty(var1, var2);
+                        __this__.setRequestProperty(var1, var2);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6032,10 +5065,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6048,17 +5078,16 @@ public class SubHandler1 {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getRequestProperty(var1);
+                        __result__ = __this__.getRequestProperty(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6068,32 +5097,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setUserAgent_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setUserAgent(var1);
+                        __this__.setUserAgent(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6103,10 +5129,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6122,13 +5145,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.util.Map<String,String> __result__;
+                    java.util.Map<String,String> __result__ = null;
                     try {
-                        __result__ = ref.getRequestProperties();
+                        __result__ = __this__.getRequestProperties();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6138,32 +5160,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    java.util.Map<String,String> jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setRequestProperties_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setRequestProperties(var1);
+                        __this__.setRequestProperties(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6173,10 +5192,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6192,13 +5208,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    boolean __result__;
+                    Boolean __result__ = null;
                     try {
-                        __result__ = ref.isHaveRspData();
+                        __result__ = __this__.isHaveRspData();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6208,32 +5223,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setHaveRspData_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setHaveRspData(var1);
+                        __this__.setHaveRspData(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6243,10 +5255,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6262,13 +5271,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    boolean __result__;
+                    Boolean __result__ = null;
                     try {
-                        __result__ = ref.isRspDatazip();
+                        __result__ = __this__.isRspDatazip();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6278,32 +5286,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpRequest::setRspDatazip_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpRequest ref = (cn.jiguang.net.HttpRequest) getHEAP().get(refId);
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setRspDatazip(var1);
+                        __this__.setRspDatazip(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6313,34 +5318,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpUtils::httpGet__android_content_Context__cn_jiguang_net_HttpRequest_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    cn.jiguang.net.HttpRequest var1 = __var1RefId__ != null ? (cn.jiguang.net.HttpRequest) getHEAP().get(__var1RefId__) : null;
+                    cn.jiguang.net.HttpRequest var1 = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    cn.jiguang.net.HttpResponse __result__;
+                    cn.jiguang.net.HttpResponse __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.httpGet(var0, var1);
                     } catch (Throwable throwable) {
@@ -6352,37 +5352,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpUtils::httpGet__android_content_Context__String_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                    // jsonable arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    cn.jiguang.net.HttpResponse __result__;
+                    cn.jiguang.net.HttpResponse __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.httpGet(var0, var1);
                     } catch (Throwable throwable) {
@@ -6394,14 +5386,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6415,17 +5400,15 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    cn.jiguang.net.HttpRequest var1 = __var1RefId__ != null ? (cn.jiguang.net.HttpRequest) getHEAP().get(__var1RefId__) : null;
+                    cn.jiguang.net.HttpRequest var1 = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.httpGetString(var0, var1);
                     } catch (Throwable throwable) {
@@ -6437,10 +5420,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6454,16 +5434,15 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                    // jsonable arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.httpGetString(var0, var1);
                     } catch (Throwable throwable) {
@@ -6475,34 +5454,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpUtils::httpPost__android_content_Context__cn_jiguang_net_HttpRequest_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    cn.jiguang.net.HttpRequest var1 = __var1RefId__ != null ? (cn.jiguang.net.HttpRequest) getHEAP().get(__var1RefId__) : null;
+                    cn.jiguang.net.HttpRequest var1 = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    cn.jiguang.net.HttpResponse __result__;
+                    cn.jiguang.net.HttpResponse __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.httpPost(var0, var1);
                     } catch (Throwable throwable) {
@@ -6514,37 +5488,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpUtils::httpPost__android_content_Context__String_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                    // jsonable arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    cn.jiguang.net.HttpResponse __result__;
+                    cn.jiguang.net.HttpResponse __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.httpPost(var0, var1);
                     } catch (Throwable throwable) {
@@ -6556,14 +5522,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6577,16 +5536,15 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                    // jsonable arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.httpPostString(var0, var1);
                     } catch (Throwable throwable) {
@@ -6598,10 +5556,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6615,18 +5570,17 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
-                    // jsonable arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     java.util.Map<String,String> var2 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.httpPostString(var0, var1, var2);
                     } catch (Throwable throwable) {
@@ -6638,10 +5592,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6654,16 +5605,16 @@ public class SubHandler1 {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                    // jsonable arg
+                    // ref arg
                     java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.getUrlWithParas(var0, var1);
                     } catch (Throwable throwable) {
@@ -6675,10 +5626,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6691,16 +5639,16 @@ public class SubHandler1 {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                    // jsonable arg
+                    // ref arg
                     java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.getUrlWithValueEncodeParas(var0, var1);
                     } catch (Throwable throwable) {
@@ -6712,10 +5660,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6728,14 +5673,14 @@ public class SubHandler1 {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     java.util.Map<String,String> var0 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.joinParas(var0);
                     } catch (Throwable throwable) {
@@ -6747,10 +5692,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6763,14 +5705,14 @@ public class SubHandler1 {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     java.util.Map<String,String> var0 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.joinParasWithEncodedValue(var0);
                     } catch (Throwable throwable) {
@@ -6782,10 +5724,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6798,18 +5737,18 @@ public class SubHandler1 {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
             
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.appendParaToUrl(var0, var1, var2);
                     } catch (Throwable throwable) {
@@ -6821,10 +5760,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6837,14 +5773,14 @@ public class SubHandler1 {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    long __result__;
+                    Long __result__ = null;
                     try {
                         __result__ = cn.jiguang.net.HttpUtils.parseGmtTime(var0);
                     } catch (Throwable throwable) {
@@ -6856,10 +5792,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    long jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6875,13 +5808,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpResponse ref = (cn.jiguang.net.HttpResponse) getHEAP().get(refId);
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getUrl();
+                        __result__ = __this__.getUrl();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6891,32 +5823,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpResponse::setUrl_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpResponse ref = (cn.jiguang.net.HttpResponse) getHEAP().get(refId);
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setUrl(var1);
+                        __this__.setUrl(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6926,10 +5855,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6945,13 +5871,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpResponse ref = (cn.jiguang.net.HttpResponse) getHEAP().get(refId);
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getResponseBody();
+                        __result__ = __this__.getResponseBody();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6961,32 +5886,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpResponse::setResponseBody_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpResponse ref = (cn.jiguang.net.HttpResponse) getHEAP().get(refId);
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setResponseBody(var1);
+                        __this__.setResponseBody(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6996,10 +5918,7 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -7015,13 +5934,12 @@ public class SubHandler1 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpResponse ref = (cn.jiguang.net.HttpResponse) getHEAP().get(refId);
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getResponseCode();
+                        __result__ = __this__.getResponseCode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7031,32 +5949,29 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("cn.jiguang.net.HttpResponse::setResponseCode_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jiguang.net.HttpResponse ref = (cn.jiguang.net.HttpResponse) getHEAP().get(refId);
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setResponseCode(var1);
+                        __this__.setResponseCode(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7066,10 +5981,324 @@ public class SubHandler1 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
+                    __resultList__.add(__result__);
+                }
             
-                    __resultList__.add(jsonableResult);
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setResponseHeaders_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.Map<String,java.lang.Object> var1 = (java.util.Map<String,java.lang.Object>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setResponseHeaders(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getType();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setType(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setExpiredTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setExpiredTime(var1.longValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getExpiredTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = __this__.getExpiredTime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::isExpired_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isExpired();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::isInCache_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isInCache();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setInCache_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.net.HttpResponse __result__ = null;
+                    try {
+                        __result__ = __this__.setInCache(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getExpiresHeader_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getExpiresHeader();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setResponseHeader_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setResponseHeader(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);

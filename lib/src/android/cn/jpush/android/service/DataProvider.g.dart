@@ -20,10 +20,8 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
 
   //region creators
   static Future<cn_jpush_android_service_DataProvider> create__() async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jpush_android_service_DataProvider__');
+    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jpush_android_service_DataProvider__', );
     final object = cn_jpush_android_service_DataProvider()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -31,10 +29,9 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jpush_android_service_DataProvider__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jpush_android_service_DataProvider__', {'length': length});
   
     final List<cn_jpush_android_service_DataProvider> typedResult = resultBatch.map((result) => cn_jpush_android_service_DataProvider()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -57,7 +54,7 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jpush.android.service.DataProvider::onCreate', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.DataProvider::onCreate', {"__this__": this});
   
   
     // handle native call
@@ -68,7 +65,6 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -81,7 +77,7 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jpush.android.service.DataProvider::call', {"var1": var1, "var2": var2, "var3": var3 is Ref ? (var3 as Ref)?.refId : var3, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.DataProvider::call', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
   
   
     // handle native call
@@ -92,7 +88,6 @@ class cn_jpush_android_service_DataProvider extends android_content_ContentProvi
       return null;
     } else {
       final __return__ = android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -117,7 +112,7 @@ extension cn_jpush_android_service_DataProvider_Batch on List<cn_jpush_android_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jpush.android.service.DataProvider::onCreate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.DataProvider::onCreate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -125,7 +120,6 @@ extension cn_jpush_android_service_DataProvider_Batch on List<cn_jpush_android_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -137,15 +131,14 @@ extension cn_jpush_android_service_DataProvider_Batch on List<cn_jpush_android_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jpush.android.service.DataProvider::call_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.DataProvider::call_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify').toList();
       return typedResult;
     }
   }

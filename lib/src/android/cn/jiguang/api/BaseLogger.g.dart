@@ -39,7 +39,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::getCommonTag', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.BaseLogger::getCommonTag', {"__this__": this});
   
   
     // handle native call
@@ -50,247 +50,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
       return null;
     } else {
       final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> v__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::v([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::v__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> vv__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::vv([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::vv__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> d__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::d([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::d__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> dd__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::dd([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::dd__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> i__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::i([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::i__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> ii__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::ii([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::ii__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> w__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::w([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::w__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> ww__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::ww([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::ww__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> e__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::e([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::e__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> ee__String__String(String var1, String var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.api.BaseLogger@$refId::ee([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::ee__String__String', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -303,7 +62,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::_d', {"var1": var1, "var2": var2, "var3": var3, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.BaseLogger::_d', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
   
   
     // handle native call
@@ -314,7 +73,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -327,7 +85,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::flushCached2File', );
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.BaseLogger::flushCached2File', );
   
   
     // handle native call
@@ -338,7 +96,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -363,7 +120,7 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::getCommonTag_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.BaseLogger::getCommonTag_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -371,207 +128,6 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> v__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::v__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> vv__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::vv__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> d__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::d__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> dd__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::dd__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> i__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::i__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> ii__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::ii__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> w__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::w__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> ww__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::ww__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> e__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::e__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> ee__String__String_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::ee__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -583,7 +139,7 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::_d_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.BaseLogger::_d_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -591,7 +147,6 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -603,7 +158,7 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.BaseLogger::flushCached2File_batch', );
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.BaseLogger::flushCached2File_batch', );
   
   
     // convert native result to dart side object
@@ -611,7 +166,6 @@ extension cn_jiguang_api_BaseLogger_Batch on List<cn_jiguang_api_BaseLogger> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

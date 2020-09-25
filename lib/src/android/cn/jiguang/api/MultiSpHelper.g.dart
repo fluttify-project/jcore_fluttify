@@ -39,7 +39,7 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitString', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::commitString', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -50,7 +50,6 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -63,7 +62,7 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getString', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::getString', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -74,7 +73,6 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -87,7 +85,7 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitLong', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::commitLong', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -98,7 +96,6 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -111,7 +108,7 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getLong', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::getLong', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -122,7 +119,6 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -135,7 +131,7 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitInt', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::commitInt', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -146,7 +142,6 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -159,7 +154,7 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getInt', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::getInt', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -170,7 +165,6 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -183,7 +177,7 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitBoolean', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::commitBoolean', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -194,7 +188,6 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -207,7 +200,7 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getBoolean', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::getBoolean', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -218,7 +211,6 @@ class cn_jiguang_api_MultiSpHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -243,7 +235,7 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitString_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::commitString_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -251,7 +243,6 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -263,7 +254,7 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getString_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::getString_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -271,7 +262,6 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -283,7 +273,7 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitLong_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::commitLong_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -291,7 +281,6 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -303,7 +292,7 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getLong_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::getLong_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -311,7 +300,6 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -323,7 +311,7 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitInt_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::commitInt_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -331,7 +319,6 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -343,7 +330,7 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getInt_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::getInt_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -351,7 +338,6 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -363,7 +349,7 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::commitBoolean_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::commitBoolean_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -371,7 +357,6 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -383,7 +368,7 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.MultiSpHelper::getBoolean_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.MultiSpHelper::getBoolean_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -391,7 +376,6 @@ extension cn_jiguang_api_MultiSpHelper_Batch on List<cn_jiguang_api_MultiSpHelpe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

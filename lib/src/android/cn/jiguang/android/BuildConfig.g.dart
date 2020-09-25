@@ -28,10 +28,8 @@ class cn_jiguang_android_BuildConfig extends java_lang_Object  {
 
   //region creators
   static Future<cn_jiguang_android_BuildConfig> create__() async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_android_BuildConfig__');
+    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_android_BuildConfig__', );
     final object = cn_jiguang_android_BuildConfig()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -39,10 +37,9 @@ class cn_jiguang_android_BuildConfig extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_android_BuildConfig__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_android_BuildConfig__', {'length': length});
   
     final List<cn_jiguang_android_BuildConfig> typedResult = resultBatch.map((result) => cn_jiguang_android_BuildConfig()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -50,39 +47,33 @@ class cn_jiguang_android_BuildConfig extends java_lang_Object  {
 
   //region getters
   static Future<bool> get_static_DEBUG() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_DEBUG", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_DEBUG", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_INTERNAL_USE() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_INTERNAL_USE", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_INTERNAL_USE", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_FILE_ENABLED() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_FILE_ENABLED", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_FILE_ENABLED", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_IS_FOR_GOOGLE_PLAY_USE() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_IS_FOR_GOOGLE_PLAY_USE", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_IS_FOR_GOOGLE_PLAY_USE", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_LOG_ENABLE() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_LOG_ENABLE", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_LOG_ENABLE", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_SUPPORT_DY() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_SUPPORT_DY", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_SUPPORT_DY", );
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
@@ -99,44 +90,44 @@ class cn_jiguang_android_BuildConfig extends java_lang_Object  {
 extension cn_jiguang_android_BuildConfig_Batch on List<cn_jiguang_android_BuildConfig> {
   //region getters
   Future<List<bool>> get_static_DEBUG_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_DEBUG_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_DEBUG_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_INTERNAL_USE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_INTERNAL_USE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_INTERNAL_USE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_FILE_ENABLED_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_FILE_ENABLED_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_FILE_ENABLED_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_IS_FOR_GOOGLE_PLAY_USE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_IS_FOR_GOOGLE_PLAY_USE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_IS_FOR_GOOGLE_PLAY_USE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_LOG_ENABLE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_LOG_ENABLE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_LOG_ENABLE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_SUPPORT_DY_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.android.BuildConfig::get_SUPPORT_DY_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.android.BuildConfig::get_SUPPORT_DY_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   

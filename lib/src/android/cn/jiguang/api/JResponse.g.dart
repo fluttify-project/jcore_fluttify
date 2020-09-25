@@ -24,16 +24,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
   //region getters
   Future<int> get_code() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.api.JResponse::get_code", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.api.JResponse::get_code", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_code(int code) async {
-    await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JResponse::set_code', {'refId': refId, "code": code});
+    await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JResponse::set_code', <String, dynamic>{'__this__': this, "code": code});
   
   
   }
@@ -48,9 +47,9 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 extension cn_jiguang_api_JResponse_Batch on List<cn_jiguang_api_JResponse> {
   //region getters
   Future<List<int>> get_code_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.api.JResponse::get_code_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.api.JResponse::get_code_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -58,7 +57,7 @@ extension cn_jiguang_api_JResponse_Batch on List<cn_jiguang_api_JResponse> {
 
   //region setters
   Future<void> set_code_batch(List<int> code) async {
-    await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.JResponse::set_code_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "code": code[__i__]}]);
+    await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('cn.jiguang.api.JResponse::set_code_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "code": code[__i__]}]);
   
   
   }

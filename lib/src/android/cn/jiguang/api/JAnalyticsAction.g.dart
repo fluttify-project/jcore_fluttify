@@ -23,31 +23,13 @@ mixin cn_jiguang_api_JAnalyticsAction on java_lang_Object {
   
 
   @mustCallSuper
-  Future<void> dispatchResume(android_content_Context var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('dispatchResume::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> dispatchResume(android_content_Context var1) {}
   
   @mustCallSuper
-  Future<void> dispatchPause(android_content_Context var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('dispatchPause::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> dispatchPause(android_content_Context var1) {}
   
   @mustCallSuper
-  Future<void> dispatchStatus(android_content_Context var1, String var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('dispatchStatus::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> dispatchStatus(android_content_Context var1, String var2) {}
   
 }
 

@@ -1,6 +1,6 @@
 name: jcore_fluttify
 description: A `JCore` Component, Powered By `Fluttify` Engine.
-version: 0.1.0
+version: 0.2.0
 author: yohom <yohombao@qq.com>
 homepage: https://github.com/fluttify-project/jcore_fluttify
 
@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   
-  foundation_fluttify: ^0.8.11-dev.3
+  foundation_fluttify: ^0.9.5
 
 dev_dependencies:
   flutter_test:

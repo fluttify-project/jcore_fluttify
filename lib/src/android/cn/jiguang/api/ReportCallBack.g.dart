@@ -23,13 +23,7 @@ mixin cn_jiguang_api_ReportCallBack on java_lang_Object {
   
 
   @mustCallSuper
-  Future<void> onFinish(int var1) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onFinish::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onFinish(int var1) {}
   
 }
 

@@ -39,7 +39,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onEvent', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5 is Ref ? (var5 as Ref)?.refId : var5, "var6": var6, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JCoreHelperAction::onEvent', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "var6": var6, "__this__": this});
   
   
     // handle native call
@@ -50,7 +50,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -63,7 +62,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::directHandle', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "var2": var2, "var3": var3, "var4": var4 is Ref ? (var4 as Ref)?.refId : var4, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JCoreHelperAction::directHandle', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "__this__": this});
   
   
     // handle native call
@@ -74,7 +73,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
       return null;
     } else {
       final __return__ = android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -87,7 +85,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onCommonMethod', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "var2": var2, "var3": var3, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JCoreHelperAction::onCommonMethod', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
   
   
     // handle native call
@@ -98,7 +96,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -123,7 +120,7 @@ extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_interna
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onEvent_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__].refId, "var6": var6[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JCoreHelperAction::onEvent_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "var6": var6[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -131,7 +128,6 @@ extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_interna
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Object>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -143,15 +139,14 @@ extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_interna
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::directHandle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JCoreHelperAction::directHandle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify').toList();
       return typedResult;
     }
   }
@@ -163,7 +158,7 @@ extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_interna
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JCoreHelperAction::onCommonMethod_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "var2": var2[__i__], "var3": var3[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JCoreHelperAction::onCommonMethod_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -171,7 +166,6 @@ extension cn_jiguang_internal_JCoreHelperAction_Batch on List<cn_jiguang_interna
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Object>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

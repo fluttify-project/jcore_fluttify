@@ -20,10 +20,8 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
 
   //region creators
   static Future<cn_jiguang_api_utils_ProtocolUtil> create__() async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_api_utils_ProtocolUtil__');
+    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_api_utils_ProtocolUtil__', );
     final object = cn_jiguang_api_utils_ProtocolUtil()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -31,10 +29,9 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_api_utils_ProtocolUtil__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_api_utils_ProtocolUtil__', {'length': length});
   
     final List<cn_jiguang_api_utils_ProtocolUtil> typedResult = resultBatch.map((result) => cn_jiguang_api_utils_ProtocolUtil()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -57,7 +54,7 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::tlv2ToByteArray', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::tlv2ToByteArray', {"var0": var0});
   
   
     // handle native call
@@ -68,7 +65,6 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -81,7 +77,7 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fixedStringToBytes', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fixedStringToBytes', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -92,7 +88,6 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -105,7 +100,7 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillIntData', {"var0": var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillIntData', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -116,7 +111,6 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -129,7 +123,7 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillStringData', {"var0": var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillStringData', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -140,7 +134,6 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -153,7 +146,7 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::getDefaultByte', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::getDefaultByte', {"var0": var0});
   
   
     // handle native call
@@ -164,7 +157,6 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -177,7 +169,7 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::int2ByteArray', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::int2ByteArray', {"var0": var0});
   
   
     // handle native call
@@ -188,7 +180,6 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -201,7 +192,7 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::long2ByteArray', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::long2ByteArray', {"var0": var0});
   
   
     // handle native call
@@ -212,7 +203,6 @@ class cn_jiguang_api_utils_ProtocolUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -237,7 +227,7 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::tlv2ToByteArray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::tlv2ToByteArray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -245,7 +235,6 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -257,7 +246,7 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fixedStringToBytes_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fixedStringToBytes_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -265,7 +254,6 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -277,7 +265,7 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillIntData_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillIntData_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -285,7 +273,6 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -297,7 +284,7 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillStringData_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::fillStringData_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -305,7 +292,6 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -317,7 +303,7 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::getDefaultByte_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::getDefaultByte_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -325,7 +311,6 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -337,7 +322,7 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::int2ByteArray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::int2ByteArray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -345,7 +330,6 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -357,7 +341,7 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.api.utils.ProtocolUtil::long2ByteArray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.utils.ProtocolUtil::long2ByteArray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -365,7 +349,6 @@ extension cn_jiguang_api_utils_ProtocolUtil_Batch on List<cn_jiguang_api_utils_P
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
