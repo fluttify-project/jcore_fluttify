@@ -30,7 +30,7 @@ mixin cn_jiguang_android_IDataShare on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.android.IDataShare::onAction', {"var1": var1, "var2": var2, "var3": var3 is Ref ? (var3 as Ref)?.refId : var3, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.android.IDataShare::onAction', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
   
   
     // handle native call
@@ -41,7 +41,6 @@ mixin cn_jiguang_android_IDataShare on java_lang_Object {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -54,7 +53,7 @@ mixin cn_jiguang_android_IDataShare on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.android.IDataShare::execute', {"var1": var1, "var2": var2, "var3": var3 is Ref ? (var3 as Ref)?.refId : var3, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.android.IDataShare::execute', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
   
   
     // handle native call
@@ -65,7 +64,29 @@ mixin cn_jiguang_android_IDataShare on java_lang_Object {
       return null;
     } else {
       final __return__ = android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
+      return __return__;
+    }
+  }
+  
+  
+  Future<String> bind(cn_jiguang_android_IDataShare var1, String var2) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: cn.jiguang.android.IDataShare@$refId::bind([\'var2\':$var2])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.android.IDataShare::bind', {"var1": var1, "var2": var2, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
       return __return__;
     }
   }
@@ -81,7 +102,7 @@ extension cn_jiguang_android_IDataShare_Batch on List<cn_jiguang_android_IDataSh
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.android.IDataShare::onAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.android.IDataShare::onAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -89,7 +110,6 @@ extension cn_jiguang_android_IDataShare_Batch on List<cn_jiguang_android_IDataSh
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -101,15 +121,33 @@ extension cn_jiguang_android_IDataShare_Batch on List<cn_jiguang_android_IDataSh
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.android.IDataShare::execute_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.android.IDataShare::execute_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_os_Bundle()..refId = __result__..tag__ = 'jcore_fluttify').toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<String>> bind_batch(List<cn_jiguang_android_IDataShare> var1, List<String> var2) async {
+    if (var1.length != var2.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.android.IDataShare::bind_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
       return typedResult;
     }
   }

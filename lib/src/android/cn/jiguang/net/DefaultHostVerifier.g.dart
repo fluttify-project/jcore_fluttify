@@ -19,39 +19,20 @@ class cn_jiguang_net_DefaultHostVerifier extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<cn_jiguang_net_DefaultHostVerifier> create__String(String var1) async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_net_DefaultHostVerifier__String', {"var1": var1});
-    final object = cn_jiguang_net_DefaultHostVerifier()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
-    return object;
-  }
-  
-  static Future<List<cn_jiguang_net_DefaultHostVerifier>> create_batch__String(List<String> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_net_DefaultHostVerifier__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<cn_jiguang_net_DefaultHostVerifier> typedResult = resultBatch.map((result) => cn_jiguang_net_DefaultHostVerifier()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
-    return typedResult;
-  }
   
   //endregion
 
   //region getters
   Future<String> get_a() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.net.DefaultHostVerifier::get_a", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.net.DefaultHostVerifier::get_a", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_a(String a) async {
-    await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.DefaultHostVerifier::set_a', {'refId': refId, "a": a});
+    await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.net.DefaultHostVerifier::set_a', <String, dynamic>{'__this__': this, "a": a});
   
   
   }
@@ -66,9 +47,9 @@ class cn_jiguang_net_DefaultHostVerifier extends java_lang_Object  {
 extension cn_jiguang_net_DefaultHostVerifier_Batch on List<cn_jiguang_net_DefaultHostVerifier> {
   //region getters
   Future<List<String>> get_a_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.net.DefaultHostVerifier::get_a_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.net.DefaultHostVerifier::get_a_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -76,7 +57,7 @@ extension cn_jiguang_net_DefaultHostVerifier_Batch on List<cn_jiguang_net_Defaul
 
   //region setters
   Future<void> set_a_batch(List<String> a) async {
-    await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.net.DefaultHostVerifier::set_a_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "a": a[__i__]}]);
+    await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('cn.jiguang.net.DefaultHostVerifier::set_a_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "a": a[__i__]}]);
   
   
   }

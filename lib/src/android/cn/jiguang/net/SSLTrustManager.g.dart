@@ -19,24 +19,6 @@ class cn_jiguang_net_SSLTrustManager extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<cn_jiguang_net_SSLTrustManager> create__String(String param1) async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_net_SSLTrustManager__String', {"param1": param1});
-    final object = cn_jiguang_net_SSLTrustManager()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
-    return object;
-  }
-  
-  static Future<List<cn_jiguang_net_SSLTrustManager>> create_batch__String(List<String> param1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_net_SSLTrustManager__String', [for (int __i__ = 0; __i__ < param1.length; __i__++) {"param1": param1[__i__]}]);
-  
-    final List<cn_jiguang_net_SSLTrustManager> typedResult = resultBatch.map((result) => cn_jiguang_net_SSLTrustManager()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
-    return typedResult;
-  }
   
   //endregion
 

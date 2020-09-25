@@ -19,9 +19,11 @@ import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.jcore_fluttify.JcoreFluttifyPlugin.Handler;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -30,907 +32,173 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 public class SubHandler3 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
-            // method
-            put("cn.jpush.android.service.JCommonService::onTrimMemory_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onTrimMemory(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.JCommonService::onStart_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onStart(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.JCommonService::onStartCommand_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.JCommonService ref = (cn.jpush.android.service.JCommonService) getHEAP().get(refId);
-            
-                    // invoke native method
-                    int __result__;
-                    try {
-                        __result__ = ref.onStartCommand(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.DataProvider::onCreate_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.DataProvider ref = (cn.jpush.android.service.DataProvider) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean __result__;
-                    try {
-                        __result__ = ref.onCreate();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.DataProvider::call_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Integer __var3RefId__ = (Integer) ((Map<String, Object>) __args__).get("var3");
-                    android.os.Bundle var3 = __var3RefId__ != null ? (android.os.Bundle) getHEAP().get(__var3RefId__) : null;
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.DataProvider ref = (cn.jpush.android.service.DataProvider) getHEAP().get(refId);
-            
-                    // invoke native method
-                    android.os.Bundle __result__;
-                    try {
-                        __result__ = ref.call(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.AlarmReceiver::onReceive_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
-                    // ref arg
-                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    android.content.Intent var2 = __var2RefId__ != null ? (android.content.Intent) getHEAP().get(__var2RefId__) : null;
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.AlarmReceiver ref = (cn.jpush.android.service.AlarmReceiver) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onReceive(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.PushReceiver::onReceive_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
-                    // ref arg
-                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    android.content.Intent var2 = __var2RefId__ != null ? (android.content.Intent) getHEAP().get(__var2RefId__) : null;
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.PushReceiver ref = (cn.jpush.android.service.PushReceiver) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onReceive(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.WakedResultReceiver::onReceive_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
-                    // ref arg
-                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    android.content.Intent var2 = __var2RefId__ != null ? (android.content.Intent) getHEAP().get(__var2RefId__) : null;
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.WakedResultReceiver ref = (cn.jpush.android.service.WakedResultReceiver) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onReceive(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.WakedResultReceiver::onWakeMap_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    java.util.Map var1 = (java.util.Map) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.WakedResultReceiver ref = (cn.jpush.android.service.WakedResultReceiver) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onWakeMap(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.WakedResultReceiver::onWake__int_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.WakedResultReceiver ref = (cn.jpush.android.service.WakedResultReceiver) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onWake(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.WakedResultReceiver::onWake__android_content_Context__int_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.WakedResultReceiver ref = (cn.jpush.android.service.WakedResultReceiver) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onWake(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.DaemonService::onCreate_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.DaemonService ref = (cn.jpush.android.service.DaemonService) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onCreate();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.DaemonService::onDestroy_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.DaemonService ref = (cn.jpush.android.service.DaemonService) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onDestroy();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.DaemonService::onStartCommand_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Intent var1 = __var1RefId__ != null ? (android.content.Intent) getHEAP().get(__var1RefId__) : null;
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.DaemonService ref = (cn.jpush.android.service.DaemonService) getHEAP().get(refId);
-            
-                    // invoke native method
-                    int __result__;
-                    try {
-                        __result__ = ref.onStartCommand(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.DownloadProvider::onCreate_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.DownloadProvider ref = (cn.jpush.android.service.DownloadProvider) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean __result__;
-                    try {
-                        __result__ = ref.onCreate();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.DownloadProvider::call_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Integer __var3RefId__ = (Integer) ((Map<String, Object>) __args__).get("var3");
-                    android.os.Bundle var3 = __var3RefId__ != null ? (android.os.Bundle) getHEAP().get(__var3RefId__) : null;
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    cn.jpush.android.service.DownloadProvider ref = (cn.jpush.android.service.DownloadProvider) getHEAP().get(refId);
-            
-                    // invoke native method
-                    android.os.Bundle __result__;
-                    try {
-                        __result__ = ref.call(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            put("RefClass::isKindOfcn_jiguang_net_DefaultHostVerifier", (__args__, __methodResult__) -> {
-                // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
-            
-                __methodResult__.success(ref instanceof cn.jiguang.net.DefaultHostVerifier);
-            });
-            put("RefClass::isKindOfcn_jiguang_net_SSLTrustManager", (__args__, __methodResult__) -> {
-                // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
-            
-                __methodResult__.success(ref instanceof cn.jiguang.net.SSLTrustManager);
-            });
-            put("RefClass::isKindOfcn_jiguang_net_HttpRequest", (__args__, __methodResult__) -> {
-                // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
-            
-                __methodResult__.success(ref instanceof cn.jiguang.net.HttpRequest);
-            });
-            put("RefClass::isKindOfcn_jiguang_net_HttpUtils", (__args__, __methodResult__) -> {
-                // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
-            
-                __methodResult__.success(ref instanceof cn.jiguang.net.HttpUtils);
-            });
-            put("RefClass::isKindOfcn_jiguang_net_HttpResponse", (__args__, __methodResult__) -> {
-                // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
-            
-                __methodResult__.success(ref instanceof cn.jiguang.net.HttpResponse);
-            });
-            put("RefClass::isKindOfcn_jiguang_internal_JConstants", (__args__, __methodResult__) -> {
-                // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
-            
-                __methodResult__.success(ref instanceof cn.jiguang.internal.JConstants);
-            });
-            put("RefClass::isKindOfcn_jiguang_internal_JCoreHelperAction", (__args__, __methodResult__) -> {
-                // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
-            
-                __methodResult__.success(ref instanceof cn.jiguang.internal.JCoreHelperAction);
-            });
-            put("RefClass::isKindOfcn_jiguang_internal_JCoreInternalHelper", (__args__, __methodResult__) -> {
-                // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
-            
-                __methodResult__.success(ref instanceof cn.jiguang.internal.JCoreInternalHelper);
-            });
             put("RefClass::isKindOfcn_jiguang_internal_ActionManager", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.internal.ActionManager);
+                __methodResult__.success(__this__ instanceof cn.jiguang.internal.ActionManager);
             });
             put("RefClass::isKindOfcn_jiguang_android_BuildConfig", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.android.BuildConfig);
+                __methodResult__.success(__this__ instanceof cn.jiguang.android.BuildConfig);
             });
             put("RefClass::isKindOfcn_jiguang_dy_Protocol", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.dy.Protocol);
+                __methodResult__.success(__this__ instanceof cn.jiguang.dy.Protocol);
             });
             put("RefClass::isKindOfcn_jiguang_api_JDispatchAction", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.JDispatchAction);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JDispatchAction);
             });
             put("RefClass::isKindOfcn_jiguang_api_JActionExtra", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.JActionExtra);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JActionExtra);
             });
             put("RefClass::isKindOfcn_jiguang_api_utils_ByteBufferUtils", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.utils.ByteBufferUtils);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.utils.ByteBufferUtils);
             });
             put("RefClass::isKindOfcn_jiguang_api_utils_OutputDataUtil", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.utils.OutputDataUtil);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.utils.OutputDataUtil);
             });
             put("RefClass::isKindOfcn_jiguang_api_utils_ProtocolUtil", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.utils.ProtocolUtil);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.utils.ProtocolUtil);
             });
             put("RefClass::isKindOfcn_jiguang_api_JRequest", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.JRequest);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JRequest);
             });
             put("RefClass::isKindOfcn_jiguang_api_JResponse", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.JResponse);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JResponse);
             });
             put("RefClass::isKindOfcn_jiguang_api_JCoreInterface", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.JCoreInterface);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JCoreInterface);
             });
             put("RefClass::isKindOfcn_jiguang_api_JCoreManager", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.JCoreManager);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JCoreManager);
             });
             put("RefClass::isKindOfcn_jiguang_api_BaseLogger", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.BaseLogger);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.BaseLogger);
             });
             put("RefClass::isKindOfcn_jiguang_api_JProtocol", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.JProtocol);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JProtocol);
             });
             put("RefClass::isKindOfcn_jiguang_api_MultiSpHelper", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.api.MultiSpHelper);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.MultiSpHelper);
             });
             put("RefClass::isKindOfcn_jiguang_analytics_page_ActivityLifecycle", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.analytics.page.ActivityLifecycle);
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.page.ActivityLifecycle);
             });
             put("RefClass::isKindOfcn_jiguang_analytics_page_PushSA", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jiguang.analytics.page.PushSA);
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.page.PushSA);
             });
             put("RefClass::isKindOfcn_jcore_client_android_BuildConfig", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jcore.client.android.BuildConfig);
+                __methodResult__.success(__this__ instanceof cn.jcore.client.android.BuildConfig);
             });
             put("RefClass::isKindOfcn_jpush_android_service_PushService", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.PushService);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.PushService);
             });
             put("RefClass::isKindOfcn_jpush_android_service_DActivity", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.DActivity);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DActivity);
             });
             put("RefClass::isKindOfcn_jpush_android_service_JCommonService", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.JCommonService);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.JCommonService);
             });
             put("RefClass::isKindOfcn_jpush_android_service_DataProvider", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.DataProvider);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DataProvider);
             });
             put("RefClass::isKindOfcn_jpush_android_service_AlarmReceiver", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.AlarmReceiver);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.AlarmReceiver);
             });
             put("RefClass::isKindOfcn_jpush_android_service_PushReceiver", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.PushReceiver);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.PushReceiver);
             });
             put("RefClass::isKindOfcn_jpush_android_service_WakedResultReceiver", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.WakedResultReceiver);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.WakedResultReceiver);
             });
             put("RefClass::isKindOfcn_jpush_android_service_DownloadActivity", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.DownloadActivity);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DownloadActivity);
             });
             put("RefClass::isKindOfcn_jpush_android_service_DaemonService", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.DaemonService);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DaemonService);
             });
             put("RefClass::isKindOfcn_jpush_android_service_DownloadProvider", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof cn.jpush.android.service.DownloadProvider);
-            });
-            // factory
-            put("ObjectFactory::createcn_jiguang_net_DefaultHostVerifier__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_DefaultHostVerifier__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                cn.jiguang.net.DefaultHostVerifier __obj__ = new cn.jiguang.net.DefaultHostVerifier(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcn_jiguang_net_SSLTrustManager__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_SSLTrustManager__String");
-                }
-            
-                // args
-                // jsonable arg
-                String param1 = (String) ((Map<String, Object>) __args__).get("param1");
-            
-                // create target object
-                cn.jiguang.net.SSLTrustManager __obj__ = new cn.jiguang.net.SSLTrustManager(param1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DownloadProvider);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_net_HttpRequest__String", (__args__, __methodResult__) -> {
@@ -939,19 +207,18 @@ public class SubHandler3 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
                 cn.jiguang.net.HttpRequest __obj__ = new cn.jiguang.net.HttpRequest(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_net_HttpRequest__String__java_util_Map_String_String_", (__args__, __methodResult__) -> {
@@ -960,21 +227,20 @@ public class SubHandler3 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 java.util.Map<String,String> var2 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 cn.jiguang.net.HttpRequest __obj__ = new cn.jiguang.net.HttpRequest(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_net_HttpUtils__", (__args__, __methodResult__) -> {
@@ -987,14 +253,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.net.HttpUtils __obj__ = new cn.jiguang.net.HttpUtils();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_net_HttpResponse__String", (__args__, __methodResult__) -> {
@@ -1003,19 +268,18 @@ public class SubHandler3 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
                 cn.jiguang.net.HttpResponse __obj__ = new cn.jiguang.net.HttpResponse(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_net_HttpResponse__", (__args__, __methodResult__) -> {
@@ -1028,14 +292,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.net.HttpResponse __obj__ = new cn.jiguang.net.HttpResponse();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_internal_JConstants__", (__args__, __methodResult__) -> {
@@ -1048,14 +311,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.internal.JConstants __obj__ = new cn.jiguang.internal.JConstants();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_internal_ActionManager__", (__args__, __methodResult__) -> {
@@ -1068,14 +330,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.internal.ActionManager __obj__ = new cn.jiguang.internal.ActionManager();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_android_BuildConfig__", (__args__, __methodResult__) -> {
@@ -1088,14 +349,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.android.BuildConfig __obj__ = new cn.jiguang.android.BuildConfig();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_dy_Protocol__", (__args__, __methodResult__) -> {
@@ -1108,14 +368,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.dy.Protocol __obj__ = new cn.jiguang.dy.Protocol();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_api_utils_ByteBufferUtils__", (__args__, __methodResult__) -> {
@@ -1128,14 +387,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.api.utils.ByteBufferUtils __obj__ = new cn.jiguang.api.utils.ByteBufferUtils();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_api_utils_OutputDataUtil__int", (__args__, __methodResult__) -> {
@@ -1144,19 +402,18 @@ public class SubHandler3 {
                 }
             
                 // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+                cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil(var1.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_api_utils_OutputDataUtil__", (__args__, __methodResult__) -> {
@@ -1169,14 +426,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_api_utils_ProtocolUtil__", (__args__, __methodResult__) -> {
@@ -1189,14 +445,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.api.utils.ProtocolUtil __obj__ = new cn.jiguang.api.utils.ProtocolUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_api_JCoreInterface__", (__args__, __methodResult__) -> {
@@ -1209,14 +464,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.api.JCoreInterface __obj__ = new cn.jiguang.api.JCoreInterface();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jiguang_api_JCoreManager__", (__args__, __methodResult__) -> {
@@ -1229,34 +483,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jiguang.api.JCoreManager __obj__ = new cn.jiguang.api.JCoreManager();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcn_jiguang_analytics_page_ActivityLifecycle__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_page_ActivityLifecycle__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                cn.jiguang.analytics.page.ActivityLifecycle __obj__ = new cn.jiguang.analytics.page.ActivityLifecycle();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jcore_client_android_BuildConfig__", (__args__, __methodResult__) -> {
@@ -1269,14 +502,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jcore.client.android.BuildConfig __obj__ = new cn.jcore.client.android.BuildConfig();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jpush_android_service_DActivity__", (__args__, __methodResult__) -> {
@@ -1289,14 +521,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jpush.android.service.DActivity __obj__ = new cn.jpush.android.service.DActivity();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jpush_android_service_DataProvider__", (__args__, __methodResult__) -> {
@@ -1309,14 +540,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jpush.android.service.DataProvider __obj__ = new cn.jpush.android.service.DataProvider();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jpush_android_service_DownloadActivity__", (__args__, __methodResult__) -> {
@@ -1329,14 +559,13 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jpush.android.service.DownloadActivity __obj__ = new cn.jpush.android.service.DownloadActivity();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcn_jpush_android_service_DownloadProvider__", (__args__, __methodResult__) -> {
@@ -1349,98 +578,17 @@ public class SubHandler3 {
             
                 // create target object
                 cn.jpush.android.service.DownloadProvider __obj__ = new cn.jpush.android.service.DownloadProvider();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::create_batchcn_jiguang_net_DefaultHostVerifier__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    cn.jiguang.net.DefaultHostVerifier __obj__ = new cn.jiguang.net.DefaultHostVerifier(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcn_jiguang_net_SSLTrustManager__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String param1 = (String) ((Map<String, Object>) __args__).get("param1");
-            
-                    // create target object
-                    cn.jiguang.net.SSLTrustManager __obj__ = new cn.jiguang.net.SSLTrustManager(param1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_net_HttpRequest__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpRequest> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1461,26 +609,25 @@ public class SubHandler3 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
                     cn.jiguang.net.HttpRequest __obj__ = new cn.jiguang.net.HttpRequest(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_net_HttpRequest__String__java_util_Map_String_String_", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpRequest> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1501,28 +648,27 @@ public class SubHandler3 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     java.util.Map<String,String> var2 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     cn.jiguang.net.HttpRequest __obj__ = new cn.jiguang.net.HttpRequest(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_net_HttpUtils__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpUtils> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1547,21 +693,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.net.HttpUtils __obj__ = new cn.jiguang.net.HttpUtils();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_net_HttpResponse__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1582,26 +727,25 @@ public class SubHandler3 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
                     cn.jiguang.net.HttpResponse __obj__ = new cn.jiguang.net.HttpResponse(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_net_HttpResponse__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1626,21 +770,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.net.HttpResponse __obj__ = new cn.jiguang.net.HttpResponse();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_internal_JConstants__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.internal.JConstants> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1665,21 +808,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.internal.JConstants __obj__ = new cn.jiguang.internal.JConstants();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_internal_ActionManager__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.internal.ActionManager> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1704,21 +846,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.internal.ActionManager __obj__ = new cn.jiguang.internal.ActionManager();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_android_BuildConfig__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.android.BuildConfig> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1743,21 +884,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.android.BuildConfig __obj__ = new cn.jiguang.android.BuildConfig();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_dy_Protocol__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.dy.Protocol> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1782,21 +922,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.dy.Protocol __obj__ = new cn.jiguang.dy.Protocol();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_api_utils_ByteBufferUtils__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.api.utils.ByteBufferUtils> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1821,21 +960,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.api.utils.ByteBufferUtils __obj__ = new cn.jiguang.api.utils.ByteBufferUtils();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_api_utils_OutputDataUtil__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.api.utils.OutputDataUtil> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1856,26 +994,25 @@ public class SubHandler3 {
                     }
             
                     // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+                    cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil(var1.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_api_utils_OutputDataUtil__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.api.utils.OutputDataUtil> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1900,21 +1037,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_api_utils_ProtocolUtil__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.api.utils.ProtocolUtil> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1939,21 +1075,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.api.utils.ProtocolUtil __obj__ = new cn.jiguang.api.utils.ProtocolUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_api_JCoreInterface__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.api.JCoreInterface> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1978,21 +1113,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.api.JCoreInterface __obj__ = new cn.jiguang.api.JCoreInterface();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jiguang_api_JCoreManager__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jiguang.api.JCoreManager> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -2017,60 +1151,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jiguang.api.JCoreManager __obj__ = new cn.jiguang.api.JCoreManager();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_page_ActivityLifecycle__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    cn.jiguang.analytics.page.ActivityLifecycle __obj__ = new cn.jiguang.analytics.page.ActivityLifecycle();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jcore_client_android_BuildConfig__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jcore.client.android.BuildConfig> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -2095,21 +1189,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jcore.client.android.BuildConfig __obj__ = new cn.jcore.client.android.BuildConfig();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jpush_android_service_DActivity__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jpush.android.service.DActivity> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -2134,21 +1227,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jpush.android.service.DActivity __obj__ = new cn.jpush.android.service.DActivity();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jpush_android_service_DataProvider__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jpush.android.service.DataProvider> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -2173,21 +1265,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jpush.android.service.DataProvider __obj__ = new cn.jpush.android.service.DataProvider();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jpush_android_service_DownloadActivity__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jpush.android.service.DownloadActivity> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -2212,21 +1303,20 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jpush.android.service.DownloadActivity __obj__ = new cn.jpush.android.service.DownloadActivity();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcn_jpush_android_service_DownloadProvider__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<cn.jpush.android.service.DownloadProvider> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -2251,14 +1341,13 @@ public class SubHandler3 {
             
                     // create target object
                     cn.jpush.android.service.DownloadProvider __obj__ = new cn.jpush.android.service.DownloadProvider();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);

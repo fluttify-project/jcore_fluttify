@@ -26,10 +26,8 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
 
   //region creators
   static Future<cn_jiguang_internal_JConstants> create__() async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_internal_JConstants__');
+    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_internal_JConstants__', );
     final object = cn_jiguang_internal_JConstants()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -37,10 +35,9 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_internal_JConstants__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_internal_JConstants__', {'length': length});
   
     final List<cn_jiguang_internal_JConstants> typedResult = resultBatch.map((result) => cn_jiguang_internal_JConstants()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -48,159 +45,133 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
 
   //region getters
   static Future<String> get_static_APP_KEY() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_APP_KEY", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_APP_KEY", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<String> get_static_TUU() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_TUU", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_TUU", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_AT_I() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_AT_I", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_AT_I", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_SUPPORT_DY() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SUPPORT_DY", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SUPPORT_DY", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<String> get_static_SDK_NAME() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SDK_NAME", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SDK_NAME", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_SDK_VERSION_INT() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SDK_VERSION_INT", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SDK_VERSION_INT", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_LOG_ENABLE() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_LOG_ENABLE", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_LOG_ENABLE", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_DEBUG_MODE() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_DEBUG_MODE", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_DEBUG_MODE", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_LOG_FILE_ENABLE() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_LOG_FILE_ENABLE", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_LOG_FILE_ENABLE", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_INTERNAL_USE() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_INTERNAL_USE", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_INTERNAL_USE", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_IS_FOR_GOOGLE_PLAY_USE() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_IS_FOR_GOOGLE_PLAY_USE", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_IS_FOR_GOOGLE_PLAY_USE", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_SECOND() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SECOND", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SECOND", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_MIN() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_MIN", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_MIN", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_HOUR() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_HOUR", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_HOUR", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_DAY() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_DAY", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_DAY", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_REPORT_USE_HTTPS() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_REPORT_USE_HTTPS", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_REPORT_USE_HTTPS", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_REPORT_SUPPORT_HTTP() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_REPORT_SUPPORT_HTTP", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_REPORT_SUPPORT_HTTP", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_isInstrumentationHookFailed() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_isInstrumentationHookFailed", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_isInstrumentationHookFailed", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_DEFAULT_HEARTBEAT_INTERVAL() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_DEFAULT_HEARTBEAT_INTERVAL", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_DEFAULT_HEARTBEAT_INTERVAL", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_DEFAULT_ALARM_DELAY() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_DEFAULT_ALARM_DELAY", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_DEFAULT_ALARM_DELAY", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_AES_CBC() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_AES_CBC", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_AES_CBC", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_SM4_CBC() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SM4_CBC", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SM4_CBC", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_tcpAlgorithm() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_tcpAlgorithm", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_tcpAlgorithm", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<int> get_static_tcpSessionId() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_tcpSessionId", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_tcpSessionId", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<String> get_static_testCountry() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_testCountry", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_testCountry", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<android_content_Context> get_static_mApplicationContext() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_mApplicationContext", );
-    kNativeObjectPool.add(android_content_Context()..refId = __result__..tag__ = 'jcore_fluttify');
-    return android_content_Context()..refId = __result__..tag__ = 'jcore_fluttify';
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_mApplicationContext", );
+    return __result__ == null ? null : (android_content_Context()..refId = __result__..tag__ = 'jcore_fluttify');
   }
   
   //endregion
@@ -218,7 +189,7 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::isTestEnv', );
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::isTestEnv', );
   
   
     // handle native call
@@ -229,7 +200,6 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -242,7 +212,7 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::setTestEnv', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::setTestEnv', {"var0": var0});
   
   
     // handle native call
@@ -253,7 +223,6 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -266,7 +235,7 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::testAndroidQ', );
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::testAndroidQ', );
   
   
     // handle native call
@@ -277,7 +246,6 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -290,7 +258,7 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::isAndroidQ', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::isAndroidQ', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -301,7 +269,6 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -314,7 +281,7 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::getAppContext', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::getAppContext', {"var0": var0});
   
   
     // handle native call
@@ -325,7 +292,6 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
       return null;
     } else {
       final __return__ = android_content_Context()..refId = __result__..tag__ = 'jcore_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -336,184 +302,184 @@ class cn_jiguang_internal_JConstants extends java_lang_Object  {
 extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JConstants> {
   //region getters
   Future<List<String>> get_static_APP_KEY_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_APP_KEY_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_APP_KEY_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_static_TUU_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_TUU_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_TUU_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_AT_I_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_AT_I_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_AT_I_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_SUPPORT_DY_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SUPPORT_DY_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SUPPORT_DY_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_static_SDK_NAME_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SDK_NAME_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SDK_NAME_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_SDK_VERSION_INT_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SDK_VERSION_INT_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SDK_VERSION_INT_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_LOG_ENABLE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_LOG_ENABLE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_LOG_ENABLE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_DEBUG_MODE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_DEBUG_MODE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_DEBUG_MODE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_LOG_FILE_ENABLE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_LOG_FILE_ENABLE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_LOG_FILE_ENABLE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_INTERNAL_USE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_INTERNAL_USE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_INTERNAL_USE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_IS_FOR_GOOGLE_PLAY_USE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_IS_FOR_GOOGLE_PLAY_USE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_IS_FOR_GOOGLE_PLAY_USE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_SECOND_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SECOND_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SECOND_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_MIN_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_MIN_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_MIN_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_HOUR_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_HOUR_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_HOUR_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_DAY_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_DAY_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_DAY_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_REPORT_USE_HTTPS_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_REPORT_USE_HTTPS_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_REPORT_USE_HTTPS_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_REPORT_SUPPORT_HTTP_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_REPORT_SUPPORT_HTTP_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_REPORT_SUPPORT_HTTP_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_isInstrumentationHookFailed_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_isInstrumentationHookFailed_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_isInstrumentationHookFailed_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_DEFAULT_HEARTBEAT_INTERVAL_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_DEFAULT_HEARTBEAT_INTERVAL_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_DEFAULT_HEARTBEAT_INTERVAL_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_DEFAULT_ALARM_DELAY_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_DEFAULT_ALARM_DELAY_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_DEFAULT_ALARM_DELAY_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_AES_CBC_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_AES_CBC_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_AES_CBC_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_SM4_CBC_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_SM4_CBC_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_SM4_CBC_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_tcpAlgorithm_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_tcpAlgorithm_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_tcpAlgorithm_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_static_tcpSessionId_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_tcpSessionId_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_tcpSessionId_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_static_testCountry_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_testCountry_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_testCountry_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<android_content_Context>> get_static_mApplicationContext_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.internal.JConstants::get_mApplicationContext_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => android_content_Context()..refId = __result__..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.internal.JConstants::get_mApplicationContext_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_content_Context()..refId = __result__..tag__ = 'jcore_fluttify').toList();
     return typedResult;
   }
   
@@ -531,7 +497,7 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::isTestEnv_batch', );
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::isTestEnv_batch', );
   
   
     // convert native result to dart side object
@@ -539,7 +505,6 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -551,7 +516,7 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::setTestEnv_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::setTestEnv_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -559,7 +524,6 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -571,7 +535,7 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::testAndroidQ_batch', );
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::testAndroidQ_batch', );
   
   
     // convert native result to dart side object
@@ -579,7 +543,6 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -591,7 +554,7 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::isAndroidQ_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::isAndroidQ_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -599,7 +562,6 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -611,15 +573,14 @@ extension cn_jiguang_internal_JConstants_Batch on List<cn_jiguang_internal_JCons
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.internal.JConstants::getAppContext_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.internal.JConstants::getAppContext_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => android_content_Context()..refId = __result__..tag__ = 'jcore_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_content_Context()..refId = __result__..tag__ = 'jcore_fluttify').toList();
       return typedResult;
     }
   }

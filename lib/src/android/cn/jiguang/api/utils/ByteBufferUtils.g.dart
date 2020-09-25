@@ -20,10 +20,8 @@ class cn_jiguang_api_utils_ByteBufferUtils extends java_lang_Object  {
 
   //region creators
   static Future<cn_jiguang_api_utils_ByteBufferUtils> create__() async {
-    final int refId = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_api_utils_ByteBufferUtils__');
+    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_api_utils_ByteBufferUtils__', );
     final object = cn_jiguang_api_utils_ByteBufferUtils()..refId = refId..tag__ = 'jcore_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -31,10 +29,9 @@ class cn_jiguang_api_utils_ByteBufferUtils extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_api_utils_ByteBufferUtils__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_api_utils_ByteBufferUtils__', {'length': length});
   
     final List<cn_jiguang_api_utils_ByteBufferUtils> typedResult = resultBatch.map((result) => cn_jiguang_api_utils_ByteBufferUtils()..refId = result..tag__ = 'jcore_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   

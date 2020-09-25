@@ -26,15 +26,13 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
 
   //region getters
   static Future<bool> get_static_isOnResumeInvoke() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.analytics.page.PushSA::get_isOnResumeInvoke", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.analytics.page.PushSA::get_isOnResumeInvoke", );
+    return __result__ == null ? null : (__result__);
   }
   
   static Future<bool> get_static_isOnPauseInvoke() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.analytics.page.PushSA::get_isOnPauseInvoke", );
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.analytics.page.PushSA::get_isOnPauseInvoke", );
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
@@ -52,7 +50,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onFragmentResume', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onFragmentResume', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -63,7 +61,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -76,7 +73,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onFragmentPause', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onFragmentPause', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -87,7 +84,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -100,7 +96,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::getInterval', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::getInterval', {"__this__": this});
   
   
     // handle native call
@@ -111,7 +107,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -124,7 +119,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::setInterval', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::setInterval', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -135,7 +130,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -148,7 +142,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::isStatEnable', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::isStatEnable', {"__this__": this});
   
   
     // handle native call
@@ -159,7 +153,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -172,7 +165,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::setStatEnable', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::setStatEnable', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -183,7 +176,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -196,7 +188,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onKillProcess', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onKillProcess', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -207,7 +199,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -220,7 +211,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::getInstance', );
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::getInstance', );
   
   
     // handle native call
@@ -231,7 +222,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_page_PushSA()..refId = __result__..tag__ = 'jcore_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -244,7 +234,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onResume', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onResume', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -255,7 +245,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -268,7 +257,7 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onPause', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onPause', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -279,7 +268,6 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -290,16 +278,16 @@ class cn_jiguang_analytics_page_PushSA extends java_lang_Object  {
 extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_page_PushSA> {
   //region getters
   Future<List<bool>> get_static_isOnResumeInvoke_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.analytics.page.PushSA::get_isOnResumeInvoke_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.analytics.page.PushSA::get_isOnResumeInvoke_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_static_isOnPauseInvoke_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod("cn.jiguang.analytics.page.PushSA::get_isOnPauseInvoke_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.analytics.page.PushSA::get_isOnPauseInvoke_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -317,7 +305,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onFragmentResume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onFragmentResume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -325,7 +313,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -337,7 +324,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onFragmentPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onFragmentPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -345,7 +332,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -357,7 +343,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::getInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::getInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -365,7 +351,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -377,7 +362,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::setInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::setInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -385,7 +370,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -397,7 +381,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::isStatEnable_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::isStatEnable_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -405,7 +389,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -417,7 +400,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::setStatEnable_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::setStatEnable_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -425,7 +408,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -437,7 +419,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onKillProcess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onKillProcess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -445,7 +427,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -457,15 +438,14 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::getInstance_batch', );
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::getInstance_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_page_PushSA()..refId = __result__..tag__ = 'jcore_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_page_PushSA()..refId = __result__..tag__ = 'jcore_fluttify').toList();
       return typedResult;
     }
   }
@@ -477,7 +457,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onResume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onResume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -485,7 +465,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -497,7 +476,7 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify').invokeMethod('cn.jiguang.analytics.page.PushSA::onPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.analytics.page.PushSA::onPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -505,7 +484,6 @@ extension cn_jiguang_analytics_page_PushSA_Batch on List<cn_jiguang_analytics_pa
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

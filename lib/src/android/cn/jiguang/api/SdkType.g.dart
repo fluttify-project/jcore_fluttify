@@ -23,6 +23,7 @@ extension cn_jiguang_api_SdkTypeToX on cn_jiguang_api_SdkType {
       case cn_jiguang_api_SdkType.JMESSAGE: return cn_jiguang_api_SdkType.JMESSAGE.index + 0;
       case cn_jiguang_api_SdkType.JSSP: return cn_jiguang_api_SdkType.JSSP.index + 0;
       case cn_jiguang_api_SdkType.JVERIFICATION: return cn_jiguang_api_SdkType.JVERIFICATION.index + 0;
+      default: return 0;
     }
   }
 }
