@@ -18,17 +18,20 @@ mixin cn_jiguang_api_JAnalyticsAction on java_lang_Object {
 
   
 
-  
+  @override
+  final String tag__ = 'jcore_fluttify';
 
   
 
-  @mustCallSuper
+  
+
+  /* @mustCallSuper */
   Future<void> dispatchResume(android_content_Context var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> dispatchPause(android_content_Context var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> dispatchStatus(android_content_Context var1, String var2) {}
   
 }

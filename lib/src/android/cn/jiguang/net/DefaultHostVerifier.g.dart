@@ -15,52 +15,58 @@ class cn_jiguang_net_DefaultHostVerifier extends java_lang_Object  {
   //region constants
   static const String name__ = 'cn.jiguang.net.DefaultHostVerifier';
 
+  @override
+  final String tag__ = 'jcore_fluttify';
+
   
   //endregion
 
   //region creators
+  static Future<cn_jiguang_net_DefaultHostVerifier> create__String(String var1) async {
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jiguang_net_DefaultHostVerifier__String',
+      {"var1": var1}
+    );
+    return JcoreFluttifyAndroidAs<cn_jiguang_net_DefaultHostVerifier>(__result__);
+  }
+  
+  static Future<List<cn_jiguang_net_DefaultHostVerifier>> create_batch__String(List<String> var1) async {
+    assert(true);
+    final __result_batch__ = await  kJcoreFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jiguang_net_DefaultHostVerifier__String',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => JcoreFluttifyAndroidAs<cn_jiguang_net_DefaultHostVerifier>(it))
+        .toList();
+  }
   
   //endregion
 
   //region getters
-  Future<String> get_a() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.net.DefaultHostVerifier::get_a", {'__this__': this});
-    return __result__ == null ? null : (__result__);
-  }
   
   //endregion
 
   //region setters
-  Future<void> set_a(String a) async {
-    await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.net.DefaultHostVerifier::set_a', <String, dynamic>{'__this__': this, "a": a});
-  
-  
-  }
   
   //endregion
 
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jiguang_net_DefaultHostVerifier{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jiguang_net_DefaultHostVerifier_Batch on List<cn_jiguang_net_DefaultHostVerifier> {
   //region getters
-  Future<List<String>> get_a_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.net.DefaultHostVerifier::get_a_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
-  }
   
   //endregion
 
   //region setters
-  Future<void> set_a_batch(List<String> a) async {
-    await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('cn.jiguang.net.DefaultHostVerifier::set_a_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "a": a[__i__]}]);
-  
-  
-  }
   
   //endregion
 

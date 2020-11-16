@@ -18,11 +18,14 @@ mixin cn_jiguang_api_ReportCallBack on java_lang_Object {
 
   
 
-  
+  @override
+  final String tag__ = 'jcore_fluttify';
 
   
 
-  @mustCallSuper
+  
+
+  /* @mustCallSuper */
   Future<void> onFinish(int var1) {}
   
 }

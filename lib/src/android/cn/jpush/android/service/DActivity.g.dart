@@ -15,24 +15,30 @@ class cn_jpush_android_service_DActivity extends android_app_Activity  {
   //region constants
   static const String name__ = 'cn.jpush.android.service.DActivity';
 
+  @override
+  final String tag__ = 'jcore_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<cn_jpush_android_service_DActivity> create__() async {
-    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jpush_android_service_DActivity__', );
-    final object = cn_jpush_android_service_DActivity()..refId = refId..tag__ = 'jcore_fluttify';
-    return object;
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jpush_android_service_DActivity__',
+    
+    );
+    return JcoreFluttifyAndroidAs<cn_jpush_android_service_DActivity>(__result__);
   }
   
   static Future<List<cn_jpush_android_service_DActivity>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jpush_android_service_DActivity__', {'length': length});
-  
-    final List<cn_jpush_android_service_DActivity> typedResult = resultBatch.map((result) => cn_jpush_android_service_DActivity()..refId = result..tag__ = 'jcore_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJcoreFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jpush_android_service_DActivity__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => JcoreFluttifyAndroidAs<cn_jpush_android_service_DActivity>(it))
+        .toList();
   }
   
   //endregion
@@ -48,6 +54,11 @@ class cn_jpush_android_service_DActivity extends android_app_Activity  {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jpush_android_service_DActivity{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jpush_android_service_DActivity_Batch on List<cn_jpush_android_service_DActivity> {

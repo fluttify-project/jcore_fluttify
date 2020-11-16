@@ -15,10 +15,31 @@ class cn_jpush_android_service_PushService extends java_lang_Object  {
   //region constants
   static const String name__ = 'cn.jpush.android.service.PushService';
 
+  @override
+  final String tag__ = 'jcore_fluttify';
+
   
   //endregion
 
   //region creators
+  static Future<cn_jpush_android_service_PushService> create__() async {
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jpush_android_service_PushService__',
+    
+    );
+    return JcoreFluttifyAndroidAs<cn_jpush_android_service_PushService>(__result__);
+  }
+  
+  static Future<List<cn_jpush_android_service_PushService>> create_batch__(int length) async {
+    assert(true);
+    final __result_batch__ = await  kJcoreFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jpush_android_service_PushService__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => JcoreFluttifyAndroidAs<cn_jpush_android_service_PushService>(it))
+        .toList();
+  }
   
   //endregion
 
@@ -33,6 +54,11 @@ class cn_jpush_android_service_PushService extends java_lang_Object  {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jpush_android_service_PushService{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jpush_android_service_PushService_Batch on List<cn_jpush_android_service_PushService> {

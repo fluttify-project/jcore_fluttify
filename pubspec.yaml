@@ -12,11 +12,13 @@ dependencies:
   flutter:
     sdk: flutter
   
-  foundation_fluttify: ^0.9.5
+  
+  foundation_fluttify: ^0.11.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  pedantic: ^1.9.2
 
 flutter:
   plugin:
