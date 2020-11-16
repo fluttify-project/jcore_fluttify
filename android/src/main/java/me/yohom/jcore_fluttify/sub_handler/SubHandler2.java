@@ -33,1568 +33,6 @@ public class SubHandler2 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("cn.jiguang.internal.JConstants::isTestEnv_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.internal.JConstants.isTestEnv();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JConstants::setTestEnv_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.internal.JConstants.setTestEnv(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JConstants::testAndroidQ_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.internal.JConstants.testAndroidQ();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JConstants::isAndroidQ_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.internal.JConstants.isAndroidQ(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JConstants::getAppContext_batch", (__argsBatch__, __methodResult__) -> {
-                List<android.content.Context> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    android.content.Context __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.internal.JConstants.getAppContext(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JCoreHelperAction::onEvent_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    String var4 = (String) ((Map<String, Object>) __args__).get("var4");
-                    // ref arg
-                    android.os.Bundle var5 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var5");
-                    // ref arg
-                    java.lang.Object var6 = (java.lang.Object) ((Map<String, Object>) __args__).get("var6");
-            
-                    // ref
-                    cn.jiguang.internal.JCoreHelperAction __this__ = (cn.jiguang.internal.JCoreHelperAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.onEvent(var1, var2, var3.intValue(), var4, var5, var6);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JCoreHelperAction::directHandle_batch", (__argsBatch__, __methodResult__) -> {
-                List<android.os.Bundle> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
-            
-                    // ref
-                    cn.jiguang.internal.JCoreHelperAction __this__ = (cn.jiguang.internal.JCoreHelperAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    android.os.Bundle __result__ = null;
-                    try {
-                        __result__ = __this__.directHandle(var1, var2, var3, var4);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JCoreHelperAction::onCommonMethod_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    java.lang.Object var3 = (java.lang.Object) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.internal.JCoreHelperAction __this__ = (cn.jiguang.internal.JCoreHelperAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.onCommonMethod(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JCoreInternalHelper::getInstance_batch", (__argsBatch__, __methodResult__) -> {
-                List<cn.jiguang.internal.JCoreInternalHelper> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    cn.jiguang.internal.JCoreInternalHelper __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.internal.JCoreInternalHelper.getInstance();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JCoreInternalHelper::initLoad_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.internal.JCoreInternalHelper __this__ = (cn.jiguang.internal.JCoreInternalHelper) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.initLoad(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JCoreInternalHelper::onEvent_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    boolean var4 = (boolean) ((Map<String, Object>) __args__).get("var4");
-                    // ref arg
-                    String var5 = (String) ((Map<String, Object>) __args__).get("var5");
-                    // ref arg
-                    android.os.Bundle var6 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var6");
-                    // ref arg
-                    java.lang.Object var7 = (java.lang.Object) ((Map<String, Object>) __args__).get("var7");
-            
-                    // ref
-                    cn.jiguang.internal.JCoreInternalHelper __this__ = (cn.jiguang.internal.JCoreInternalHelper) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.onEvent(var1, var2, var3.intValue(), var4, var5, var6, var7);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JCoreInternalHelper::directHandle_batch", (__argsBatch__, __methodResult__) -> {
-                List<android.os.Bundle> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
-            
-                    // ref
-                    cn.jiguang.internal.JCoreInternalHelper __this__ = (cn.jiguang.internal.JCoreInternalHelper) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    android.os.Bundle __result__ = null;
-                    try {
-                        __result__ = __this__.directHandle(var1, var2, var3, var4);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.JCoreInternalHelper::commonMethod_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    java.lang.Object var3 = (java.lang.Object) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.internal.JCoreInternalHelper __this__ = (cn.jiguang.internal.JCoreInternalHelper) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.commonMethod(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.ActionManager::getInstance_batch", (__argsBatch__, __methodResult__) -> {
-                List<cn.jiguang.internal.ActionManager> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    cn.jiguang.internal.ActionManager __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.internal.ActionManager.getInstance();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.ActionManager::getActionMap_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.util.HashMap<String,String>> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    java.util.HashMap<String,String> __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.internal.ActionManager.getActionMap();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.ActionManager::addAction_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.internal.ActionManager __this__ = (cn.jiguang.internal.ActionManager) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.addAction(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.internal.ActionManager::handleMessage_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    java.lang.Object var3 = (java.lang.Object) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.internal.ActionManager __this__ = (cn.jiguang.internal.ActionManager) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.handleMessage(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.android.IDataShare::onAction_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    android.os.Bundle var3 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.android.IDataShare __this__ = (cn.jiguang.android.IDataShare) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onAction(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.android.IDataShare::execute_batch", (__argsBatch__, __methodResult__) -> {
-                List<android.os.Bundle> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    android.os.Bundle var3 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.android.IDataShare __this__ = (cn.jiguang.android.IDataShare) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    android.os.Bundle __result__ = null;
-                    try {
-                        __result__ = __this__.execute(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.android.IDataShare::bind_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    cn.jiguang.android.IDataShare var1 = (cn.jiguang.android.IDataShare) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.android.IDataShare __this__ = (cn.jiguang.android.IDataShare) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.bind(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::isSupportedCMD_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.isSupportedCMD(var1, var2.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::onActionRun_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActionRun(var1, var2, var3, var4);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::onEvent_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
-                    // ref arg
-                    String var5 = (String) ((Map<String, Object>) __args__).get("var5");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onEvent(var1, var2, var3.intValue(), var4.intValue(), var5);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::handleMessage_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    java.lang.Object var3 = (java.lang.Object) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.handleMessage(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::getSdkVersion_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getSdkVersion(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::getReportVersionKey_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getReportVersionKey(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::dispatchTimeOutMessage_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.dispatchTimeOutMessage(var1, var2, var3.longValue(), var5.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::checkAction_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.checkAction(var1, var2.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::beforRegister_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    String var4 = (String) ((Map<String, Object>) __args__).get("var4");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.beforRegister(var1, var2, var3.intValue(), var4);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::beforLogin_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    String var4 = (String) ((Map<String, Object>) __args__).get("var4");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.beforLogin(var1, var2, var3.intValue(), var4);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::onSendData_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
-                    // ref arg
-                    Number var6 = (Number) ((Map<String, Object>) __args__).get("var6");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.onSendData(var1, var2, var3.longValue(), var5.intValue(), var6.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JDispatchAction::getPInfo_batch", (__argsBatch__, __methodResult__) -> {
-                List<android.os.Bundle> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.JDispatchAction __this__ = (cn.jiguang.api.JDispatchAction) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    android.os.Bundle __result__ = null;
-                    try {
-                        __result__ = __this__.getPInfo(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JActionExtra::checkAction_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.JActionExtra __this__ = (cn.jiguang.api.JActionExtra) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.checkAction(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JActionExtra::beforRegister_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.api.JActionExtra __this__ = (cn.jiguang.api.JActionExtra) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.beforRegister(var1, var2.intValue(), var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JActionExtra::beforLogin_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.api.JActionExtra __this__ = (cn.jiguang.api.JActionExtra) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.beforLogin(var1, var2.intValue(), var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JActionExtra::onSendData_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
-                    // ref arg
-                    Number var6 = (Number) ((Map<String, Object>) __args__).get("var6");
-                    // ref arg
-                    Number var7 = (Number) ((Map<String, Object>) __args__).get("var7");
-            
-                    // ref
-                    cn.jiguang.api.JActionExtra __this__ = (cn.jiguang.api.JActionExtra) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = __this__.onSendData(var1, var2.longValue(), var4.longValue(), var6.intValue(), var7.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::current_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.current();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::jump_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.jump(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::save_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.save();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::restore_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.restore();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::writeU8_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.writeU8(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::writeU8At_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.writeU8At(var1.intValue(), var2.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::writeU16_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.writeU16(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::writeU16At_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.writeU16At(var1.intValue(), var2.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.utils.OutputDataUtil::writeU32_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.utils.OutputDataUtil __this__ = (cn.jiguang.api.utils.OutputDataUtil) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.writeU32(var1.longValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
             put("cn.jiguang.api.utils.OutputDataUtil::writeU32At_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
@@ -2252,544 +690,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JRequest::setSid_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.JRequest __this__ = (cn.jiguang.api.JRequest) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setSid(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JRequest::setJuid_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.api.JRequest __this__ = (cn.jiguang.api.JRequest) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setJuid(var1.longValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::init_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.init(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::register_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.register(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::sendData_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.sendData(var0, var1, var2.intValue(), var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::sendRequestData_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.sendRequestData(var0, var1, var2.intValue(), var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::sendAction_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.sendAction(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::stop_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.stop(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::restart_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    boolean var3 = (boolean) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.restart(var0, var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getDeviceId_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getDeviceId(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::canCallDirect_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.canCallDirect();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::setDebugMode_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.setDebugMode(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getDebugMode_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getDebugMode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::putSingleExecutor_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.putSingleExecutor(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getRegistrationID_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getRegistrationID(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::isValidRegistered_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.isValidRegistered();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getAppKey_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::getUrl_batch", (__argsBatch__, __methodResult__) -> {
                 List<String> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -2799,12 +700,12 @@ public class SubHandler2 {
             
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     String __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getAppKey();
+                        __result__ = __this__.getUrl();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2820,69 +721,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::getReportTime_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Long __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getReportTime();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getUid_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Long __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getUid();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getSid_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::getConnectTimeout_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -2892,12 +731,12 @@ public class SubHandler2 {
             
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getSid();
+                        __result__ = __this__.getConnectTimeout();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2913,85 +752,23 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::getNextRid_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Long __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getNextRid();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::isTcpConnected_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.isTcpConnected();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getConnectionState_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.net.HttpRequest::setConnectTimeout_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Boolean __result__ = null;
+                    Void __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getConnectionState(var0);
+                        __this__.setConnectTimeout(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3007,8 +784,8 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::getChannel_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.net.HttpRequest::getReadTimeout_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -3017,12 +794,12 @@ public class SubHandler2 {
             
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getChannel();
+                        __result__ = __this__.getReadTimeout();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3038,27 +815,118 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::reportHttpData_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.net.HttpRequest::setReadTimeout_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setReadTimeout(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setUrl_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setUrl(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::getBody_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.lang.Object> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.lang.Object __result__ = null;
+                    try {
+                        __result__ = __this__.getBody();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setBody_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
                     // ref arg
                     java.lang.Object var1 = (java.lang.Object) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Boolean __result__ = null;
+                    Void __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.JCoreInterface.reportHttpData(var0, var1, var2);
+                        __this__.setBody(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3074,41 +942,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::getHttpConfig_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getHttpConfig(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getRuningFlag_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::isDoOutPut_batch", (__argsBatch__, __methodResult__) -> {
                 List<Boolean> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -3118,12 +952,12 @@ public class SubHandler2 {
             
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Boolean __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getRuningFlag();
+                        __result__ = __this__.isDoOutPut();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3139,25 +973,23 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::setImLBSEnable_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::setDoOutPut_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.api.JCoreInterface.setImLBSEnable(var0, var1);
+                        __this__.setDoOutPut(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3173,25 +1005,54 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::setWakeEnable_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::isDoInPut_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isDoInPut();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setDoInPut_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.api.JCoreInterface.setWakeEnable(var0, var1);
+                        __this__.setDoInPut(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3207,543 +1068,54 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::onResume_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::isUseCaches_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isUseCaches();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setUseCaches_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.onResume(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::onPause_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.onPause(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::onFragmentResume_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.onFragmentResume(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::onFragmentPause_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.onFragmentPause(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::onKillProcess_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.onKillProcess(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::initCrashHandler_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.initCrashHandler(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::stopCrashHandler_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.stopCrashHandler(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::requestPermission_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.requestPermission(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::setCanLaunchedStoppedService_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.setCanLaunchedStoppedService(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::setTestConn_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.setTestConn(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::setTestConnIPPort_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.setTestConnIPPort(var0, var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getJCoreSDKVersionInt_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getJCoreSDKVersionInt();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::processCtrlReport_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.processCtrlReport(var0.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::setDaemonAction_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.setDaemonAction(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getDaemonAction_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getDaemonAction();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::setLocationReportDelay_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.setLocationReportDelay(var0, var1.longValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::setPowerSaveMode_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.api.JCoreInterface.setPowerSaveMode(var0, var1);
+                        __this__.setUseCaches(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3759,315 +1131,54 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreInterface::testCountryCode_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::isNeedErrorInput_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isNeedErrorInput();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setNeedErrorInput_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.testCountryCode(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::setAccountId_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.setAccountId(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getAccountId_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getAccountId();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::getCommonConfigAppkey_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreInterface.getCommonConfigAppkey();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreInterface::triggerSceneCheck_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreInterface.triggerSceneCheck(var0, var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::init_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreManager.init(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::register_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreManager.register(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::unRegister_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreManager.unRegister(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::changeLiveStatus_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreManager.changeLiveStatus(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::setLBSEnable_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.api.JCoreManager.setLBSEnable(var0, var1);
+                        __this__.setNeedErrorInput(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4083,7 +1194,38 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreManager::setDebugMode_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::getSslTrustManager_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.SSLTrustManager> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.net.SSLTrustManager __result__ = null;
+                    try {
+                        __result__ = __this__.getSslTrustManager();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setSslTrustManager_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -4091,15 +1233,15 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+                    cn.jiguang.net.SSLTrustManager var1 = (cn.jiguang.net.SSLTrustManager) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.api.JCoreManager.setDebugMode(var0);
+                        __this__.setSslTrustManager(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4115,7 +1257,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreManager::getDebugMode_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::isNeedRetryIfHttpsFailed_batch", (__argsBatch__, __methodResult__) -> {
                 List<Boolean> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -4125,43 +1267,12 @@ public class SubHandler2 {
             
             
                     // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreManager.getDebugMode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::isInternal_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Boolean __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.JCoreManager.isInternal();
+                        __result__ = __this__.isNeedRetryIfHttpsFailed();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4177,7 +1288,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreManager::addDispatchAction_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::setNeedRetryIfHttpsFailed_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -4185,17 +1296,15 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.api.JCoreManager.addDispatchAction(var0, var1);
+                        __this__.setNeedRetryIfHttpsFailed(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4211,33 +1320,22 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreManager::onEvent__android_content_Context__String__int__String__android_os_Bundle__Object_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.net.HttpRequest::getParasMap_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.Map<String,String>> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
-                    // ref arg
-                    java.lang.Object var5 = (java.lang.Object) ((Map<String, Object>) __args__).get("var5");
+            
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.lang.Object __result__ = null;
+                    java.util.Map<String,String> __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.JCoreManager.onEvent(var0, var1, var2.intValue(), var3, var4, var5);
+                        __result__ = __this__.getParasMap();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4253,51 +1351,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreManager::onEvent__android_content_Context__String__int__bool__String__android_os_Bundle__Object_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.lang.Object> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    boolean var3 = (boolean) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    String var4 = (String) ((Map<String, Object>) __args__).get("var4");
-                    // ref arg
-                    android.os.Bundle var5 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var5");
-                    // ref arg
-                    java.lang.Object var6 = (java.lang.Object) ((Map<String, Object>) __args__).get("var6");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    java.lang.Object __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreManager.onEvent(var0, var1, var2.intValue(), var3, var4, var5, var6);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::requestPermission_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::setParasMap_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -4305,15 +1359,15 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.api.JCoreManager.requestPermission(var0);
+                        __this__.setParasMap(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4329,516 +1383,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.JCoreManager::initCrashHandler_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreManager.initCrashHandler(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::stopCrashHandler_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreManager.stopCrashHandler(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::isTestEnv_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreManager.isTestEnv();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::setSDKConfigs_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.JCoreManager.setSDKConfigs(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::getAppContext_batch", (__argsBatch__, __methodResult__) -> {
-                List<android.content.Context> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    android.content.Context __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreManager.getAppContext(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JCoreManager::getConnectionState_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JCoreManager.getConnectionState(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::getCommonTag_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.BaseLogger __this__ = (cn.jiguang.api.BaseLogger) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getCommonTag();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::_d_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    java.lang.Object var3 = (java.lang.Object) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jiguang.api.BaseLogger __this__ = (cn.jiguang.api.BaseLogger) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__._d(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.BaseLogger::flushCached2File_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.BaseLogger.flushCached2File();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JProtocol::parseHead_batch", (__argsBatch__, __methodResult__) -> {
-                List<byte[]> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    byte[] __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.JProtocol.parseHead(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JProtocol::getCommand_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.getCommand();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JProtocol::getRid_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Long __result__ = null;
-                    try {
-                        __result__ = __this__.getRid();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JProtocol::getJuid_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Long __result__ = null;
-                    try {
-                        __result__ = __this__.getJuid();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JProtocol::getSid_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.getSid();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JProtocol::getVersion_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.getVersion();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JProtocol::getName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getName();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.JProtocol::writeBodyAndToBytes_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::getParas_batch", (__argsBatch__, __methodResult__) -> {
                 List<byte[]> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -4848,12 +1393,12 @@ public class SubHandler2 {
             
             
                     // ref
-                    cn.jiguang.api.JProtocol __this__ = (cn.jiguang.api.JProtocol) ((Map<String, Object>) __args__).get("__this__");
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     byte[] __result__ = null;
                     try {
-                        __result__ = __this__.writeBodyAndToBytes();
+                        __result__ = __this__.getParas();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4869,8 +1414,835 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.MultiSpHelper::commitString_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpRequest::setRequestProperty_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRequestProperty(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::getRequestProperty_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getRequestProperty(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setUserAgent_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setUserAgent(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::getRequestProperties_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.Map<String,String>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.Map<String,String> __result__ = null;
+                    try {
+                        __result__ = __this__.getRequestProperties();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setRequestProperties_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRequestProperties(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::isHaveRspData_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isHaveRspData();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setHaveRspData_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setHaveRspData(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::isRspDatazip_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isRspDatazip();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpRequest::setRspDatazip_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpRequest __this__ = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRspDatazip(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getUrl_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getUrl();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setUrl_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setUrl(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getResponseBody_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getResponseBody();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setResponseBody_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setResponseBody(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getResponseCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getResponseCode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setResponseCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setResponseCode(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setResponseHeaders_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.Map<String,java.lang.Object> var1 = (java.util.Map<String,java.lang.Object>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setResponseHeaders(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getType();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setType(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setExpiredTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setExpiredTime(var1.longValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getExpiredTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = __this__.getExpiredTime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::isExpired_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isExpired();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::isInCache_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isInCache();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setInCache_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.net.HttpResponse __result__ = null;
+                    try {
+                        __result__ = __this__.setInCache(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::getExpiresHeader_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getExpiresHeader();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpResponse::setResponseHeader_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    cn.jiguang.net.HttpResponse __this__ = (cn.jiguang.net.HttpResponse) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setResponseHeader(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::httpGet__android_content_Context__cn_jiguang_net_HttpRequest_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    cn.jiguang.net.HttpRequest var1 = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    cn.jiguang.net.HttpResponse __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.httpGet(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::httpGet__android_content_Context__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -4880,16 +2252,14 @@ public class SubHandler2 {
                     android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
             
             
                     // invoke native method
-                    Void __result__ = null;
+                    cn.jiguang.net.HttpResponse __result__ = null;
                     try {
-                        cn.jiguang.api.MultiSpHelper.commitString(var0, var1, var2);
+                        __result__ = cn.jiguang.net.HttpUtils.httpGet(var0, var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4905,7 +2275,177 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.MultiSpHelper::getString_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpUtils::httpGetString__android_content_Context__cn_jiguang_net_HttpRequest_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    cn.jiguang.net.HttpRequest var1 = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.httpGetString(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::httpGetString__android_content_Context__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.httpGetString(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::httpPost__android_content_Context__cn_jiguang_net_HttpRequest_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    cn.jiguang.net.HttpRequest var1 = (cn.jiguang.net.HttpRequest) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    cn.jiguang.net.HttpResponse __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.httpPost(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::httpPost__android_content_Context__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    cn.jiguang.net.HttpResponse __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.httpPost(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::httpPostString__android_content_Context__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.httpPostString(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::httpPostString__android_content_Context__String__Map_String_String__batch", (__argsBatch__, __methodResult__) -> {
                 List<String> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -4917,6 +2457,174 @@ public class SubHandler2 {
                     // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
+                    java.util.Map<String,String> var2 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.httpPostString(var0, var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::getUrlWithParas_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.getUrlWithParas(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::getUrlWithValueEncodeParas_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.getUrlWithValueEncodeParas(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::joinParas_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.Map<String,String> var0 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.joinParas(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::joinParasWithEncodedValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.Map<String,String> var0 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = cn.jiguang.net.HttpUtils.joinParasWithEncodedValue(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.net.HttpUtils::appendParaToUrl_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
@@ -4925,7 +2633,7 @@ public class SubHandler2 {
                     // invoke native method
                     String __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.MultiSpHelper.getString(var0, var1, var2);
+                        __result__ = cn.jiguang.net.HttpUtils.appendParaToUrl(var0, var1, var2);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4941,43 +2649,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.MultiSpHelper::commitLong_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.MultiSpHelper.commitLong(var0, var1, var2.longValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.MultiSpHelper::getLong_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.net.HttpUtils::parseGmtTime_batch", (__argsBatch__, __methodResult__) -> {
                 List<Long> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -4985,11 +2657,7 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
@@ -4997,7 +2665,7 @@ public class SubHandler2 {
                     // invoke native method
                     Long __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.MultiSpHelper.getLong(var0, var1, var2.longValue());
+                        __result__ = cn.jiguang.net.HttpUtils.parseGmtTime(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5013,7 +2681,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.MultiSpHelper::commitInt_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jpush.android.service.AlarmReceiver::onReceive_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5021,19 +2689,17 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    android.content.Intent var2 = (android.content.Intent) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
-            
+                    cn.jpush.android.service.AlarmReceiver __this__ = (cn.jpush.android.service.AlarmReceiver) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.api.MultiSpHelper.commitInt(var0, var1, var2.intValue());
+                        __this__.onReceive(var1, var2);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5049,7 +2715,69 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.MultiSpHelper::getInt_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jpush.android.service.DaemonService::onCreate_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onCreate();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jpush.android.service.DaemonService::onDestroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onDestroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jpush.android.service.DaemonService::onStartCommand_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5057,19 +2785,19 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
                     Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                     // ref
-            
+                    cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = cn.jiguang.api.MultiSpHelper.getInt(var0, var1, var2.intValue());
+                        __result__ = __this__.onStartCommand(var1, var2.intValue(), var3.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5085,438 +2813,7 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.api.MultiSpHelper::commitBoolean_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.api.MultiSpHelper.commitBoolean(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.api.MultiSpHelper::getBoolean_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = cn.jiguang.api.MultiSpHelper.getBoolean(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityCreated_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivityCreated(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityStarted_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivityStarted(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityResumed_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivityResumed(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityPaused_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivityPaused(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityStopped_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivityStopped(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.ActivityLifecycle::onActivitySaveInstanceState_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    android.os.Bundle var2 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivitySaveInstanceState(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.ActivityLifecycle::onActivityDestroyed_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.app.Activity var1 = (android.app.Activity) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.page.ActivityLifecycle __this__ = (cn.jiguang.analytics.page.ActivityLifecycle) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivityDestroyed(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.PushSA::onFragmentResume_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onFragmentResume(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.PushSA::onFragmentPause_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onFragmentPause(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.PushSA::getInterval_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Long __result__ = null;
-                    try {
-                        __result__ = __this__.getInterval();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.PushSA::setInterval_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setInterval(var1.longValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.PushSA::isStatEnable_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jpush.android.service.DataProvider::onCreate_batch", (__argsBatch__, __methodResult__) -> {
                 List<Boolean> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5526,12 +2823,12 @@ public class SubHandler2 {
             
             
                     // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
+                    cn.jpush.android.service.DataProvider __this__ = (cn.jpush.android.service.DataProvider) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Boolean __result__ = null;
                     try {
-                        __result__ = __this__.isStatEnable();
+                        __result__ = __this__.onCreate();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5547,7 +2844,75 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.page.PushSA::setStatEnable_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jpush.android.service.DataProvider::call_batch", (__argsBatch__, __methodResult__) -> {
+                List<android.os.Bundle> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    android.os.Bundle var3 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    cn.jpush.android.service.DataProvider __this__ = (cn.jpush.android.service.DataProvider) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    android.os.Bundle __result__ = null;
+                    try {
+                        __result__ = __this__.call(var1, var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jpush.android.service.DataShare::getInstance_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.android.IDataShare> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    cn.jiguang.android.IDataShare __result__ = null;
+                    try {
+                        __result__ = cn.jpush.android.service.DataShare.getInstance(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jpush.android.service.DataShare::init_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5555,15 +2920,17 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+                    cn.jiguang.android.IDataShare var0 = (cn.jiguang.android.IDataShare) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setStatEnable(var1);
+                        cn.jpush.android.service.DataShare.init(var0, var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5579,23 +2946,53 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.page.PushSA::onKillProcess_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jpush.android.service.DataShare::isBinding_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = cn.jpush.android.service.DataShare.isBinding();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jpush.android.service.DataShare::setBinding_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
             
                     // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.onKillProcess(var1);
+                        cn.jpush.android.service.DataShare.setBinding();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5611,8 +3008,8 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.page.PushSA::getInstance_batch", (__argsBatch__, __methodResult__) -> {
-                List<cn.jiguang.analytics.page.PushSA> __resultList__ = new ArrayList<>();
+            put("cn.jpush.android.service.DownloadProvider::onCreate_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -5621,12 +3018,12 @@ public class SubHandler2 {
             
             
                     // ref
-            
+                    cn.jpush.android.service.DownloadProvider __this__ = (cn.jpush.android.service.DownloadProvider) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    cn.jiguang.analytics.page.PushSA __result__ = null;
+                    Boolean __result__ = null;
                     try {
-                        __result__ = cn.jiguang.analytics.page.PushSA.getInstance();
+                        __result__ = __this__.onCreate();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5642,55 +3039,27 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.page.PushSA::onResume_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("cn.jpush.android.service.DownloadProvider::call_batch", (__argsBatch__, __methodResult__) -> {
+                List<android.os.Bundle> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onResume(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.page.PushSA::onPause_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    android.os.Bundle var3 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var3");
             
                     // ref
-                    cn.jiguang.analytics.page.PushSA __this__ = (cn.jiguang.analytics.page.PushSA) ((Map<String, Object>) __args__).get("__this__");
+                    cn.jpush.android.service.DownloadProvider __this__ = (cn.jpush.android.service.DownloadProvider) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Void __result__ = null;
+                    android.os.Bundle __result__ = null;
                     try {
-                        __this__.onPause(var1);
+                        __result__ = __this__.call(var1, var2, var3);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5997,107 +3366,6 @@ public class SubHandler2 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jpush.android.service.DataProvider::onCreate_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jpush.android.service.DataProvider __this__ = (cn.jpush.android.service.DataProvider) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.onCreate();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.DataProvider::call_batch", (__argsBatch__, __methodResult__) -> {
-                List<android.os.Bundle> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    android.os.Bundle var3 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jpush.android.service.DataProvider __this__ = (cn.jpush.android.service.DataProvider) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    android.os.Bundle __result__ = null;
-                    try {
-                        __result__ = __this__.call(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jpush.android.service.AlarmReceiver::onReceive_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    android.content.Intent var2 = (android.content.Intent) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    cn.jpush.android.service.AlarmReceiver __this__ = (cn.jpush.android.service.AlarmReceiver) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onReceive(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
             put("cn.jpush.android.service.PushReceiver::onReceive_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
@@ -6263,170 +3531,101 @@ public class SubHandler2 {
             
                 __methodResult__.success(__resultList__);
             });
-            // method
-            put("cn.jpush.android.service.DaemonService::onCreate_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("RefClass::isKindOfcn_jcore_client_android_BuildConfig", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onCreate();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__this__ instanceof cn.jcore.client.android.BuildConfig);
             });
-            // method
-            put("cn.jpush.android.service.DaemonService::onDestroy_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("RefClass::isKindOfcn_jiguang_analytics_page_ActivityLifecycle", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onDestroy();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.page.ActivityLifecycle);
             });
-            // method
-            put("cn.jpush.android.service.DaemonService::onStartCommand_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+            put("RefClass::isKindOfcn_jiguang_analytics_page_PushSA", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    cn.jpush.android.service.DaemonService __this__ = (cn.jpush.android.service.DaemonService) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.onStartCommand(var1, var2.intValue(), var3.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.page.PushSA);
             });
-            // method
-            put("cn.jpush.android.service.DownloadProvider::onCreate_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
+            put("RefClass::isKindOfcn_jiguang_android_BuildConfig", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jpush.android.service.DownloadProvider __this__ = (cn.jpush.android.service.DownloadProvider) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.onCreate();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__this__ instanceof cn.jiguang.android.BuildConfig);
             });
-            // method
-            put("cn.jpush.android.service.DownloadProvider::call_batch", (__argsBatch__, __methodResult__) -> {
-                List<android.os.Bundle> __resultList__ = new ArrayList<>();
+            put("RefClass::isKindOfcn_jiguang_api_BaseLogger", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.BaseLogger);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_JActionExtra", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    android.os.Bundle var3 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var3");
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JActionExtra);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_JCoreInterface", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                    // ref
-                    cn.jpush.android.service.DownloadProvider __this__ = (cn.jpush.android.service.DownloadProvider) ((Map<String, Object>) __args__).get("__this__");
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JCoreInterface);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_JCoreManager", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                    // invoke native method
-                    android.os.Bundle __result__ = null;
-                    try {
-                        __result__ = __this__.call(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JCoreManager);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_JDispatchAction", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                    __resultList__.add(__result__);
-                }
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JDispatchAction);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_JProtocol", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JProtocol);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_JRequest", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JRequest);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_JResponse", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.JResponse);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_MultiSpHelper", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.MultiSpHelper);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_utils_ByteBufferUtils", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.utils.ByteBufferUtils);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_utils_OutputDataUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.utils.OutputDataUtil);
+            });
+            put("RefClass::isKindOfcn_jiguang_api_utils_ProtocolUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.api.utils.ProtocolUtil);
             });
             put("RefClass::isKindOfcn_jiguang_net_DefaultHostVerifier", (__args__, __methodResult__) -> {
                 // 引用对象
@@ -6434,23 +3633,11 @@ public class SubHandler2 {
             
                 __methodResult__.success(__this__ instanceof cn.jiguang.net.DefaultHostVerifier);
             });
-            put("RefClass::isKindOfcn_jiguang_net_SSLTrustManager", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof cn.jiguang.net.SSLTrustManager);
-            });
             put("RefClass::isKindOfcn_jiguang_net_HttpRequest", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
                 __methodResult__.success(__this__ instanceof cn.jiguang.net.HttpRequest);
-            });
-            put("RefClass::isKindOfcn_jiguang_net_HttpUtils", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof cn.jiguang.net.HttpUtils);
             });
             put("RefClass::isKindOfcn_jiguang_net_HttpResponse", (__args__, __methodResult__) -> {
                 // 引用对象
@@ -6458,23 +3645,1368 @@ public class SubHandler2 {
             
                 __methodResult__.success(__this__ instanceof cn.jiguang.net.HttpResponse);
             });
-            put("RefClass::isKindOfcn_jiguang_internal_JConstants", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcn_jiguang_net_HttpUtils", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof cn.jiguang.internal.JConstants);
+                __methodResult__.success(__this__ instanceof cn.jiguang.net.HttpUtils);
             });
-            put("RefClass::isKindOfcn_jiguang_internal_JCoreHelperAction", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcn_jiguang_net_SSLTrustManager", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof cn.jiguang.internal.JCoreHelperAction);
+                __methodResult__.success(__this__ instanceof cn.jiguang.net.SSLTrustManager);
             });
-            put("RefClass::isKindOfcn_jiguang_internal_JCoreInternalHelper", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcn_jpush_android_service_AlarmReceiver", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof cn.jiguang.internal.JCoreInternalHelper);
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.AlarmReceiver);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_DActivity", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DActivity);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_DaemonService", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DaemonService);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_DataProvider", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DataProvider);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_DataShare", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DataShare);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_DownloadActivity", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DownloadActivity);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_DownloadProvider", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.DownloadProvider);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_JCommonService", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.JCommonService);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_PushReceiver", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.PushReceiver);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_PushService", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.PushService);
+            });
+            put("RefClass::isKindOfcn_jpush_android_service_WakedResultReceiver", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jpush.android.service.WakedResultReceiver);
+            });
+            // factory
+            put("ObjectFactory::createcn_jcore_client_android_BuildConfig__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jcore_client_android_BuildConfig__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jcore.client.android.BuildConfig __obj__ = new cn.jcore.client.android.BuildConfig();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_page_ActivityLifecycle__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_page_ActivityLifecycle__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.page.ActivityLifecycle __obj__ = new cn.jiguang.analytics.page.ActivityLifecycle();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_android_BuildConfig__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_android_BuildConfig__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.android.BuildConfig __obj__ = new cn.jiguang.android.BuildConfig();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_api_JCoreInterface__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_api_JCoreInterface__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.api.JCoreInterface __obj__ = new cn.jiguang.api.JCoreInterface();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_api_JCoreManager__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_api_JCoreManager__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.api.JCoreManager __obj__ = new cn.jiguang.api.JCoreManager();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_api_utils_ByteBufferUtils__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_api_utils_ByteBufferUtils__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.api.utils.ByteBufferUtils __obj__ = new cn.jiguang.api.utils.ByteBufferUtils();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_api_utils_OutputDataUtil__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_api_utils_OutputDataUtil__int");
+                }
+            
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil(var1.intValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_api_utils_OutputDataUtil__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_api_utils_OutputDataUtil__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_api_utils_ProtocolUtil__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_api_utils_ProtocolUtil__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.api.utils.ProtocolUtil __obj__ = new cn.jiguang.api.utils.ProtocolUtil();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_net_DefaultHostVerifier__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_DefaultHostVerifier__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                cn.jiguang.net.DefaultHostVerifier __obj__ = new cn.jiguang.net.DefaultHostVerifier(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_net_HttpRequest__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_HttpRequest__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                cn.jiguang.net.HttpRequest __obj__ = new cn.jiguang.net.HttpRequest(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_net_HttpRequest__String__java_util_Map_String_String_", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_HttpRequest__String__java_util_Map_String_String_");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                java.util.Map<String,String> var2 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                cn.jiguang.net.HttpRequest __obj__ = new cn.jiguang.net.HttpRequest(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_net_HttpResponse__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_HttpResponse__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                cn.jiguang.net.HttpResponse __obj__ = new cn.jiguang.net.HttpResponse(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_net_HttpResponse__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_HttpResponse__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.net.HttpResponse __obj__ = new cn.jiguang.net.HttpResponse();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_net_HttpUtils__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_HttpUtils__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.net.HttpUtils __obj__ = new cn.jiguang.net.HttpUtils();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_net_SSLTrustManager__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_net_SSLTrustManager__String");
+                }
+            
+                // args
+                // ref arg
+                String param1 = (String) ((Map<String, Object>) __args__).get("param1");
+            
+                // create target object
+                cn.jiguang.net.SSLTrustManager __obj__ = new cn.jiguang.net.SSLTrustManager(param1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_AlarmReceiver__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_AlarmReceiver__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.AlarmReceiver __obj__ = new cn.jpush.android.service.AlarmReceiver();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_DActivity__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_DActivity__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.DActivity __obj__ = new cn.jpush.android.service.DActivity();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_DaemonService__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_DaemonService__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.DaemonService __obj__ = new cn.jpush.android.service.DaemonService();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_DataProvider__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_DataProvider__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.DataProvider __obj__ = new cn.jpush.android.service.DataProvider();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_DataShare__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_DataShare__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.DataShare __obj__ = new cn.jpush.android.service.DataShare();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_DownloadActivity__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_DownloadActivity__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.DownloadActivity __obj__ = new cn.jpush.android.service.DownloadActivity();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_DownloadProvider__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_DownloadProvider__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.DownloadProvider __obj__ = new cn.jpush.android.service.DownloadProvider();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_JCommonService__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_JCommonService__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.JCommonService __obj__ = new cn.jpush.android.service.JCommonService();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_PushReceiver__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_PushReceiver__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.PushReceiver __obj__ = new cn.jpush.android.service.PushReceiver();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_PushService__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_PushService__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.PushService __obj__ = new cn.jpush.android.service.PushService();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jpush_android_service_WakedResultReceiver__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jpush_android_service_WakedResultReceiver__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jpush.android.service.WakedResultReceiver __obj__ = new cn.jpush.android.service.WakedResultReceiver();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jcore_client_android_BuildConfig__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jcore.client.android.BuildConfig> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jcore.client.android.BuildConfig __obj__ = new cn.jcore.client.android.BuildConfig();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_page_ActivityLifecycle__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.page.ActivityLifecycle> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.page.ActivityLifecycle __obj__ = new cn.jiguang.analytics.page.ActivityLifecycle();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_android_BuildConfig__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.android.BuildConfig> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.android.BuildConfig __obj__ = new cn.jiguang.android.BuildConfig();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_api_JCoreInterface__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.api.JCoreInterface> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.api.JCoreInterface __obj__ = new cn.jiguang.api.JCoreInterface();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_api_JCoreManager__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.api.JCoreManager> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.api.JCoreManager __obj__ = new cn.jiguang.api.JCoreManager();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_api_utils_ByteBufferUtils__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.api.utils.ByteBufferUtils> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.api.utils.ByteBufferUtils __obj__ = new cn.jiguang.api.utils.ByteBufferUtils();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_api_utils_OutputDataUtil__int", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.api.utils.OutputDataUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil(var1.intValue());
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_api_utils_OutputDataUtil__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.api.utils.OutputDataUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.api.utils.OutputDataUtil __obj__ = new cn.jiguang.api.utils.OutputDataUtil();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_api_utils_ProtocolUtil__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.api.utils.ProtocolUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.api.utils.ProtocolUtil __obj__ = new cn.jiguang.api.utils.ProtocolUtil();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_net_DefaultHostVerifier__String", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.DefaultHostVerifier> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    cn.jiguang.net.DefaultHostVerifier __obj__ = new cn.jiguang.net.DefaultHostVerifier(var1);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_net_HttpRequest__String", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpRequest> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    cn.jiguang.net.HttpRequest __obj__ = new cn.jiguang.net.HttpRequest(var1);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_net_HttpRequest__String__java_util_Map_String_String_", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpRequest> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    java.util.Map<String,String> var2 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var2");
+            
+                    // create target object
+                    cn.jiguang.net.HttpRequest __obj__ = new cn.jiguang.net.HttpRequest(var1, var2);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_net_HttpResponse__String", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    cn.jiguang.net.HttpResponse __obj__ = new cn.jiguang.net.HttpResponse(var1);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_net_HttpResponse__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpResponse> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.net.HttpResponse __obj__ = new cn.jiguang.net.HttpResponse();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_net_HttpUtils__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.HttpUtils> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.net.HttpUtils __obj__ = new cn.jiguang.net.HttpUtils();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_net_SSLTrustManager__String", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.net.SSLTrustManager> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String param1 = (String) ((Map<String, Object>) __args__).get("param1");
+            
+                    // create target object
+                    cn.jiguang.net.SSLTrustManager __obj__ = new cn.jiguang.net.SSLTrustManager(param1);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_AlarmReceiver__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.AlarmReceiver> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.AlarmReceiver __obj__ = new cn.jpush.android.service.AlarmReceiver();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_DActivity__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.DActivity> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.DActivity __obj__ = new cn.jpush.android.service.DActivity();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_DaemonService__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.DaemonService> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.DaemonService __obj__ = new cn.jpush.android.service.DaemonService();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_DataProvider__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.DataProvider> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.DataProvider __obj__ = new cn.jpush.android.service.DataProvider();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_DataShare__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.DataShare> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.DataShare __obj__ = new cn.jpush.android.service.DataShare();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_DownloadActivity__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.DownloadActivity> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.DownloadActivity __obj__ = new cn.jpush.android.service.DownloadActivity();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_DownloadProvider__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.DownloadProvider> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.DownloadProvider __obj__ = new cn.jpush.android.service.DownloadProvider();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_JCommonService__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.JCommonService> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.JCommonService __obj__ = new cn.jpush.android.service.JCommonService();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_PushReceiver__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.PushReceiver> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.PushReceiver __obj__ = new cn.jpush.android.service.PushReceiver();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_PushService__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.PushService> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.PushService __obj__ = new cn.jpush.android.service.PushService();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jpush_android_service_WakedResultReceiver__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jpush.android.service.WakedResultReceiver> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jpush.android.service.WakedResultReceiver __obj__ = new cn.jpush.android.service.WakedResultReceiver();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
             });
         }};
     }

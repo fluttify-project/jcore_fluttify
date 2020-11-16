@@ -54,8 +54,7 @@ public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
-        handlerMapList.add(SubHandler3.getSubHandler(messenger));
-        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, registrar.activity()));
+        handlerMapList.add(SubHandlerCustom.instance.getSubHandler(messenger, registrar.activity()));
 
         channel.setMethodCallHandler(plugin);
 
@@ -82,7 +81,6 @@ public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
-        handlerMapList.add(SubHandler3.getSubHandler(messenger));
 
         channel.setMethodCallHandler(this);
     }
@@ -101,7 +99,7 @@ public class JcoreFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
         }
         Activity activity = binding.getActivity();
 
-        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, activity));
+        handlerMapList.add(SubHandlerCustom.instance.getSubHandler(messenger, activity));
 
         // register platform view
         

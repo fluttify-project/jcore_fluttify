@@ -15,11 +15,32 @@ class cn_jpush_android_service_WakedResultReceiver extends java_lang_Object  {
   //region constants
   static const String name__ = 'cn.jpush.android.service.WakedResultReceiver';
 
+  @override
+  final String tag__ = 'jcore_fluttify';
+
   static final String CONTEXT_KEY = "1";
   static final String WAKE_TYPE_KEY = "2";
   //endregion
 
   //region creators
+  static Future<cn_jpush_android_service_WakedResultReceiver> create__() async {
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jpush_android_service_WakedResultReceiver__',
+    
+    );
+    return JcoreFluttifyAndroidAs<cn_jpush_android_service_WakedResultReceiver>(__result__);
+  }
+  
+  static Future<List<cn_jpush_android_service_WakedResultReceiver>> create_batch__(int length) async {
+    assert(true);
+    final __result_batch__ = await  kJcoreFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jpush_android_service_WakedResultReceiver__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => JcoreFluttifyAndroidAs<cn_jpush_android_service_WakedResultReceiver>(it))
+        .toList();
+  }
   
   //endregion
 
@@ -40,19 +61,13 @@ class cn_jpush_android_service_WakedResultReceiver extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.WakedResultReceiver::onReceive', {"var1": var1, "var2": var2, "__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jpush.android.service.WakedResultReceiver::onReceive', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -63,19 +78,13 @@ class cn_jpush_android_service_WakedResultReceiver extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWakeMap', {"var1": var1, "__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWakeMap', {"var1": var1, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -86,19 +95,13 @@ class cn_jpush_android_service_WakedResultReceiver extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWake__int', {"var1": var1, "__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWake__int', {"var1": var1, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -109,22 +112,21 @@ class cn_jpush_android_service_WakedResultReceiver extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWake__android_content_Context__int', {"var1": var1, "var2": var2, "__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWake__android_content_Context__int', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jpush_android_service_WakedResultReceiver{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jpush_android_service_WakedResultReceiver_Batch on List<cn_jpush_android_service_WakedResultReceiver> {
@@ -139,78 +141,46 @@ extension cn_jpush_android_service_WakedResultReceiver_Batch on List<cn_jpush_an
   //region methods
   
   Future<List<void>> onReceive_batch(List<android_content_Context> var1, List<android_content_Intent> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
+    assert(var1.length == var2.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.WakedResultReceiver::onReceive_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jpush.android.service.WakedResultReceiver::onReceive_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> onWakeMap_batch(List<Map> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWakeMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWakeMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> onWake__int_batch(List<int> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWake__int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWake__int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> onWake__android_content_Context__int_batch(List<android_content_Context> var1, List<int> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
+    assert(var1.length == var2.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWake__android_content_Context__int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jpush.android.service.WakedResultReceiver::onWake__android_content_Context__int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

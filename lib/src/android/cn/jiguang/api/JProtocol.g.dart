@@ -15,6 +15,9 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
   //region constants
   static const String name__ = 'cn.jiguang.api.JProtocol';
 
+  @override
+  final String tag__ = 'jcore_fluttify';
+
   static final int NO_SID = -1;
   static final int NO_RESP_CODE = -1;
   static final int NO_JUID = -1;
@@ -44,19 +47,13 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::parseHead', {"var0": var0});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::parseHead', {"var0": var0});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ as Uint8List;
-      return __return__;
-    }
+    return __result__ as Uint8List;
   }
   
   
@@ -67,19 +64,13 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getCommand', {"__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getCommand', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -90,19 +81,13 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getRid', {"__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getRid', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -113,19 +98,13 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getJuid', {"__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getJuid', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -136,19 +115,13 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getSid', {"__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getSid', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -159,19 +132,13 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getVersion', {"__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getVersion', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -182,19 +149,13 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getName', {"__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getName', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -205,22 +166,21 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::writeBodyAndToBytes', {"__this__": this});
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::writeBodyAndToBytes', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ as Uint8List;
-      return __return__;
-    }
+    return __result__ as Uint8List;
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jiguang_api_JProtocol{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
@@ -235,154 +195,90 @@ extension cn_jiguang_api_JProtocol_Batch on List<cn_jiguang_api_JProtocol> {
   //region methods
   
   static Future<List<Uint8List>> parseHead_batch(List<Object> var0) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::parseHead_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::parseHead_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__ as Uint8List).cast<Uint8List>().toList();
   }
   
   
   Future<List<int>> getCommand_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getCommand_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getCommand_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   
   Future<List<int>> getRid_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getRid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getRid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   
   Future<List<int>> getJuid_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getJuid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getJuid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   
   Future<List<int>> getSid_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getSid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getSid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   
   Future<List<int>> getVersion_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getVersion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getVersion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   
   Future<List<String>> getName_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::getName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::getName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   
   Future<List<Uint8List>> writeBodyAndToBytes_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JProtocol::writeBodyAndToBytes_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JProtocol::writeBodyAndToBytes_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__ as Uint8List).cast<Uint8List>().toList();
   }
   
   //endregion

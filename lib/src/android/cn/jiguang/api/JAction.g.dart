@@ -18,26 +18,29 @@ mixin cn_jiguang_api_JAction on java_lang_Object {
 
   
 
-  
+  @override
+  final String tag__ = 'jcore_fluttify';
 
   
 
-  @mustCallSuper
+  
+
+  /* @mustCallSuper */
   Future<bool> isSupportedCMD(int var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onActionRun(android_content_Context var1, int var2, android_os_Bundle var4, Object var5) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onEvent(android_content_Context var1, int var2, int var4) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> handleMessage(android_content_Context var1, int var2, Object var4) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<String> getSdkVersion() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> dispatchTimeOutMessage(android_content_Context var1, int var2, int var4, int var6) {}
   
 }

@@ -15,24 +15,30 @@ class cn_jiguang_api_utils_ByteBufferUtils extends java_lang_Object  {
   //region constants
   static const String name__ = 'cn.jiguang.api.utils.ByteBufferUtils';
 
+  @override
+  final String tag__ = 'jcore_fluttify';
+
   static final int ERROR_CODE = 10000;
   //endregion
 
   //region creators
   static Future<cn_jiguang_api_utils_ByteBufferUtils> create__() async {
-    final refId = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_api_utils_ByteBufferUtils__', );
-    final object = cn_jiguang_api_utils_ByteBufferUtils()..refId = refId..tag__ = 'jcore_fluttify';
-    return object;
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jiguang_api_utils_ByteBufferUtils__',
+    
+    );
+    return JcoreFluttifyAndroidAs<cn_jiguang_api_utils_ByteBufferUtils>(__result__);
   }
   
   static Future<List<cn_jiguang_api_utils_ByteBufferUtils>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_api_utils_ByteBufferUtils__', {'length': length});
-  
-    final List<cn_jiguang_api_utils_ByteBufferUtils> typedResult = resultBatch.map((result) => cn_jiguang_api_utils_ByteBufferUtils()..refId = result..tag__ = 'jcore_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJcoreFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jiguang_api_utils_ByteBufferUtils__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => JcoreFluttifyAndroidAs<cn_jiguang_api_utils_ByteBufferUtils>(it))
+        .toList();
   }
   
   //endregion
@@ -48,6 +54,11 @@ class cn_jiguang_api_utils_ByteBufferUtils extends java_lang_Object  {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jiguang_api_utils_ByteBufferUtils{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jiguang_api_utils_ByteBufferUtils_Batch on List<cn_jiguang_api_utils_ByteBufferUtils> {

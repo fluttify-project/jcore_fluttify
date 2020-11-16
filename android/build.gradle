@@ -71,5 +71,5 @@ dependencies {
     // flutter plugin dependency
     
     // sdk dependency
-    api 'cn.jiguang.sdk:jcore:2.3.2'
+    api 'cn.jiguang.sdk:jcore:2.5.5'
 }

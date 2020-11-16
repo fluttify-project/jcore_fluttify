@@ -15,6 +15,9 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
   //region constants
   static const String name__ = 'cn.jiguang.api.JResponse';
 
+  @override
+  final String tag__ = 'jcore_fluttify';
+
   
   //endregion
 
@@ -24,15 +27,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
   //region getters
   Future<int> get_code() async {
-    final __result__ = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.api.JResponse::get_code", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJcoreFluttifyChannel.invokeMethod("cn.jiguang.api.JResponse::get_code", {'__this__': this});
+    return __result__;
   }
   
   //endregion
 
   //region setters
   Future<void> set_code(int code) async {
-    await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod('cn.jiguang.api.JResponse::set_code', <String, dynamic>{'__this__': this, "code": code});
+    await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JResponse::set_code', <String, dynamic>{'__this__': this, "code": code});
   
   
   }
@@ -42,22 +45,25 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jiguang_api_JResponse{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jiguang_api_JResponse_Batch on List<cn_jiguang_api_JResponse> {
   //region getters
   Future<List<int>> get_code_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec('jcore_fluttify'))).invokeMethod("cn.jiguang.api.JResponse::get_code_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJcoreFluttifyChannel.invokeMethod("cn.jiguang.api.JResponse::get_code_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   //endregion
 
   //region setters
   Future<void> set_code_batch(List<int> code) async {
-    await MethodChannel('me.yohom/jcore_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('cn.jiguang.api.JResponse::set_code_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "code": code[__i__]}]);
+    await kJcoreFluttifyChannel.invokeMethod('cn.jiguang.api.JResponse::set_code_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "code": code[__i__]}]);
   
   
   }
